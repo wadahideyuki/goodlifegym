@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ contact
+---------------------------------------*/
+article:not(.contactZone) {
+  //  display: none;
+}
+
+.contactZone {
+  position: relative;
+  background-color: $lGrey1;
+  padding: 50px 50px 90px;
+  background: url($p + "contact/bg.png") no-repeat center top;
+  background-size: cover;
+
+  @include mq {
+    padding: 8vw 0vw;
+  }
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 470px;
+      background: url($p + "contact/inner_bg.png") no-repeat center top;
+      background-size: cover;
+
+      @include mq {
+        height: 250px;
+      }
+    }
+
+  .u-inner {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+
+  }
+
+  .u-ttl1 {
+    position: relative;
+    color: #fff;
+  }
+
+  .u-lead1 {
+    position: relative;
+    padding: 2em;
+    color: #fff;
+    line-height: 1.8;
+
+    @include mq {
+      font-size: 13px;
+      padding: 2em;
+      text-align: left;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .areaBox {
+    position: relative;
+    background: #f4f4f4;
+    padding: 1em em(24/16);
+    line-height: 1.6;
+    margin-bottom: 80px;
+
+    @include mq {
+      border-radius: 0px;
+      padding: 2.5vw 5vw;
+      margin-bottom: 0px;
+    }
+
+    dl {
+      display: flex;
+
+      dt {
+        padding-right: 16px;
+
+        @include mq {
+          padding-right: 8px;
+        }
+      }
+
+      dd {
+        padding-left: 28px;
+        border-left: 3px solid #969696;
+
+        @include mq {
+          padding-left: 14px;
+        }
+      }
+    }
+  }
+
+  .formBox {
+    position: relative;
+    background: #FFF;
+    border-radius: 15px;
+    padding: 45px 50px ;
+    box-sizing: border-box;
+    box-shadow: 15px 20px 20px 0px rgba(0, 0, 0, .1);
+
+    @include mq {
+      border-radius: 0px;
+      padding: 5vw;
+    }
+
+    .formrun-system-show {
+      color: tomato;
+    }
+  }
+
+  .row {
+    margin-bottom: 20px;
+
+    label {
+      display: flex;
+      align-items: center;
+      padding-bottom: 5px;
+      font-size: 16px;
+      font-weight: 100;
+
+      @include mq {
+        font-size: 14px;
+      }
+
+      &.kojin {
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+
+        input {
+          margin-right: 10px;
+          width: 1.2em;
+          height: 1.2em;
+        }
+      }
+
+      .must {
+        margin-left: 10px;
+        background: #d9534f;
+        color: #FFF;
+        border-radius: 5px;
+        display: inline-block;
+        padding: .3em .5em;
+        line-height: 1.4;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    input[type="text"],
+    textarea {
+      display: block;
+      border: 1px solid #d9d9d9;
+      width: 100%;
+      box-sizing: border-box;
+      padding: .3em 1em;
+      border-radius: 5px;
+      background: #fff;
+      font-weight: 100;
+
+      @include mq {
+        padding: .5em;
+        font-size: 14px;
+      }
+    }
+
+    textarea {
+      height: 8em;
+    }
+
+  }
+
+  .privacy {
+    padding: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    background: #FFF;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+    height: 100px;
+
+    h3 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    p,
+    ul {
+      padding: 5px 0 0 0;
+      font-size: 12px;
+    }
+
+    h4 {
+      font-size: 12px;
+      font-weight: bold;
+      padding: 1.3em 0 .2em 0;
+    }
+  }
+
+  .rowRcap {
+    margin-bottom: 15px;
+  }
+
+  button {
+    color: #FFF;
+    width: 100%;
+    background: #000;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 8px;
+    padding: .5em 0;
+    cursor: pointer;
+
+    @include mq {
+      font-size: 18px;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      background: #d6dde2;
+    }
+
+
+  }
+
+  .center {
+    text-align: center;
+  }
+}

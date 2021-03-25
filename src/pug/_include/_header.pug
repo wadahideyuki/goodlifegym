@@ -1,1 +1,14 @@
-header.l-header ヘッダー
+header.l-header 
+  nav 
+    ul.menu
+      li: a(href="/") HOME
+      li: a(href="#about") GOODLIFE GYMについて
+      li: a(href="#price") 料金のご案内
+      li: a(href="#access") 店舗案内/アクセス
+    ul.sns
+      li: a(href="https://www.instagram.com/goodlife_gym_personal/" target="_blank")
+        +img("instagram.svg")
+      li: a(href="https://www.youtube.com/channel/UCsR_vKoJ8_eY7K6FY-IYjvw?view_as=subscriber" target="_blank")
+        +img("youtube.svg")
+      li: a(href="https://twitter.com/goodlife_gym_" target="_blank")
+        +img("twitter.svg")

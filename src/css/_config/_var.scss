@@ -2,7 +2,7 @@
 //変数用scss
 
 //パス
-$pathImg: "../img/";
+$p: "../img/";
 
 //切替
 $pcDesign: 1400;
@@ -24,12 +24,14 @@ $rem:100rem;
 
 //色
 $mainColor:#f00;
+$green:#00bad0;
 $subColor:#0f0;
 $accentColor:#00f;
+$lGrey1:#00f;
 $red1: rgba(200,0,0,1.0);
 $red1_a50: rgba(200,0,0,0.5);
-
-
+$yellow:#ebff0f;
+$grade:linear-gradient(to right, #006fa4 0%, #00b8ba 100%);
 //function
 @function px($suuji){
 	@return $suuji * 1px;

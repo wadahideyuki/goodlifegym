@@ -8,6 +8,35 @@
 
 
 .l-header{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    @include mq{
+      display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        ul{
+            display: flex;
+            &.menu{
+              li{
+                margin-right: 24px;
+              }
+            }
+            &.sns{
+              li{
+                width: 28px;
+                margin-right: 20px;
+                img{
+                  width: 100%;
+                }
+              }
+            }
+        }
+    }
 }
 
 

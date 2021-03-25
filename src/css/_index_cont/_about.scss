@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ cont1
+---------------------------------------*/
+article:not(.aboutZone) {
+  //display: none;
+}
+.aboutZone {
+  background-image: linear-gradient(to right, #006fa4 0%, #00b8ba 100%);
+  padding-bottom: 0px;
+  z-index: 2;
+  @include mq{
+    padding-bottom: 10vw;
+  }
+  .movieBox {
+    iframe {
+      width: 100%;
+      height: 565px;
+      @include mq{
+        height: 60vw;
+      }
+    }
+  }
+  h2 {
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0px 0 1.5em;
+    @include mq{
+      margin-bottom: 1em;
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+  .aboutBox {
+    padding-top: 120px;
+    @include mq{
+      padding-top: 10vw;
+    }
+    ul {
+      .slides {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        @include mq{
+          display: block;
+          margin-bottom: 5vw;
+        }
+        &.reverse {
+          .txt {
+            margin-left: auto;
+          }
+        }
+        .img {
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          width: 47.5%;
+          position: absolute;
+          @include mq{
+            width: 100%;
+            position: static;
+            margin-bottom: 5vw;
+          }
+          &.ph1 {
+            height: 470px;
+            right: 0px;
+            top: -150px;
+            @include mq{height: 60vw;}
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+          &.ph2{
+            top: -80px;
+          }
+          &.ph3{
+            top: -80px;
+            right: 0px;
+          }
+          &.ph4{
+            top: -80px;
+            left: 0px;
+            img{
+              height: 450px;
+              @include mq{
+                height: 60vw;
+              }
+            }
+          }
+          img {
+            object-fit: cover;
+            width: 100%;
+            @include mq{
+              height: 60vw;
+            }
+          }
+        }
+        .txt {
+          width: 48%;
+          padding-bottom:160px ;
+          &.last{
+            padding-bottom: 70px;
+          }
+          @include mq{
+            width: 100%;
+            padding-bottom: 0px;
+          }
+          h3 {
+            margin-bottom: 1.5em;
+            @include mq{
+              margin-bottom: 1em;
+            }
+            span {
+              display: inline-block;
+              font-size: 2.4rem;
+              font-weight: bold;
+              color: $green;
+              background-color: #fff;
+              line-height: 1;
+              padding: 0.3em 0.5em;
+              margin-bottom: 5px;
+              @include mq{
+                font-size: 2.2rem;
+              }
+            }
+          }
+          p {
+            color: #fff;
+            line-height: 1.8;
+            br{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slick-dots{
+    position: static;
+  }
+}

@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+ cont1
+---------------------------------------*/
+article:not(.trainerZone) {
+    //display: none;
+}
+.trainerZone {
+  background-image: url($p + "trainer/bg.jpg");
+  background-size: cover;
+  .u-enTxt {
+    color: #fff;
+    top: -3px;
+  }
+  .u-ttl1 {
+    color: #fff;
+    text-align: right;
+    margin-top: -.8em;
+    margin-bottom: 2em;
+    @include mq{
+      text-align: left;
+      padding-top: 10vw;
+      margin-bottom: 1em;
+    }
+  }
+  .trainerBox{
+    display: flex;
+    justify-content: space-between;
+    @include mq{
+      display: inline-block;
+    }
+    .col{
+      width: 48%;
+      margin-bottom: 40px;
+      color: #FFF;
+      @include mq{
+        width: 100%;
+        margin-bottom: 8vw;
+      }
+      .btn{
+        display: flex;
+        background-image: $grade;
+        color: #FFF;
+        text-align: center;
+        padding: 1.2em;
+        font-size: 1.8rem;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        &:hover{
+          filter: brightness(1.2);
+        }
+        &:after{
+          content:"" ;
+          display: inline-block;
+          width: .5em;
+          height: .5em;
+          border-top: 2px solid #FFF;
+          border-right: 2px solid #FFF;
+          transform: rotate(45deg);
+          margin-left: 10px;
+        }
+      }
+      img{
+        margin-bottom: 16px;
+      }
+      h3{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1em;
+        span{
+          font-size: 2.6rem;
+        }
+      }
+      p{
+        line-height: 1.8;
+      }
+    }
+  }
+}

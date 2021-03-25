@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
 
 @import "_config/reset";//リセット
 
@@ -7,6 +8,8 @@
 @import "_plugin/slick";
 @import "_plugin/slick-theme";
 @import "_plugin/animate";
+@import "_plugin/colorbox";
+
 
 //共通
 @import "layout";//全体的なレイアウト(ヘッダーとか)
@@ -14,10 +17,18 @@
 
 //コンテンツ別
 @import "_index_cont/main";
-@import "_index_cont/cont1";
+@import "_index_cont/information";
+@import "_index_cont/about";
+@import "_index_cont/voice";
+@import "_index_cont/trainer";
+@import "_index_cont/price";
+@import "_index_cont/stores";
+@import "_index_cont/faq";
+@import "_index_cont/contact";
 
 
 @import "_plugin/class";//単独クラス
+
 
 
 

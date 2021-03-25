@@ -3,9 +3,101 @@
 /*--------------------------------------
  メインコンテンツ
 ---------------------------------------*/
-article:not(.mainZone){
-//  display: none;
+article:not(.mainZone) {
+  //  display: none;
 }
-.mainZone{
-  
+.mainZone {
+  background-image: url($p + "main/main.jpg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  height: 50vw;
+  padding: 0px;
+  min-height: 650px;
+  max-height: 800px;
+  @include mq{
+    background-image: url($p + "main/main_sp.jpg");
+  }
+  .mainInner {
+    background-image: url($p + "main/main_cover.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100%;
+    min-height: 600px;
+    position: relative;
+    @include mq{
+      background-image: none;
+      height: vw(619);
+    }
+    @include mq(l){
+      background-position:8% 0px ;
+    }
+    .u-inner{
+      position: absolute;
+      width: 600px;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      flex-direction: column;
+      left: 5vw;
+      @include mq{
+        left: 0px;
+        display: block;
+        width: 100%;
+        padding: 0px;
+      }
+      h1{
+        color: #FFF;
+        margin-bottom: 80px;
+        padding-left: 15px;
+        @include mq{
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
+          padding-left: 0px;
+          font-size: .8rem;
+          img{
+            margin-top: 3vw;
+          }
+        }
+        span{
+          display: inline-block;
+          margin-top: 16px;
+          @include mq{
+            margin-top: 0px;
+            margin-right: 5vw;
+            width: vw(190);
+          }
+        }
+      }
+      p{
+        @include mq{
+          position: absolute;
+          bottom: vw(100);
+          left: 5vw;
+        }
+        span{
+          display: inline-block;
+          background-image: url($p + "main/text_bg.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-bottom: 5px;
+          background-size: 100%;
+          line-height: 1;
+          padding: .3em 1em;
+          font-size:3.5rem ;
+          font-weight: bold;
+          color: $green;
+          @include mq{
+            
+            font-size: 2.5rem;
+          }
+          &.txt1{
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
 }
