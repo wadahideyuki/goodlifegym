@@ -49,6 +49,16 @@
 }
 
 
+.fixBtn{
+  position: fixed;
+  right: 0px;
+  bottom: 20px;
+  @include mq{
+    bottom: 0px;
+    left: 0px;
+    right: auto;
+  }
+}
 .l-footer{
 }
 
