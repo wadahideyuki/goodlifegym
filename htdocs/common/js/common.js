@@ -88,6 +88,15 @@ $(document).ready(function () {
     });
   }
   clkScrl($(".menu a"), 0);
+  
+    $(".planArea .tabName li").click(function(){
+    $(".planArea .tabName li").removeClass("is-selected");
+    $(this).addClass("is-selected");
+    var num = $(this).index();
+    $(".planBox .contWrap").removeClass("is-active");
+    $(".planBox .contWrap").eq(num).addClass("is-active");
+  });
+  
 
 
   /*--------------------

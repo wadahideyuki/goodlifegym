@@ -11,15 +11,31 @@ article:not(.cont1Zone) {
   position: relative;
   background: #cafeff;
 
+  @include mq {
+    padding-top: 15vw;
+  }
+
   .u-enTxt {
     position: absolute;
     right: 0px;
     left: auto;
     top: -3px;
+
+    @include mq {
+      top: vw(-1.5);
+    }
   }
 
   .u-ttl1 {
     color: #00b0b8;
+
+    @include mq {
+      margin-bottom: 1em;
+
+      @include mq {
+        margin-bottom: .5em;
+      }
+    }
 
     & + p {
       color: #00b0b8;
@@ -27,25 +43,42 @@ article:not(.cont1Zone) {
       font-weight: 600;
     }
   }
-  .planArea{
+
+  .planArea {
     margin-top: 45px;
+
+    @include mq {
+      margin-top: vw(45);
+    }
+
     .tabName {
       display: flex;
       justify-content: space-between;
+
       li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 48%;
         font-size: 2.8rem;
         font-weight: bold;
         padding: em(16/28) 0;
-        text-align: center;
         color: #00b2b8;
         border-radius: 36px;
         border: 2px solid #00b2b8;
-        &.is-active {
+        cursor: pointer;
+
+        @include mq {
+          font-size: 2.4rem;
+          padding: em(12/24) 0;
+        }
+
+        &.is-selected {
           position: relative;
           color: #fff;
           border: none;
           background: #00b2b8;
+
           &:after {
             position: absolute;
             content: "";
@@ -58,85 +91,245 @@ article:not(.cont1Zone) {
             border-top: 10px solid #00b2b8;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
+
+            @include mq {
+              content: none;
+            }
           }
         }
       }
     }
-    .contWrap {
-      ul.planList {
-        display: flex;
-        justify-content: space-between;
-        li {
-          width: 32%;
-          box-sizing: border-box;
-          padding: 30px 20px;
-          background: #fff;
-          box-shadow: 10px 10px 15px rgba(0, 161, 179, .3);
-          h3 {
-            font-size: 2.4rem;
-            text-align: center;
-            color: #0099b0;
-            font-weight: bold;
-            padding-bottom: 1em;
-            border-bottom: 4px solid #0099b0;
+
+    .planBox {
+      margin-top: 45px;
+
+      @include mq {
+        margin-top: vw(25);
+      }
+
+      .contWrap {
+        display: none;
+
+        ul.planList {
+          display: flex;
+          justify-content: space-between;
+
+          @include mq {
+            flex-direction: column;
           }
-          .monthly {
-            display: block;
-            font-size: 2rem;
-            font-weight: bold;
-            text-align: center;
-            padding: 30px 0;
-            em {
-              font-size: 3rem;
-              color: #ff3636;
-              padding-left: .1em;
+
+          li {
+            width: 32%;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 30px 20px;
+            background: #fff;
+            box-shadow: 10px 10px 15px rgba(0, 161, 179, .3);
+
+            @include mq {
+              width: 100%;
+              padding: vw(30) vw(20);
+              box-shadow: 5px 5px 8px rgba(0, 161, 179, .3);
             }
-          }
-          .recommend {
-            font-size: 1.6rem;
-            text-align: center;
-            color: #00b2b8;
-            font-weight: bold;
-            padding: em(10/16);
-            border: 1px solid #00b2b8;
-            &+.recommend {
-              margin-top: 10px;
+
+            & + li {
+              @include mq {
+                margin-top: vw(30);
+              }
             }
-          }
-          .note {
-            display: block;
-            margin-top: 20px;
-            em {
-              color: #ff3636;
+
+            h3 {
+              font-size: 2.4rem;
+              text-align: center;
+              color: #0099b0;
+              font-weight: bold;
+              padding-bottom: 1em;
+              border-bottom: 4px solid #0099b0;
+
+              @include mq {
+                padding-bottom: .5em;
+                border-bottom: 2px solid #0099b0;
+              }
+            }
+
+            .monthly {
+              display: block;
+              font-size: 2rem;
+              font-weight: bold;
+              text-align: center;
+              padding: 30px 0;
+
+              @include mq {
+                padding: vw(20) 0;
+              }
+
+              em {
+                font-size: 3rem;
+                color: #ff3636;
+                padding-left: .1em;
+              }
+            }
+
+            .recommend {
+              font-size: 1.6rem;
+              text-align: center;
+              color: #00b2b8;
+              font-weight: bold;
+              padding: em(10/16);
+              border: 1px solid #00b2b8;
+
+              @include mq {
+                font-size: 1.8rem;
+              }
+
+              & + .recommend {
+                margin-top: 10px;
+
+                @include mq {
+                  margin-top: vw(10);
+                }
+              }
+            }
+
+            .note {
+              display: block;
+              margin-top: 20px;
+
+              @include mq {
+                margin-top: vw(20);
+              }
+
+              em {
+                color: #ff3636;
+              }
             }
           }
         }
-      }
-      .planNote {
-        display: block;
-        font-size: 1.4rem;
-        text-align: center;
-        margin-top: 20px;
-      }
-      .tableBox {
-        margin-top: 50px;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 35px;
-        border-radius: 10px;
-        background: #fff;
-        table{
+
+        .planNote {
+          display: block;
+          font-size: 1.4rem;
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        .tableBox {
+          margin-top: 50px;
           width: 100%;
-          tr {
-            th {
+          box-sizing: border-box;
+          padding: 35px;
+          border-radius: 10px;
+          background: #fff;
+          box-shadow: 10px 10px 15px rgba(0, 161, 179, .3);
+
+          @include mq {
+            margin-top: vw(45);
+            padding: vw(30) vw(20);
+          }
+
+          table {
+            width: 100%;
+            box-sizing: border-box;
+
+            tr {
               font-size: 1.8rem;
               font-weight: bold;
-              color: #00b0b8;
-            }
-            +tr {
-              border-top: 1px dotted #00b0b8;
+
+              @include mq {
+                display: flex;
+                font-size: 1.7rem;
+                flex-direction: column;
+              }
+
+              th {
+                width: 270px;
+                box-sizing: border-box;
+                color: #00b0b8;
+                text-align: right;
+                padding-right: 30px;
+
+                @include mq {
+                  text-align: left;
+                  width: 100%;
+                  padding-right: 0;
+                }
+              }
+
+              td {
+                @include mq {
+                  width: 100%;
+                }
+
+                .price {
+                  text-decoration: line-through;
+
+                  &:after {
+                    content: "→";
+                    padding: 0 0.2em 0 0.3em;
+                  }
+                }
+
+                em {
+                  color: #ff3636;
+                }
+              }
+
+              &:first-of-type {
+
+                th,
+                td {
+                  padding-bottom: 1em;
+                  @include mq {
+                    padding-bottom: .75em;
+                  }
+                }
+                th {
+                  padding-bottom: .5em;
+                }
+              }
+
+              + tr {
+                border-top: 1px dotted #00b0b8;
+
+                th,
+                td {
+                  padding-top: 1em;
+                  padding-bottom: 1em;
+
+                }
+                th {
+                  @include mq {
+                    padding-bottom: .5em;
+                  }
+                }
+
+                td {
+                  @include mq {
+                    padding-top: 0;
+                    padding-bottom: .5em;
+                  }
+                }
+              }
+
+              &:last-of-type {
+
+                th,
+                td {
+                  padding-bottom: 0;
+                }
+
+                th {
+                  @include mq {
+                    padding-bottom: .5em;
+                  }
+                }
+              }
             }
           }
+        }
+
+        &.is-active {
+          display: block;
         }
       }
     }
