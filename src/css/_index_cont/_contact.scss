@@ -37,7 +37,7 @@ article:not(.contactZone) {
     }
 
   .u-inner {
-
+    max-width: 800px;
   }
 
   .u-ttlBox1{
@@ -113,7 +113,7 @@ article:not(.contactZone) {
     position: relative;
     background: #FFF;
     border-radius: 15px;
-    padding: 0px ;
+    padding: 20px ;
     box-sizing: border-box;
     box-shadow: 15px 20px 20px 0px rgba(0, 0, 0, .1);
     border: 2px solid #FFF;
@@ -133,10 +133,13 @@ article:not(.contactZone) {
   }
 
   .row {
-    border-bottom: 1px dotted #CCC;
-    padding: 20px;
+    //border-bottom: 1px dotted #CCC;
+    padding: 15px 10px;
+    @include mq{
+      padding: 15px 0;
+    }
     &:nth-child(even){
-      background-color: #EEE;
+      //background-color: #EEE;
     }
 
     ul{
