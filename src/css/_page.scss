@@ -1,0 +1,27 @@
+.pageStores {
+  
+  .photoZone {
+    padding-top: 20px;
+    .slick-slide {
+      margin: 0 10px;
+    }
+    .slick-dots li.slick-active {
+      background-color: $green;
+      border: $green;
+    }
+  }
+  .ttl{
+    text-align: center;
+    background: $grade;
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #FFF;
+    padding: 1em;
+  }
+  .ttl2{
+    font-size: 3.4rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}

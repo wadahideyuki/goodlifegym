@@ -5,19 +5,31 @@ html(lang="ja")
   head
     include /_include/_head.pug
 
-  body
+  body.pageStores
     .l-wrapper
       include /_include/_header.pug
-
-
+      h1.ttl  代々木店
       main.l-cont
         article.photoZone 
           ul 
-            li
+            li: img(src="./img/ph01.jpg")
+            li: img(src="./img/ph01.jpg")
+            li: img(src="./img/ph01.jpg")
+            li: img(src="./img/ph01.jpg")
+            li: img(src="./img/ph01.jpg")
+            li: img(src="./img/ph01.jpg")
+            li: img(src="./img/ph01.jpg")
 
 
-
-
+        article.featureZone 
+          h2  代々木店の特徴
+          ul 
+            li 
+              .img
+                +img("https://dummyimage.com/600x400/000/fff")
+              dl
+                dt aaa
+                dd aaa
 
         article.storesZone#access
           include /_index_cont/_stores.pug
