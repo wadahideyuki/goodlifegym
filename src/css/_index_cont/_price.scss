@@ -3,9 +3,142 @@
 /*--------------------------------------
  cont1
 ---------------------------------------*/
-article:not(.cont1Zone){
-//  display: none;
+article:not(.cont1Zone) {
+  //  display: none;
 }
-.cont1Zone{
-  
+
+.priceZone {
+  position: relative;
+  background: #cafeff;
+
+  .u-enTxt {
+    position: absolute;
+    right: 0px;
+    left: auto;
+    top: -3px;
+  }
+
+  .u-ttl1 {
+    color: #00b0b8;
+
+    & + p {
+      color: #00b0b8;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+  .planArea{
+    margin-top: 45px;
+    .tabName {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 48%;
+        font-size: 2.8rem;
+        font-weight: bold;
+        padding: em(16/28) 0;
+        text-align: center;
+        color: #00b2b8;
+        border-radius: 36px;
+        border: 2px solid #00b2b8;
+        &.is-active {
+          position: relative;
+          color: #fff;
+          border: none;
+          background: #00b2b8;
+          &:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            margin: 0 auto;
+            border-top: 10px solid #00b2b8;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+          }
+        }
+      }
+    }
+    .contWrap {
+      ul.planList {
+        display: flex;
+        justify-content: space-between;
+        li {
+          width: 32%;
+          box-sizing: border-box;
+          padding: 30px 20px;
+          background: #fff;
+          box-shadow: 10px 10px 15px rgba(0, 161, 179, .3);
+          h3 {
+            font-size: 2.4rem;
+            text-align: center;
+            color: #0099b0;
+            font-weight: bold;
+            padding-bottom: 1em;
+            border-bottom: 4px solid #0099b0;
+          }
+          .monthly {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px 0;
+            em {
+              font-size: 3rem;
+              color: #ff3636;
+              padding-left: .1em;
+            }
+          }
+          .recommend {
+            font-size: 1.6rem;
+            text-align: center;
+            color: #00b2b8;
+            font-weight: bold;
+            padding: em(10/16);
+            border: 1px solid #00b2b8;
+            &+.recommend {
+              margin-top: 10px;
+            }
+          }
+          .note {
+            display: block;
+            margin-top: 20px;
+            em {
+              color: #ff3636;
+            }
+          }
+        }
+      }
+      .planNote {
+        display: block;
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .tableBox {
+        margin-top: 50px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 35px;
+        border-radius: 10px;
+        background: #fff;
+        table{
+          width: 100%;
+          tr {
+            th {
+              font-size: 1.8rem;
+              font-weight: bold;
+              color: #00b0b8;
+            }
+            +tr {
+              border-top: 1px dotted #00b0b8;
+            }
+          }
+        }
+      }
+    }
+  }
 }
