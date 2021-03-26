@@ -90,7 +90,10 @@ $(".u-selectWrap select").change(function(){
     $(this).removeClass("ph");
   }
 });
-
+$(".faqZone dt").click(function(){
+  $(this).toggleClass("on");
+  $(this).next().slideToggle();
+})
 
 
 
