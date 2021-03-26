@@ -76,7 +76,7 @@ function clkScrl(btn, pos) {
     return false;
   });
 }
-clkScrl($("a.clkScrl"), 0);
+clkScrl($(".menu a"), 0);
 
 
 /*--------------------

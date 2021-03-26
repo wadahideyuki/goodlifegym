@@ -3,9 +3,61 @@
 /*--------------------------------------
  cont1
 ---------------------------------------*/
-article:not(.cont1Zone){
-//  display: none;
+article:not(.storesZone) {
+  //  display: none;
 }
-.cont1Zone{
-  
+.storesZone {
+  padding: 0px;
+  .stores {
+    display: flex;
+    @include mq{
+      display: block;
+    }
+    dl {
+      height: 540px;
+      width: 100%;
+      background-image: url($p + "store/bg_yoyogi.png");
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      line-height: 1.8em;
+      flex-direction: column;
+      text-align: center;
+      @include mq{
+        height: auto;
+        padding: 10vw 0;
+      }
+      &.nihonbashi {
+        background-image: url($p + "store/bg_nihonbashi.png");
+      }
+      &.asakusa {
+        background-image: url($p + "store/bg_asakusa.png");
+      }
+      dt {
+        font-weight: bold;
+        font-size: 3.4rem;
+        font-weight: bold;
+        position: relative;
+        margin-bottom: 16px;
+      }
+      dd {
+        .btn {
+          margin-top: 20px;
+          a {
+            display: block;
+            background-color: #fff;
+            text-align: center;
+            padding: 0.8em 2em;
+            font-weight: bold;
+            color: #222;
+            &:hover{
+              opacity: .7;
+            }
+          }
+        }
+      }
+    }
+  }
 }
