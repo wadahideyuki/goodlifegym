@@ -93,7 +93,10 @@ article:not(.cont1Zone) {
             border-right: 10px solid transparent;
 
             @include mq {
-              content: none;
+              bottom: vw(-10);
+              border-top: vw(10) solid #00b2b8;
+              border-left: vw(10) solid transparent;
+              border-right: vw(10) solid transparent;
             }
           }
         }
@@ -219,7 +222,7 @@ article:not(.cont1Zone) {
           margin-top: 50px;
           width: 100%;
           box-sizing: border-box;
-          padding: 35px;
+          padding: 35px 25px;
           border-radius: 10px;
           background: #fff;
           box-shadow: 10px 10px 15px rgba(0, 161, 179, .3);
@@ -236,7 +239,7 @@ article:not(.cont1Zone) {
 
             tr {
               font-size: 1.8rem;
-              font-weight: bold;
+              font-weight: 600;
 
               @include mq {
                 display: flex;
@@ -282,10 +285,12 @@ article:not(.cont1Zone) {
                 th,
                 td {
                   padding-bottom: 1em;
+
                   @include mq {
                     padding-bottom: .75em;
                   }
                 }
+
                 th {
                   padding-bottom: .5em;
                 }
@@ -300,6 +305,7 @@ article:not(.cont1Zone) {
                   padding-bottom: 1em;
 
                 }
+
                 th {
                   @include mq {
                     padding-bottom: .5em;
