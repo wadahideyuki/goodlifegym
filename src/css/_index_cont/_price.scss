@@ -69,8 +69,8 @@ article:not(.cont1Zone) {
         cursor: pointer;
 
         @include mq {
-          font-size: 2.4rem;
-          padding: em(12/24) 0;
+          font-size: 2.2rem;
+          padding: em(12/22) 0;
         }
 
         &.is-selected {
@@ -155,7 +155,7 @@ article:not(.cont1Zone) {
             .monthly {
               display: block;
               font-size: 2rem;
-              font-weight: bold;
+              font-weight: 600;
               text-align: center;
               padding: 30px 0;
 
@@ -194,6 +194,7 @@ article:not(.cont1Zone) {
             .note {
               display: block;
               margin-top: 20px;
+              font-weight: 600;
 
               @include mq {
                 margin-top: vw(20);
@@ -210,6 +211,7 @@ article:not(.cont1Zone) {
           display: block;
           font-size: 1.4rem;
           text-align: center;
+          font-weight: bold;
           margin-top: 20px;
         }
 
@@ -225,6 +227,7 @@ article:not(.cont1Zone) {
           @include mq {
             margin-top: vw(45);
             padding: vw(30) vw(20);
+            box-shadow: 5px 5px 8px rgba(0, 161, 179, .3);
           }
 
           table {
