@@ -33,10 +33,23 @@ article:not(.trainerZone) {
     .col{
       width: 48%;
       margin-bottom: 40px;
+      margin: 0 1% 40px 1%;
       color: #FFF;
       @include mq{
         width: 100%;
         margin-bottom: 8vw;
+        &.img{
+          margin-bottom: 3vw;
+        }
+      }
+      .ph{
+        position: relative;
+        .cov{
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          animation: fadeIn 10s infinite both;
+        }
       }
       .btn{
         display: flex;
@@ -45,6 +58,7 @@ article:not(.trainerZone) {
         text-align: center;
         padding: 1.2em;
         font-size: 1.8rem;
+        margin-top: 1em;
         font-weight: bold;
         justify-content: center;
         align-items: center;
@@ -64,7 +78,7 @@ article:not(.trainerZone) {
         }
       }
       img{
-        margin-bottom: 16px;
+        margin-bottom: 5px;
       }
       h3{
         font-size: 2rem;

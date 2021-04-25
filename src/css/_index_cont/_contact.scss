@@ -144,6 +144,9 @@ article:not(.contactZone) {
 
     ul{
       display: flex;
+      @include mq{
+        display: block;
+      }
       li{
         margin-right: 15px;
         label{

@@ -14,6 +14,10 @@ $(document).ready(function () {
     $('meta[name="viewport"]').attr("content", "width=1200px");
   }
 
+  $(".spBtn").click(function(){
+    $("nav").toggleClass("show")
+  })
+
   $(".ytCBox").colorbox({
     iframe: true,
     opacity: 0.5,
@@ -51,6 +55,17 @@ $(document).ready(function () {
       variableWidth: true,
       slidesToShow: 1,
       slidesToScroll: 1,
+      responsive: [
+        {
+          variableWidth: false,
+          breakpoint: 769,
+          settings: {
+            arrows: false,
+            adaptiveHeight: true,
+            dots: true
+          }
+        }
+      ]
     });
   }
 

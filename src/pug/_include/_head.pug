@@ -1,7 +1,7 @@
 meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
 meta(http-equiv='content-script-type', content='text/javascript')
 meta(http-equiv='content-script-type', content='text/css')
-meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no')
+meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
 title #{title}
 meta(name='description', content=desc)
 meta(name='keywords', content='')
@@ -14,7 +14,10 @@ meta(name='keywords', content='')
 +og("image", ogImgPath)
 // /OGs
 +css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
-+cssCommon("style.css")
+script(src="https://sdk.form.run/js/v2/formrun.js")
+script(src="https://www.google.com/recaptcha/api.js")
+
++cssCommon("style.css?20210421")
 +jsCommon("jquery-1.11.1.min.js")
 +jsCommon("slick.min.js")
 +jsCommon("jquery.colorbox-min.js")

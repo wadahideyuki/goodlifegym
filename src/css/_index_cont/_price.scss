@@ -33,7 +33,7 @@ article:not(.cont1Zone) {
       margin-bottom: 1em;
 
       @include mq {
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
       }
     }
 
@@ -110,29 +110,144 @@ article:not(.cont1Zone) {
         margin-top: vw(25);
       }
 
+      .tableBox {
+        margin-top: 50px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 35px 25px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 10px 10px 15px rgba(0, 161, 179, 0.3);
+
+        @include mq {
+          margin-top: vw(45);
+          padding: vw(30) vw(20);
+          box-shadow: 5px 5px 8px rgba(0, 161, 179, 0.3);
+        }
+
+        table {
+          width: 100%;
+          box-sizing: border-box;
+
+          tr {
+            font-size: 1.8rem;
+            font-weight: 600;
+
+            @include mq {
+              display: flex;
+              font-size: 1.7rem;
+              flex-direction: column;
+            }
+
+            th {
+              width: 270px;
+              box-sizing: border-box;
+              color: #00b0b8;
+              text-align: right;
+              padding-right: 30px;
+
+              @include mq {
+                text-align: left;
+                width: 100%;
+                padding-right: 0;
+              }
+            }
+
+            td {
+              @include mq {
+                width: 100%;
+              }
+              small{
+                font-weight: normal;
+                font-size: 80%;
+              }
+
+              .price {
+
+              }
+
+              em {
+                color: #ff3636;
+              }
+            }
+
+            &:first-of-type {
+              th,
+              td {
+                padding-bottom: 1em;
+
+                @include mq {
+                  padding-bottom: 0.75em;
+                }
+              }
+
+              th {
+                padding-bottom: 0.5em;
+              }
+            }
+
+            + tr {
+              border-top: 1px dotted #00b0b8;
+
+              th,
+              td {
+                padding-top: 1em;
+                padding-bottom: 1em;
+              }
+
+              th {
+                @include mq {
+                  padding-bottom: 0.5em;
+                }
+              }
+
+              td {
+                @include mq {
+                  padding-top: 0;
+                  padding-bottom: 0.5em;
+                }
+              }
+            }
+
+            &:last-of-type {
+              th,
+              td {
+                padding-bottom: 0;
+              }
+
+              th {
+                @include mq {
+                  padding-bottom: 0.5em;
+                }
+              }
+            }
+          }
+        }
+      }
       .contWrap {
         display: none;
 
         ul.planList {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
 
           @include mq {
             flex-direction: column;
           }
 
           li {
-            width: 32%;
+            width: 100%;
             box-sizing: border-box;
             border-radius: 10px;
             padding: 30px 20px;
+            margin: 0 1%;
             background: #fff;
-            box-shadow: 10px 10px 15px rgba(0, 161, 179, .3);
+            box-shadow: 10px 10px 15px rgba(0, 161, 179, 0.3);
 
             @include mq {
               width: 100%;
               padding: vw(30) vw(20);
-              box-shadow: 5px 5px 8px rgba(0, 161, 179, .3);
+              box-shadow: 5px 5px 8px rgba(0, 161, 179, 0.3);
             }
 
             & + li {
@@ -150,7 +265,7 @@ article:not(.cont1Zone) {
               border-bottom: 4px solid #0099b0;
 
               @include mq {
-                padding-bottom: .5em;
+                padding-bottom: 0.5em;
                 border-bottom: 2px solid #0099b0;
               }
             }
@@ -169,7 +284,7 @@ article:not(.cont1Zone) {
               em {
                 font-size: 3rem;
                 color: #ff3636;
-                padding-left: .1em;
+                padding-left: 0.1em;
               }
             }
 
@@ -216,125 +331,6 @@ article:not(.cont1Zone) {
           text-align: center;
           font-weight: bold;
           margin-top: 20px;
-        }
-
-        .tableBox {
-          margin-top: 50px;
-          width: 100%;
-          box-sizing: border-box;
-          padding: 35px 25px;
-          border-radius: 10px;
-          background: #fff;
-          box-shadow: 10px 10px 15px rgba(0, 161, 179, .3);
-
-          @include mq {
-            margin-top: vw(45);
-            padding: vw(30) vw(20);
-            box-shadow: 5px 5px 8px rgba(0, 161, 179, .3);
-          }
-
-          table {
-            width: 100%;
-            box-sizing: border-box;
-
-            tr {
-              font-size: 1.8rem;
-              font-weight: 600;
-
-              @include mq {
-                display: flex;
-                font-size: 1.7rem;
-                flex-direction: column;
-              }
-
-              th {
-                width: 270px;
-                box-sizing: border-box;
-                color: #00b0b8;
-                text-align: right;
-                padding-right: 30px;
-
-                @include mq {
-                  text-align: left;
-                  width: 100%;
-                  padding-right: 0;
-                }
-              }
-
-              td {
-                @include mq {
-                  width: 100%;
-                }
-
-                .price {
-                  text-decoration: line-through;
-
-                  &:after {
-                    content: "→";
-                    padding: 0 0.2em 0 0.3em;
-                  }
-                }
-
-                em {
-                  color: #ff3636;
-                }
-              }
-
-              &:first-of-type {
-
-                th,
-                td {
-                  padding-bottom: 1em;
-
-                  @include mq {
-                    padding-bottom: .75em;
-                  }
-                }
-
-                th {
-                  padding-bottom: .5em;
-                }
-              }
-
-              + tr {
-                border-top: 1px dotted #00b0b8;
-
-                th,
-                td {
-                  padding-top: 1em;
-                  padding-bottom: 1em;
-
-                }
-
-                th {
-                  @include mq {
-                    padding-bottom: .5em;
-                  }
-                }
-
-                td {
-                  @include mq {
-                    padding-top: 0;
-                    padding-bottom: .5em;
-                  }
-                }
-              }
-
-              &:last-of-type {
-
-                th,
-                td {
-                  padding-bottom: 0;
-                }
-
-                th {
-                  @include mq {
-                    padding-bottom: .5em;
-                  }
-                }
-              }
-            }
-          }
         }
 
         &.is-active {

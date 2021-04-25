@@ -1,0 +1,107 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-8MLD0Z0N3G');
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(http-equiv='content-script-type', content='text/javascript')
+    meta(http-equiv='content-script-type', content='text/css')
+    meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
+    title 浅草店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    meta(name='description', content=desc)
+    meta(name='keywords', content='')
+    // OGs
+    +og("site_name", siteTitle)
+    +og("title", title)
+    +og("description", desc)
+    +og("type", (layer == "top" ? "website" : "article"))
+    +og("url", (layer == "top" ? siteUrl : siteUrl + pageUrl))
+    +og("image", ogImgPath)
+    // /OGs
+    +css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
+    script(src="https://sdk.form.run/js/v2/formrun.js")
+    script(src="https://www.google.com/recaptcha/api.js")
+    +cssCommon("style.css")
+    +jsCommon("jquery-1.11.1.min.js")
+    +jsCommon("slick.min.js")
+    +jsCommon("jquery.colorbox-min.js")
+    +jsCommon("common.js")
+
+  body.pageStores
+    .l-wrapper
+      include /_include/_header.pug
+      h1.ttl  浅草店
+      .info
+        dl
+          dt  ◎浅草店限定
+          dd  
+            ul
+              li  初回体験無料キャンペーン実施中！
+      main.l-cont
+        article.photoZone 
+          ul 
+            li: img(src="./img/ph01.jpg?2021")
+            li: img(src="./img/ph02.jpg?2021")
+            li: img(src="./img/ph03.jpg?2021")
+            li: img(src="./img/ph04.jpg?2021")
+
+
+        //article.featureZone 
+          h2.ttl2  浅草店の特徴
+          ul 
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+
+        article.outlineZone 
+          h2.ttl2  ご利用案内
+          .in
+            dl
+              dt  営業時間
+              dd  平日9:00～22:00#[br]土日祝10:00～17:00　不定休
+            dl
+              dt  住所
+              dd  １１１－００３２#[br]東京都台東区浅草６－４７－５​永井ビル1階
+            dl
+              dt  アクセス
+              dd  ​浅草駅　徒歩１２分#[br]#[br]浅草・浅草橋・馬喰町 各駅よりバス#[br]今戸バス停 徒歩2分#[br]#[br]上野駅よりバス#[br]浅草五丁目バス停 徒歩4分#[br]#[br]錦糸町・押上 各駅よりバス#[br]二天門バス停 徒歩6分
+            //img(src="./img/sche.png")
+
+
+        .mapZone
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.2395025860246!2d139.79799081525974!3d35.72032788018522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188f3aa35f0bf3%3A0x27e19c19429fac7a!2zR09PRExJRkUgR1lNIOa1heiNiQ!5e0!3m2!1sja!2sjp!4v1617159548147!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy")
+
+        article.storesZone#access
+          include /_index_cont/_stores.pug
+
+
+
+        article.contactZone
+          include /_index_cont/_contact.pug
+
+
+
+
+
+      include /_include/_footer.pug
+

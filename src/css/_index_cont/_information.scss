@@ -38,21 +38,33 @@ article:not(.informationZone){
       dd{
           padding-left: 2em;
           border-left: 1px solid #1389c1;
-          font-size: 2.4rem;
-          font-weight: bold;
+          font-size: 1.8rem;
+          font-weight: normal;
+          line-height: 1.8;
+          .box{
+              border-top: 1px dotted #CCC;
+              padding-top: 1em;
+              margin-top: 1em;
+          }
           @include mq{
               padding:.5em 0 0 0;
               margin-top: .5em;
               border-left: 0px;
               border-top: 1px solid #1389c1;
-              font-size: 2rem;
-              br{
-                  display: none;
-              }
+              font-size: 1.5rem;
 
+          }
+          strong{
+            background:linear-gradient(transparent 75%, #fff799 75%);
+            font-weight:bold; 
+            font-size: 2.2rem;
+            @include mq{
+                font-size: 1.8rem;
+            }
           }
           em{
               color: #ff2d55;
+              font-weight: bold;
           }
       }
   }

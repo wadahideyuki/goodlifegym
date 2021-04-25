@@ -1,4 +1,4 @@
-.u-enTxt CONTACT
+.u-enTxt#contact CONTACT
 .u-inner
   +ttl1("お問い合わせ")
   p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]LINEメッセージもしくはメールフォームにてお問合せください。
@@ -7,7 +7,7 @@
 
     // class, action, methodを変更しないでください
   .formBox
-    form.formrun(action="mail.php" method="post")
+    form.formrun(action="https://form.run/api/v1/r/74etx5odnmeb53u6zr9c6b4v" method="post")
       // ↓自由に要素を追加・編集することができます
       .row
         label お名前 #[span.must 必須]
@@ -15,6 +15,21 @@
       .row
         label メールアドレス #[span.must 必須]
         input(name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email"  required)
+      .row
+        label ご希望の店舗 #[span.must 必須]
+        ul
+          li 
+            label 
+              input(name="ご希望の店舗" type="radio" value="代々木店" )
+              | 代々木店 
+          li 
+            label 
+              input(name="ご希望の店舗" type="radio" value="東日本橋店")
+              | 東日本橋店
+          li  
+            label 
+              input(name="ご希望の店舗" type="radio" value="浅草店")
+              | 浅草店
       .row
         label ご希望のプラン #[span.must 必須]
         ul
@@ -31,15 +46,45 @@
               input(name="ご希望のプラン" type="checkbox" value="お問い合わせ")
               | お問い合わせ
       .row
-        label ご希望の⽇時 #[span.must 必須]
-        input(name="ご希望の⽇時" type="datetime-local"  required )
+        label どちらにご興味がございますか #[span.must 必須]
+        ul
+          li 
+            label 
+              input(name="どちらにご興味がございますか" type="checkbox" value="マンツーマンパーソナル" )
+              | マンツーマンパーソナル 
+          li 
+            label 
+              input(name="どちらにご興味がございますか" type="checkbox" value="セミパーソナル")
+              | セミパーソナル
+          li  
+            label 
+              input(name="どちらにご興味がございますか" type="checkbox" value="分からないので話を聞いてみたい")
+              | 分からないので話を聞いてみたい
+      .row
+        label 当ジムを知ったきっかけ
+        select(name="当ジムを知ったきっかけ")
+          option(value="")  選択してください
+          option(value="インターネット検索")  インターネット検索
+          option(value="GOOGLEマップ検索")  GOOGLEマップ検索
+          option(value="SNS")  SNS
+          option(value="店頭看板、チラシ")  店頭看板、チラシ
+          option(value="知人からの紹介")  知人からの紹介
+
+      .row
+        label ご希望の⽇時（第1希望） #[span.must 必須]
+        input(name="ご希望の⽇時（第1希望）" type="datetime-local"  required )
+      .row
+        label ご希望の⽇時（第2希望） #[span.must 必須]
+        input(name="ご希望の⽇時（第2希望）" type="datetime-local"  required )
+      .row
+        label ご希望の⽇時（第3希望） #[span.must 必須]
+        input(name="ご希望の⽇時（第3希望）" type="datetime-local"  required )
       .row
         label 電話番号 #[span.must 必須]
         input(name="電話番号" type="text"  required  placeholder="0123456789")
       .row
-        label お問い合わせ内容 #[span.must 必須]
-        textarea(name="お問い合わせ内容"  required placeholder="お問い合わせ内容を入力")
-        
+        label お問い合わせ内容 
+        textarea(name="お問い合わせ内容"   placeholder="お問い合わせ内容を入力")
 
       // ボット投稿をブロックするためのタグ
       ._formrun_gotcha
@@ -49,8 +94,8 @@
         input#_formrun_gotcha(type="text" name="_formrun_gotcha" tabindex="-1")
       
       .rowRcap
-        .g-recaptcha(data-sitekey="6LdN6ssZAAAAAOOEOmHl4XnLCRx9-rTlpD3J80IX")
-      button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." disabled) 送信
+        .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
+      button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." ) 送信
   
   .companyBox
     h3 運営会社

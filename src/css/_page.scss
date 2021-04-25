@@ -1,9 +1,46 @@
 .pageStores {
-  
+  .info{
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3em 0;
+    width: 90%;
+    @include mq{
+      padding: 2em 0;
+    }
+    dl{
+      padding: 1em;
+      background-color:rgb(255, 231, 180);
+      border: 2px solid red;
+    }
+    dt{
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: red;
+    }
+    dd{
+      font-size: 2rem;
+      li{
+        margin-left: 1em;
+        padding:.5em 0 0 0;
+      }
+    }
+    @include mq{
+      text-align: left;
+    }
+  }
   .photoZone {
     padding-top: 20px;
     .slick-slide {
       margin: 0 10px;
+      @include mq{
+        width: 90vw;
+        margin: 0 1vw;
+      }
+    }
+    .slick-dots{
+      position: static;
+      margin-top: 15px;
     }
     .slick-dots li.slick-active {
       background-color: $green;
@@ -18,10 +55,94 @@
     font-weight: bold;
     color: #FFF;
     padding: 1em;
+    @include mq{
+      font-size: 3rem;
+
+    }
   }
   .ttl2{
     font-size: 3.4rem;
     font-weight: bold;
+    margin-bottom: 1.5em;
     text-align: center;
+    @include mq{
+      font-size: 3rem;
+      margin-bottom: 1em;
+    }
+  }
+  .featureZone{
+    background: $grade;
+    color: #FFF;
+    padding-top: 80px;
+    @include mq{
+      padding-top: 10vw;
+    }
+
+    ul{
+      max-width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      justify-content: space-between;
+      li{
+        width: 48%;
+        margin-bottom: 3em;
+        @include mq{
+          width: 90%;
+          margin:0 auto 10vw auto;
+        }
+        p{
+          margin-top: 1em;
+        }
+      }
+    }
+
+  }
+  .outlineZone{
+    padding-top: 0px;
+    .in{
+      max-width: 720px;
+      width: 90%;
+      margin: 0 auto;
+      dl{
+        display: flex;
+        padding: 1em 0;
+        border-top: 1px solid #0094af;
+        &:last-of-type{
+          border-bottom:1px solid #0094af;
+        }
+        @include mq{
+          display: block;
+        }
+        dt{
+          width: 30%;
+          color: #0094af;
+          font-weight: bold;
+          @include mq{
+            width: 100%;
+          }
+        }
+        dd{
+          width: 70%;
+          @include mq{
+            width: 100%;
+          }
+        }
+      }
+    }
+    @include mq{
+      padding-top: 10vw;
+    }
+  }
+  .mapZone{
+    iframe{
+    }
+    iframe{
+      width: 100%;
+      height: 550px;
+      @include mq{
+        height: 80vw;
+      }
+    }
   }
 }

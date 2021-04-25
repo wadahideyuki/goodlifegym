@@ -1,12 +1,17 @@
 header.l-header 
   .logo 
-    +img("logo_tenpo.png")
+    a(href="/")
+      +img("logo_tenpo.png")
+  .spBtn.sp
   nav 
     ul.menu
-      li: a(href="/") HOME
-      li: a(href="#about") GOODLIFE GYMについて
-      li: a(href="#price") 料金のご案内
-      li: a(href="#access") 店舗案内/アクセス
+      //li: a(href="/") HOME
+      li: a(href="/#about") GOODLIFE GYMについて
+      li: a(href="/#price") 料金のご案内
+      li: a(href="#contact") お問い合わせ
+      li: a(href="/yoyogi") 代々木店
+      li: a(href="/higashinihonbashi") 東日本橋店
+      li: a(href="/asakusa") 浅草店
     ul.sns
       li: a(href="https://www.instagram.com/goodlife_gym_personal/" target="_blank")
         +img("instagram.svg")

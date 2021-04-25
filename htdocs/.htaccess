@@ -1,0 +1,16 @@
+
+
+# BEGIN-HTACCESS-236742
+# このBEGIN-ENDはヘテムルコントロールパネルから挿入されました。編集しないようにお願いします。
+# AuthUserFile /home/users/0/goodlifegym/web/goodlifegym.jp/.htpasswd
+# AuthGroupFile /dev/null
+# AuthName "IDPASS"
+# AuthType Basic
+# require valid-user
+# END-HTACCESS-236742
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+</IfModule>

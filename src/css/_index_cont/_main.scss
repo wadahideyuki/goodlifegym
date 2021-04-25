@@ -15,6 +15,18 @@ article:not(.mainZone) {
   padding: 0px;
   min-height: 650px;
   max-height: 800px;
+  &:before{
+    content: "";
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    right: 0px;
+    display: block;
+    background:linear-gradient(to bottom,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 100%) ;
+    @include mq{
+      display: none;
+    }
+  }
   @include mq{
     background-image: url($p + "main/main_sp.jpg");
   }
@@ -56,7 +68,7 @@ article:not(.mainZone) {
           justify-content: center;
           align-items: center;
           padding-left: 0px;
-          font-size: .8rem;
+          font-size: 1.2rem;
           img{
             margin-top: 3vw;
           }
@@ -67,7 +79,7 @@ article:not(.mainZone) {
           @include mq{
             margin-top: 0px;
             margin-right: 5vw;
-            width: vw(190);
+            width: 26.5vw;
           }
         }
       }

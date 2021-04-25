@@ -60,6 +60,8 @@ input[type="number"] {
 }
 select {
   box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  padding: .5em;
   &::-ms-expand {
     //IEで矢印を消す
     display: none;
@@ -83,7 +85,28 @@ section {
     }
   }
 }
-
+.thanksBox{
+  font-size: 2rem;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  a{
+    display: inline-block;
+    padding: .5em 2em;
+    background: $grade;
+    color: #FFF;
+    font-size: 2rem;
+    margin-top: 4em;
+    border-radius: 50px;
+  }
+}
+.rowRcap{
+  display: flex;
+  justify-content: center;
+}
 /*--------------------------------------
  パーツ
 ---------------------------------------*/
