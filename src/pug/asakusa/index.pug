@@ -47,15 +47,19 @@ html(lang="ja")
       main.l-cont
         article.photoZone 
           ul 
-            li: img(src="./img/ph01.jpg?2021")
+            li: img(src="./img/ph01.jpg?202104")
             li: img(src="./img/ph02.jpg?2021")
-            li: img(src="./img/ph03.jpg?2021")
-            li: img(src="./img/ph04.jpg?2021")
+            li: img(src="./img/ph03.jpg?202104")
+            li: img(src="./img/ph04.jpg?202104")
 
 
-        //article.featureZone 
-          h2.ttl2  浅草店の特徴
-          ul 
+        article.featureZone 
+          h2.ttl2  パノラマ写真
+          .pano 
+            iframe(src='https://www.asreet.com/tokyo/goodlifegym-asakusa/panorama' width='100%' height='600')
+
+
+          //ul 
             li 
               .img
                 img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
@@ -73,18 +77,25 @@ html(lang="ja")
                 img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
               p 特徴が入るテキストテキストテキストテキスト
 
-        article.outlineZone 
+        article.outlineZone
+          
           h2.ttl2  ご利用案内
           .in
             dl
               dt  営業時間
-              dd  平日9:00～22:00#[br]土日祝10:00～17:00　不定休
+              dd  平日9:00～22:00#[br]土日祝10:00～17:00
+            dl
+              dt  定休日
+              dd  第4土曜・第4日曜
             dl
               dt  住所
               dd  １１１－００３２#[br]東京都台東区浅草６－４７－５​永井ビル1階
             dl
               dt  アクセス
               dd  ​浅草駅　徒歩１２分#[br]#[br]浅草・浅草橋・馬喰町 各駅よりバス#[br]今戸バス停 徒歩2分#[br]#[br]上野駅よりバス#[br]浅草五丁目バス停 徒歩4分#[br]#[br]錦糸町・押上 各駅よりバス#[br]二天門バス停 徒歩6分
+            dl
+              dt  設備・サービス
+              dd  ​更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
             //img(src="./img/sche.png")
 
 
