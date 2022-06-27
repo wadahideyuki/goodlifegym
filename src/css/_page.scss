@@ -1,41 +1,231 @@
+.recruitMain {
+  background-image: url("/recruit/img/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 80px;
+  @include mq {
+    background-size: auto 125%;
+    background-attachment: scroll;
+    background-position: bottom;
+  }
+  &.b0 {
+    margin-bottom: 0px;
+  }
+  .btn {
+    margin-top: 30px;
+    @include mq {
+      margin-top: 0px;
+    }
+  }
+  .img {
+    margin-bottom: 30px;
+    display: block;
+    img {
+      box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.7);
+      width: 90%;
+      max-width: 800px;
+    }
+  }
+  .btn a {
+    display: flex;
+    background-color: #fff;
+    color: #006fa4;
+    text-align: center;
+    padding: 1.2em;
+    font-size: 2.4rem;
+    margin-top: 1em;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    @include mq {
+      margin-top: 0px;
+      font-size: 2rem;
+    }
+    &:hover {
+      filter: brightness(1.2);
+    }
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 0.5em;
+      height: 0.5em;
+      border-top: 2px solid #006fa4;
+      border-right: 2px solid #006fa4;
+      transform: rotate(45deg);
+      margin-left: 10px;
+    }
+  }
+  @include mq {
+    margin-bottom: 10vw;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    @include mq {
+      text-align: center;
+    }
+    span {
+      display: inline-block;
+      background-color: #ffea2a;
+      color: #00afb7;
+      font-size: 2.8rem;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+      @include mq {
+        font-size: 2rem;
+      }
+    }
+  }
+  p {
+    line-height: 1.8em;
+    @include mq {
+      padding: 0 5vw;
+      font-size: 1.6rem;
+      text-align: left;
+      br {
+        display: none;
+      }
+    }
+    & + p {
+      margin-top: 0.5em;
+    }
+  }
+}
 .pageStores {
-  .pano{
+  .voiceBtn {
+    text-align: center;
+    margin-top: 30px;
+    a {
+      display: inline-block;
+      border: 1px solid #0094af;
+      border-radius: 50px;
+      padding: 1em;
+      width: 90%;
+      margin: 0 auto;
+      max-width: 300px;
+      color: #0094af;
+    }
+  }
+  .voice {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+      margin: 1%;
+      @include mq {
+        width: 46%;
+      }
+    }
+  }
+  .pano {
     width: 95%;
     max-width: 1200px;
-    margin:  0 auto;
-    iframe{
-      @include mq{
+    margin: 0 auto;
+    iframe {
+      @include mq {
         height: 100vw;
       }
     }
   }
-  .info{
+  .info {
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
     padding: 3em 0;
     width: 90%;
-    @include mq{
+    @include mq {
       padding: 2em 0;
     }
-    dl{
-      padding: 1em;
-      background-color:rgb(255, 231, 180);
-      border: 2px solid red;
+    dl {
+      border-radius: 15px;
+      padding: 1.5em;
+      background-color: rgb(255, 231, 180);
+      @include mq {
+        padding: 1em;
+        border-radius: 5px;
+      }
     }
-    dt{
+    dt {
       font-size: 2.4rem;
       font-weight: bold;
       color: red;
-    }
-    dd{
-      font-size: 2rem;
-      li{
-        margin-left: 1em;
-        padding:.5em 0 0 0;
+      border-bottom: 2px solid red;
+      padding-bottom: 0.5em;
+      @include mq {
+        font-size: 2rem;
       }
     }
-    @include mq{
+    .col2box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .cols {
+        align-items: center;
+
+        width: 48%;
+        margin: 1%;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        @include mq {
+          width: 100%;
+          padding: 0.6em;
+          border-radius: 5px;
+        }
+        b {
+          display: block;
+          background-color: #eee;
+          border-radius: 5px;
+          text-align: center;
+          padding: 0.5em;
+          margin-bottom: 0.8em;
+        }
+        .h2 {
+          padding-top: 2em;
+          display: block;
+          @include mq {
+            padding-top: 0px;
+          }
+        }
+      }
+    }
+    dd {
+      font-size: 1.8rem;
+      .note {
+        font-size: 1.2rem;
+      }
+      li {
+        margin-left: 1em;
+        padding: 1em 0 0 0;
+        font-size: 2rem;
+
+        strong {
+          font-size: 2.4rem;
+          font-weight: bold;
+          display: block;
+          margin-bottom: 0.3em;
+          @include mq {
+            font-size: 1.8rem;
+          }
+        }
+        @include mq {
+          margin-left: 0px;
+          font-size: 1.7rem;
+        }
+        em {
+          color: red;
+          font-weight: bold;
+        }
+        p {
+          padding-top: 1em;
+        }
+      }
+    }
+    @include mq {
       text-align: left;
     }
   }
@@ -43,12 +233,12 @@
     padding-top: 20px;
     .slick-slide {
       margin: 0 10px;
-      @include mq{
+      @include mq {
         width: 90vw;
         margin: 0 1vw;
       }
     }
-    .slick-dots{
+    .slick-dots {
       position: static;
       margin-top: 15px;
     }
@@ -57,103 +247,447 @@
       border: $green;
     }
   }
-  .ttl{
+  .ttl {
     text-align: center;
     background: $grade;
     text-align: center;
     font-size: 4.5rem;
     font-weight: bold;
-    color: #FFF;
+    color: #fff;
     padding: 1em;
-    @include mq{
+    .sub{
+      font-size: 80%;
+    }
+    @include mq {
       font-size: 3rem;
-
     }
   }
-  .ttl2{
+  .ttl2 {
     font-size: 3.4rem;
     font-weight: bold;
     margin-bottom: 1.5em;
     text-align: center;
-    @include mq{
+    .sub {
+      display: block;
+      font-size: 80%;
+    }
+    @include mq {
       font-size: 3rem;
       margin-bottom: 1em;
     }
   }
-  .featureZone{
+  .lead {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    & + .lead {
+      margin-top: 1em;
+      strong {
+        font-weight: bold;
+        color: rgb(252, 255, 72);
+      }
+    }
+  }
+  .featureZone {
     background: $grade;
-    color: #FFF;
+    color: #fff;
     padding-top: 80px;
     margin-bottom: 80px;
-    @include mq{
+    @include mq {
       margin-bottom: 0px;
       padding-top: 10vw;
     }
 
-    ul{
+    ul {
       max-width: 1000px;
       display: flex;
       flex-wrap: wrap;
       margin: 0 auto;
       justify-content: space-between;
-      li{
+      li {
         width: 48%;
         margin-bottom: 3em;
-        @include mq{
+        @include mq {
           width: 90%;
-          margin:0 auto 10vw auto;
+          margin: 0 auto 10vw auto;
         }
-        p{
+        p {
           margin-top: 1em;
         }
       }
     }
-
   }
-  .outlineZone{
+  .serviceBox {
+    background-color: #fff;
+    padding: 1.5em;
+    text-align: left;
+    border-radius: 15px;
+    @include mq {
+      padding: 1em;
+    }
+    li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.8rem;
+      @include mq {
+        display: block;
+      }
+      & + li {
+        margin-top: 10px;
+        padding-top: 15px;
+        border-top: 1px dotted #0094af;
+        @include mq {
+          border: 0px;
+          padding-bottom: 0px;
+        }
+      }
+      &:last-of-type {
+        padding-bottom: 0px;
+      }
+      span {
+        background-color: #ffd820;
+        color: #0095b0;
+        display: inline-block;
+        width: 120px;
+        padding: 0.2em 0.5em;
+        font-weight: bold;
+        text-align: center;
+        flex-shrink: 0;
+        margin-right: 15px;
+        @include mq {
+          width: auto;
+          margin-bottom: 10px;
+          display: block;
+          margin-right: 0px;
+        }
+      }
+      p {
+        font-weight: bold;
+        color: #0094af;
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .recomBox {
+    justify-content: space-between;
+    display: flex;
+    @include mq {
+      display: block;
+    }
+    li {
+      width: 31.5%;
+      box-sizing: border-box;
+      background-color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      @include mq {
+        width: 100%;
+        margin-top: 15px;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        color: #0094af;
+        padding: 20px 10px;
+        span {
+          display: block;
+          font-weight: normal;
+          font-size: 1.4rem;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .specialPrice {
+    font-size: 1.8rem;
+    justify-content: space-between;
+    color: #222;
+    width: 90%;
+    margin: 2em auto 0 auto;
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    @include mq {
+      display: block;
+      padding: 1em;
+    }
+    dl {
+      display: flex;
+      border-bottom: 1px dotted #0094af;
+      padding: 0 0 1em 0;
+      margin-bottom: 1em;
+      align-items: center;
+      @include mq {
+        display: block;
+      }
+      &:last-of-type {
+        padding-bottom: 0px;
+        border: 0px;
+        margin-bottom: 0px;
+      }
+      dt {
+        font-weight: bold;
+        width: 26%;
+        text-align: left;
+        color: #0094af;
+        @include mq {
+          width: 100%;
+        }
+      }
+      dd {
+        text-align: left;
+        span {
+          font-weight: bold;
+          font-size: 120%;
+        }
+        em {
+          color: rgba(250, 27, 27, 0.911);
+          font-weight: bold;
+          font-size: 120%;
+          @include mq {
+            font-size: 100%;
+          }
+        }
+      }
+    }
+  }
+  .daihyouBox {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 1000px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include mq {
+      display: block;
+      padding: 5vw;
+    }
+    .box {
+      width: 100%;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      h4 {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.8rem;
+        padding-bottom: 0.5em;
+      }
+    }
+    .img {
+      width: 50%;
+      box-sizing: border-box;
+      @include mq {
+        width: 100%;
+      }
+    }
+    .txt2 {
+      text-align: left;
+      h4 {
+        font-weight: bold;
+        font-size: 2.4rem;
+        padding-bottom: 10px;
+        span {
+          display: block;
+          line-height: 1.4;
+          font-size: 80%;
+        }
+      }
+      @include mq {
+        padding-top: 3vw;
+        width: auto;
+      }
+      p {
+        & + p {
+          margin-top: 1em;
+        }
+      }
+    }
+    .txt {
+      width: 46%;
+      box-sizing: border-box;
+      text-align: left;
+      .btn {
+        padding-top: 15px;
+        a {
+          display: block;
+          background: #fff;
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          padding: 0.8em 0;
+          margin-bottom: 15px;
+          color: #0094af;
+          &:hover {
+            filter: brightness(1.1);
+          }
+        }
+      }
+      h4 {
+        font-weight: bold;
+        font-size: 2.4rem;
+        padding-bottom: 10px;
+        span {
+          display: block;
+          line-height: 1.4;
+          font-size: 80%;
+        }
+      }
+      @include mq {
+        padding-top: 3vw;
+        width: auto;
+      }
+    }
+    p.con {
+      text-align: left;
+      margin-top: 1em;
+      & + .img2 {
+        margin-top: 2em;
+      }
+    }
+  }
+  .specialZone {
+    background: $grade;
+    color: #fff;
+    padding-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    @include mq {
+      margin-bottom: 0px;
+      padding-top: 10vw;
+    }
+    h3 {
+      margin-top: 2em;
+      margin-bottom: 1em;
+      display: inline-block;
+      border-bottom: 1px solid #fff;
+      font-size: 2.4rem;
+      font-weight: bold;
+      padding: 0.2em 0.5em;
+      @include mq {
+        font-size: 2rem;
+      }
+    }
+
+    ul {
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1000px;
+      box-sizing: border-box;
+    }
+  }
+  .outlineZone {
     padding-top: 0px;
-    .in{
+    .in {
       max-width: 720px;
       width: 90%;
       margin: 0 auto;
-      dl{
+      dl {
         display: flex;
         padding: 1em 0;
         border-top: 1px solid #0094af;
-        &:last-of-type{
-          border-bottom:1px solid #0094af;
+        &:last-of-type {
+          border-bottom: 1px solid #0094af;
         }
-        @include mq{
+        @include mq {
           display: block;
         }
-        dt{
+        dt {
           width: 30%;
           color: #0094af;
           font-weight: bold;
-          @include mq{
+          @include mq {
             width: 100%;
           }
         }
-        dd{
+        dd {
           width: 70%;
-          @include mq{
+          @include mq {
             width: 100%;
           }
         }
       }
     }
-    @include mq{
+    @include mq {
       padding-top: 10vw;
     }
   }
-  .mapZone{
-    iframe{
+  .mapZone {
+    iframe {
     }
-    iframe{
+    iframe {
       width: 100%;
       height: 550px;
-      @include mq{
+      @include mq {
         height: 80vw;
+      }
+    }
+  }
+}
+
+.mediaList {
+  max-width: 800px;
+  margin-bottom: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  @include mq{
+    padding-top: vw(40);
+    padding-bottom: vw(80);
+  }
+  .lead{
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .list {
+    font-size: 1.8rem;
+    padding-top: 40px;
+    color: #000 ;
+    @include mq{
+      padding-top: vw(40);
+    }
+    li {
+      padding: 1em 0;
+      border-top: 1px dotted #006fa4 ;
+      display: flex;
+      .day{
+        margin-right: 1em;
+      }
+      &:last-of-type{
+        border-bottom: 1px dotted #006fa4 ;
+      }
+      a{
+        color: #006fa4;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+        @include mq{
+          display: block;
+        }
+        .day{
+          margin-right: 1em;
+          display: block;
+          flex-shrink: 0;
+          @include mq{
+            font-size: 1.4rem;
+          }
+        }
       }
     }
   }

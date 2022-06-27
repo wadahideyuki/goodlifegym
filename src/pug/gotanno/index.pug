@@ -1,0 +1,189 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-8MLD0Z0N3G');
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P36PRNS');
+    // End Google Tag Manager
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(http-equiv='content-script-type', content='text/javascript')
+    meta(http-equiv='content-script-type', content='text/css')
+    meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
+    title 五反野店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    meta(name='description', content=desc)
+    meta(name='keywords', content='')
+    // OGs
+    +og("site_name", siteTitle)
+    +og("title", title)
+    +og("description", desc)
+    +og("type", (layer == "top" ? "website" : "article"))
+    +og("url", (layer == "top" ? siteUrl : siteUrl + pageUrl))
+    +og("image", ogImgPath)
+    // /OGs
+    +css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
+    script(src="https://sdk.form.run/js/v2/formrun.js")
+    script(src="https://www.google.com/recaptcha/api.js")
+    +cssCommon("style.css")
+    +jsCommon("jquery-1.11.1.min.js")
+    +jsCommon("slick.min.js")
+    +jsCommon("jquery.colorbox-min.js")
+    +jsCommon("common.js?2022-3")
+
+  body.pageStores
+    .l-wrapper
+      include /_include/_header.pug
+      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]五反野
+        br
+        small(style="font-size:80%")  2022年4月11日オープン(初回体験受付中)
+      
+      .info
+        dl
+          dt  体験当日ご入会で初期費用が２万円お得に！
+          dd  
+            ul  
+              li
+                strong 入会金割引#[br]
+                span 入会金30,000円→#[em 10,000円]
+            a(href="#contact").u-btn1  お問い合わせはこちら
+      main.l-cont
+        article.photoZone 
+          ul 
+            li: img(src="./img/ph01.jpg?202106")
+            li: img(src="./img/ph02.jpg?202106")
+            li: img(src="./img/ph03.jpg?202106")
+            li: img(src="./img/ph04.jpg?202106")
+
+
+
+        //article.featureZone 
+          h2.ttl2  西新井の特徴
+          ul 
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+
+
+        article.outlineZone 
+          h2.ttl2  ご利用案内
+          .in
+            dl
+              dt  営業時間
+              dd  平日9:00-22:00#[br]土日祝10:00-18:00　
+            dl
+              dt  定休日
+              dd  日曜
+            dl
+              dt  住所
+              dd  120-0013#[br] 東京都足立区弘道2-13-1
+            dl
+              dt  アクセス
+              dd  五反野駅徒歩7分
+            dl
+              dt  設備・サービス
+              dd  ​更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
+            //img(src="./img/sche.png")
+
+
+        //article.outlineZone 
+          h2.ttl2  お客様の声
+          ul.voice 
+            li 
+              a(href="https://goo.gl/maps/kjj53MJdM2S4WjPn7" target="_blank")
+                img(src="img/v01.png")
+            li 
+              a(href="https://goo.gl/maps/Yrg8wbZEBhwLk4Pb7" target="_blank")
+                img(src="img/v02.png")
+            li 
+              a(href="https://goo.gl/maps/atCZPHyxAPmS9B3M9" target="_blank")
+                img(src="img/v03.png")
+          .voiceBtn
+            a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E8%A5%BF%E6%96%B0%E4%BA%95%E5%A4%A7%E5%B8%AB%E5%BA%97/@35.7807536,139.7738803,17z/data=!4m8!3m7!1s0x6018916c1320ac37:0xa3419b480d6e0390!8m2!3d35.7807501!4d139.7761109!9m1!1b1!16s%2Fg%2F11rwphzqdt?hl=ja-JP" target="_blank") もっと見る
+        .mapZone
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.3478581619306!2d139.81434621553407!3d35.76683058017443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188fcc61049833%3A0xdc61674fc05770d1!2z44CSMTIwLTAwMTMg5p2x5Lqs6YO96Laz56uL5Yy65byY6YGT77yS5LiB55uu77yR77yT4oiS77yR!5e0!3m2!1sja!2sjp!4v1649050184999!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen= loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+
+        article.priceZone#price
+          .u-enTxt PRICE
+          .u-inner
+            h2.u-ttl1 ​料金のご案内
+            p スケジュールに合わせて通い放題・週1プランからご選択いただけます。
+            .planArea
+              .planBox
+                .contWrap.is-active
+                  ul.planList
+                    li
+                      h3 セミパ通い放題
+                      span.monthly 月額#[em 19,800]円(税込)
+
+                      p.recommend セミパーソナルトレーニング#[br]通い放題#[br]【他店舗相互利用可能】
+                      
+                    li
+                      h3 セミパ週１回
+                      span.monthly 月額#[em 14,800]円(税込)
+                      p.recommend セミパーソナルトレーニング#[br]週１回（月４～５回分）​​
+                    li
+                      h3 マンツーマン通い放題
+                      span.monthly 月額#[em 34,800]円(税込)
+                      p.recommend マンツーマンパーソナル#[br]トレーニング通い放題#[br]【他店舗相互利用可能】
+                    li
+                      h3 マンツーマン週１回
+                      span.monthly 月額#[em 24,800]円(税込)
+                      p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
+                  span.planNote ＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます#[br]＊月の途中からのプラン開始も可能です#[br](例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます
+                  
+                .tableBox
+                  table
+                    tr
+                      th カウンセリング＆初回体験料
+                      td 3,000円
+                    tr
+                      th 入会金・登録料
+                      td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
+                    tr
+                      th 毎月のお支払い方法
+                      td 銀行振込またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
+
+
+        article.contactZone
+          .u-enTxt#contact CONTACT
+          .u-inner
+            +ttl1("五反野店 お問い合わせ")
+            p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
+            // class, action, methodを変更しないでください
+            .formBox
+              form.formrun(action="https://form.run/api/v1/r/s43az6pfq1fntq5j4du0vsy9" method="post")
+                // ↓自由に要素を追加・編集することができます
+                - var shopName = "五反野店"
+                include /_index_cont/_contact.pug
+
+
+        article.storesZone#access
+          include /_index_cont/_stores.pug
+
+      include /_include/_footer.pug
+

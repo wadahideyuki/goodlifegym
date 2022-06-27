@@ -1,0 +1,193 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-8MLD0Z0N3G');
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P36PRNS');
+    // End Google Tag Manager
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(http-equiv='content-script-type', content='text/javascript')
+    meta(http-equiv='content-script-type', content='text/css')
+    meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
+    title トレーナー採用情報 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    meta(name='description', content=desc)
+    meta(name='keywords', content='')
+    // OGs
+    +og("site_name", siteTitle)
+    +og("title", title)
+    +og("description", desc)
+    +og("type", (layer == "top" ? "website" : "article"))
+    +og("url", (layer == "top" ? siteUrl : siteUrl + pageUrl))
+    +og("image", ogImgPath)
+    // /OGs
+    +css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
+    script(src="https://sdk.form.run/js/v2/formrun.js")
+    script(src="https://www.google.com/recaptcha/api.js")
+    +cssCommon("style.css")
+    +jsCommon("jquery-1.11.1.min.js")
+    +jsCommon("slick.min.js")
+    +jsCommon("jquery.colorbox-min.js")
+    +jsCommon("common.js?2022-3")
+
+  body.pageStores
+    .l-wrapper
+      include /_include/_header.pug
+      h1.ttl  トレーナー採用情報
+      main.l-cont
+        article.recruitMain
+          h2 
+            span  GOODLIFE GYMでパーソナルトレーナー、
+            br
+            span  ジムオーナーを目指しませんか？
+          .img 
+            img(src="../common/img/trainer/img01.jpg?v2")
+            
+          p GOODLIFE GYMは代表が30歳からトレーニングを始め20kgのダイエットに成功。#[br.pc]「正しい方法で理想のカラダになっていく楽しさを多くの人に伝えたい」という思いから#[br.pc]開業したパーソナルトレーニングジムです。
+          p 1店舗目は東京代々木に2019年OPENし、2020年に東日本橋店をOPEN。#[br.pc]さらに２０２１年には、浅草、稲毛海岸、高円寺、千駄ヶ谷と複数店舗の展開を進めています。
+          p   トレーナーになりたい方はもちろん、ジムを開業したい方のご応募もお待ちしております。#[br]#[br]
+          .img 
+            img(src="../common/img/trainer/img02.jpg?v2")
+
+        //article.featureZone 
+            h2.ttl2  代々木店の特徴
+            ul 
+              li 
+                .img
+                  img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+                p 特徴が入るテキストテキストテキストテキスト
+              li 
+                .img
+                  img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+                p 特徴が入るテキストテキストテキストテキスト
+              li 
+                .img
+                  img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+                p 特徴が入るテキストテキストテキストテキスト
+              li 
+                .img
+                  img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+                p 特徴が入るテキストテキストテキストテキスト
+
+
+        article.outlineZone 
+          h2.ttl2  募集要項
+          .in
+            dl
+              dt  募集職種
+              dd  パーソナルトレーナー（業務委託のみ）
+            dl
+              dt  募集対象
+              dd  パーソナルトレーナー歴1年以上
+            dl
+              dt  報酬
+              dd  単価報酬1日12,000〜20,000円#[br](経験・実績による)#[br]※店舗メイントレーナーはインセンティブあり
+            dl
+              dt  勤務時間、日数
+              dd  応相談
+            dl
+              dt  応募要件
+              dd ・ホスピタリティにあふれる方（必須）#[br]・誠実かつ熱意のある方（必須）#[br]・ボディメイクに自信のある方（必須）#[br]・独立開業支援制度あり
+
+
+
+
+
+
+        article.contactZone
+          .u-enTxt#contact ENTRY
+          .u-inner
+            +ttl1("エントリーフォーム")
+            p.u-lead1 募集要項をご確認の上、応募フォームよりご応募ください。#[br]皆さまと一緒に働けることを楽しみにしています。
+            // class, action, methodを変更しないでください
+            .formBox
+              form.formrun(action="https://form.run/api/v1/r/sg0uo5cchwo5lghvyezdywgz" method="post")
+                .row
+                  label お名前 #[span.must 必須]
+                  input(name="お名前" type="text" placeholder="山田 太郎"  required)
+                .row
+                  label メールアドレス #[span.must 必須]
+                  input(name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email"  required)
+                .row
+                  label 生年月日 #[span.must 必須]
+                  input(name="生年月日" type="text" placeholder="2000年1月1日"  required)
+                .row
+                  label 電話番号 #[span.must 必須]
+                  input(name="電話番号" type="text"  required  placeholder="0123456789")
+                .row
+                  label 住所 #[span.must 必須]
+                  input(name="住所" type="text"  required  placeholder="東京都渋谷区代々木３－４６－１６​小野木ビル６０７号室")
+                .row
+                  label 志望動機 #[span.must 必須]
+                  textarea(name="志望動機"   placeholder="")
+
+                .row
+                  label 希望勤務店舗(第1希望)
+                  select(name="希望勤務店舗(第1希望)")
+                    option(value="")  選択してください
+                    option(value="代々木店")  代々木店
+                    option(value="東日本橋店")  東日本橋店
+                    option(value="浅草店")  浅草店
+                    option(value="稲毛海岸店")  稲毛海岸店
+                    option(value="千駄ヶ谷")  千駄ヶ谷
+                    option(value="西新井大師")  西新井大師
+                    option(value="東京スカイツリー前店")  東京スカイツリー前店
+                    option(value="中野野方店")  中野野方店
+                    option(value="小田原店")  小田原店
+                    option(value="台東入谷店")  台東入谷店
+                    option(value="五反野店")  五反野店
+                    option(value="千葉中央店")  千葉中央店
+                .row
+                  label 希望勤務店舗(第2希望)
+                  select(name="希望勤務店舗(第2希望)")
+                    option(value="")  選択してください
+                    option(value="代々木店")  代々木店
+                    option(value="東日本橋店")  東日本橋店
+                    option(value="浅草店")  浅草店
+                    option(value="稲毛海岸店")  稲毛海岸店
+                    option(value="千駄ヶ谷")  千駄ヶ谷
+                    option(value="西新井大師")  西新井大師
+                    option(value="東京スカイツリー前店")  東京スカイツリー前店
+                    option(value="中野野方店")  中野野方店
+                    option(value="小田原店")  小田原店
+                    option(value="台東入谷店")  台東入谷店
+                    option(value="五反野店")  五反野店
+                    option(value="千葉中央店")  千葉中央店
+                .row
+                  label 勤務開始月 #[span.must 必須]
+                  input(name="勤務開始月" type="text"  required  placeholder="１月")
+                .row
+                  label お問い合わせ内容 
+                  textarea(name="お問い合わせ内容"   placeholder="お問い合わせ内容を入力")
+
+                // ボット投稿をブロックするためのタグ
+                ._formrun_gotcha
+                  style(media="screen").
+                    ._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}
+                  label(for="_formrun_gotcha") If you are a human, ignore this field
+                  input#_formrun_gotcha(type="text" name="_formrun_gotcha" tabindex="-1")
+
+                .rowRcap
+                  .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
+                button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." ) 送信
+
+
+
+        article.storesZone#access
+          include /_index_cont/_stores.pug
+
+          
+      include /_include/_footer.pug
+

@@ -1,0 +1,200 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-8MLD0Z0N3G');
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P36PRNS');
+    // End Google Tag Manager
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(http-equiv='content-script-type', content='text/javascript')
+    meta(http-equiv='content-script-type', content='text/css')
+    meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
+    title 千葉中央店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    meta(name='description', content=desc)
+    meta(name='keywords', content='')
+    // OGs
+    +og("site_name", siteTitle)
+    +og("title", title)
+    +og("description", desc)
+    +og("type", (layer == "top" ? "website" : "article"))
+    +og("url", (layer == "top" ? siteUrl : siteUrl + pageUrl))
+    +og("image", ogImgPath)
+    // /OGs
+    +css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
+    script(src="https://sdk.form.run/js/v2/formrun.js")
+    script(src="https://www.google.com/recaptcha/api.js")
+    +cssCommon("style.css?2022")
+    +jsCommon("jquery-1.11.1.min.js")
+    +jsCommon("slick.min.js")
+    +jsCommon("jquery.colorbox-min.js")
+    +jsCommon("common.js?2022-3")
+
+  body.pageStores
+    .l-wrapper
+      include /_include/_header.pug
+      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]千葉中央
+        br
+        small(style="font-size:80%")  2022年4月18日オープン(初回体験受付中)
+      .info
+        dl
+          dt  キャンペーン実施中！（6月受付分まで）
+          dd  
+            ul  
+              li
+                strong 入会金30,000円→#[em 10,000円]
+              li
+                strong 初月会費→#[em 10,000円割引]
+              li
+                strong カウンセリング＆初回体験料3,000円→#[em 無料]
+            a(href="#contact").u-btn1  お問い合わせはこちら
+      main.l-cont
+        article.photoZone 
+          ul 
+            li: img(src="./img/ph01.jpg?v2")
+            li: img(src="./img/ph02.jpg?v2")
+            li: img(src="./img/ph03.jpg?v2")
+            li: img(src="./img/ph04.jpg?v2")
+            li: img(src="./img/ph05.jpg?v2")
+            li: img(src="./img/ph06.jpg?v2")
+            li: img(src="./img/ph07.jpg?v2")
+
+
+
+        //article.featureZone 
+          h2.ttl2  千葉中央店の特徴
+          ul 
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+
+
+        article.outlineZone 
+          h2.ttl2  ご利用案内
+          .in
+            dl
+              dt  営業時間
+              dd  平日9:00-22:00、土祝10:00-18:00
+            dl
+              dt  定休日
+              dd  水曜、日曜
+            dl
+              dt  住所
+              dd  260-0013　千葉県千葉市中央区中央3-13-1 富士屋ビル2階
+            dl
+              dt  アクセス
+              dd  京成千葉中央駅　徒歩3分#[br]JR千葉駅　徒歩13分
+            //dl
+              dt  設備・サービス
+              dd 未定
+            //img(src="./img/sche.png")
+
+        //article.outlineZone 
+          h2.ttl2  お客様の声
+          ul.voice 
+            li 
+              a(href="https://goo.gl/maps/468L8ZPysWc9bTWr8" target="_blank")
+                img(src="img/h_v01.png")
+            li 
+              a(href="https://goo.gl/maps/yVE2BUNB2AcUYev29" target="_blank")
+                img(src="img/h_v02.png")
+            li 
+              a(href="https://goo.gl/maps/VLBYVkmLjGGqREXz6" target="_blank")
+                img(src="img/h_v03.png")
+          .voiceBtn
+            a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E6%9D%B1%E6%97%A5%E6%9C%AC%E6%A9%8B/@35.6918831,139.7785884,17z/data=!3m1!5s0x60188eacdf385b6d:0xc7e4d3a39af46488!4m8!3m7!1s0x60188f92c6511503:0xab317f776a0c0d21!8m2!3d35.6918831!4d139.7807771!9m1!1b1!16s%2Fg%2F11jlkkjcc_?hl=ja-JP" target="_blank") もっと見る
+
+        .mapZone
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.7849689207173!2d140.12100691525674!3d35.608370480211406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228519b58130d7%3A0x6c57b39e72cb769f!2zR09PRExJRkUgR1lNKOOCsOODg-ODieODqeOCpOODleOCuOODoCnljYPokYnkuK3lpK4!5e0!3m2!1sja!2sjp!4v1649298173917!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen= loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+
+
+        article.priceZone#price
+          .u-enTxt PRICE
+          .u-inner
+            h2.u-ttl1 ​料金のご案内
+            p スケジュールに合わせて通い放題・週1プランからご選択いただけます。
+            p.cTxt 【キャンペーン中】初月会費が以下の金額から10,000円OFFとなります！
+            .planArea
+              .planBox
+                .contWrap.is-active
+                  ul.planList
+                    li
+                      h3 セミパ通い放題
+                      span.monthly 月額#[em 19,800]円(税込)
+
+                      p.recommend セミパーソナルトレーニング#[br]通い放題#[br]【他店舗相互利用可能】
+                      
+                    li
+                      h3 セミパ週１回
+                      span.monthly 月額#[em 14,800]円(税込)
+                      p.recommend セミパーソナルトレーニング#[br]週１回（月４～５回分）​​
+                    li
+                      h3 マンツーマン通い放題
+                      span.monthly 月額#[em 34,800]円(税込)
+                      p.recommend マンツーマンパーソナル#[br]トレーニング通い放題#[br]【他店舗相互利用可能】
+                    li
+                      h3 マンツーマン週１回
+                      span.monthly 月額#[em 24,800]円(税込)
+                      p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
+                  span.planNote ＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます#[br]＊月の途中からのプラン開始も可能です#[br](例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます
+                  
+                .tableBox
+                  table
+                    tr
+                      th カウンセリング＆初回体験料
+                      td 3,000円→ #[em 【キャンペーン中】無料]
+                    tr
+                      th 入会金・登録料
+                      td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
+                    tr
+                      th 毎月のお支払い方法
+                      td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
+
+
+        article.contactZone
+          .u-enTxt#contact CONTACT
+          .u-inner
+            +ttl1("千葉中央店 お問い合わせ")
+            p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
+            //.u-stopBox 
+              p 　現在、定員につき新規受付停止中です。
+            // class, action, methodを変更しないでください
+            .formBox
+              form.formrun(action="https://form.run/api/v1/r/li8wcdo763sh8k1pakga6b2a" method="post")
+                // ↓自由に要素を追加・編集することができます
+                - var shopName = "千葉中央"
+                - var man2 = "on"
+                include /_index_cont/_contact.pug
+
+
+        article.storesZone#access
+          include /_index_cont/_stores.pug
+
+      include /_include/_footer.pug
+      
+

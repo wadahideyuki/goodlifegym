@@ -1,0 +1,132 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    // Global site tag (gtag.js) - Google Analytics
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-8MLD0Z0N3G');
+
+    include /_include/_head.pug
+
+  body.pageTop
+    .l-wrapper
+      include /_include/_header.pug
+
+
+      main.l-cont
+        article.mainZone
+          include /_index_cont/_main.pug
+
+        article.informationZone
+          include /_index_cont/_information.pug
+
+        article.aboutZone#about
+          include /_index_cont/_about.pug
+
+        article.voiceZone
+          include /_index_cont/_voice.pug
+
+        article.trainerZone
+          include /_index_cont/_trainer.pug
+
+        article.priceZone#price
+          include /_index_cont/_price.pug
+
+        article.storesZone#access
+          .u-enTxt STORES 
+          .stores 
+            dl.yoyogi
+              dt 代々木店
+              dd 営業時間：平日9:00-22:00#[br]土日祝10:00-18:00#[br]定休日：第2日曜・第4水曜
+                .btn
+                  a(href="/yoyogi/") 代々木店の詳細はこちら
+            dl.nihonbashi
+              dt 東日本橋店​
+              dd 営業時間：平日9:00-22:00#[br]土日祝10:00-18:00#[br]定休日：第2土曜・第2日曜
+                .btn
+                  a(href="/higashinihonbashi/") 東日本橋店​の詳細はこちら
+            dl.asakusa
+              dt 浅草店​
+              dd 営業時間：平日9:00-22:00#[br]土日祝10:00-18:00#[br]定休日：第4土曜・第4日曜
+                .btn
+                  a(href="/asakusa/") 浅草店​の詳細はこちら
+            dl.inage
+            
+              dt 稲毛海岸店
+              dd  営業時間：平日9:00-22:00　#[br]土日祝9:00-18:00#[br]定休日：水曜
+                .btn
+                  a(href="/inage/") 稲毛海岸店​の詳細はこちら
+          .stores
+            dl.sendagaya
+              dt 千駄ヶ谷店#[br]
+              dd 営業時間：平日9:00-22:00#[br]土日祝10:00-18:00#[br]定休日：月曜
+                .btn
+                  a(href="/sendagaya/") 千駄ヶ谷店​の詳細はこちら
+            dl.nishiarai
+              dt 西新井大師店#[br]
+              dd 営業時間：平日9:00-22:00#[br]土日祝10:00-18:00#[br]定休日：日曜
+                .btn
+                  a(href="/nishiarai/") 西新井大師店の詳細はこちら
+            dl.kouenji
+              dt GOODLIFE GYM extra #[br]高円寺
+              dd  
+                .btn
+                  a(href="/koenji/") 高円寺店の詳細はこちら
+            dl.skytree
+              dt 東京スカイツリー前店#[br]
+              dd 営業時間：平日9:00-22:00#[br]土日祝10:00-18:00#[br]定休日：月曜
+                .btn
+                  a(href="/skytree/") 東京スカイツリー前店の詳細はこちら
+          .stores.stores2
+            dl.nakano
+              dt 中野野方店#[br]
+              dd 165-0027 東京都中野区野方2-23-5 ルース中野B1階
+                .btn
+                  span coming soon#[br]2022年1月上旬オープン予定
+            dl.odawara
+              dt 小田原店#[br]
+              dd 250-0012 神奈川県小田原市本町1-10-26 ベルジェント小田原城址公園101
+                .btn
+                  span coming soon#[br]2022年1月中旬オープン予定
+
+
+        article.faqZone
+          include /_index_cont/_faq.pug
+
+        article.contactZone.index
+          .u-enTxt#contact CONTACT
+          .u-inner
+            +ttl1("お問い合わせ")
+            p.u-lead1 カウンセリング、初回体験をご希望の方は、各店舗ページのフォームよりお問い合わせください。
+            include /_index_cont/_clist.pug
+            .companyBox
+              h3 運営会社
+              dl
+                dt 会社名　　
+                dd  合同会社GOODLIFE​
+                dt 代表者　　
+                dd  鈴木　涼太​
+                dt 所在地　　
+                dd  東京都渋谷区代々木３－４６－１６小野木ビル６０７
+                dt ​資本金　　
+                dd  1,000,000円
+                dt  事業内容　　
+                dd  フィットネスクラブ経営、サプリメント販売・アパレル販売
+
+        include /_index_cont/_recruit.pug
+        article.noteZone#column
+          include /_index_cont/_note.pug
+        
+
+
+
+
+      include /_include/_footer.pug
+
+

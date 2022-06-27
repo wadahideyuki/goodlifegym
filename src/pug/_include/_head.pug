@@ -1,3 +1,12 @@
+// Google Tag Manager
+script.
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P36PRNS');
+// End Google Tag Manager
+
 meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
 meta(http-equiv='content-script-type', content='text/javascript')
 meta(http-equiv='content-script-type', content='text/css')
@@ -10,16 +19,16 @@ meta(name='keywords', content='')
 +og("title", title)
 +og("description", desc)
 +og("type", (layer == "top" ? "website" : "article"))
-+og("url", (layer == "top" ? siteUrl : siteUrl + pageUrl))
++og("url", (siteUrl))
 +og("image", ogImgPath)
 // /OGs
 +css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
 script(src="https://sdk.form.run/js/v2/formrun.js")
 script(src="https://www.google.com/recaptcha/api.js")
 
-+cssCommon("style.css?20210421")
++cssCommon("style.css?v7")
 +jsCommon("jquery-1.11.1.min.js")
 +jsCommon("slick.min.js")
 +jsCommon("jquery.colorbox-min.js")
-+jsCommon("common.js")
++jsCommon("common.js?2022-3")
 

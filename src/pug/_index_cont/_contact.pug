@@ -1,112 +1,132 @@
-.u-enTxt#contact CONTACT
-.u-inner
-  +ttl1("お問い合わせ")
-  p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]LINEメッセージもしくはメールフォームにてお問合せください。
+
+h3 お問い合わせ種別
+
+.row.inqType
+  label お問い合わせ種別を選択してください #[span.must 必須]
+  ul.column
+    li 
+      - if (uketsuke != "off")
+        label
+          input(name="お問い合わせ種別" type="radio" value="初回体験" required).showDate
+          | 初回体験
+      label 
+        input(name="お問い合わせ種別" type="radio" value="サービスに関するご質問" required)
+        | サービスに関するご質問
+
+h3 お客様情報 
+.row
+  label お名前 #[span.must 必須]
+  input(name="お名前" type="text" placeholder="山田 太郎"  required)
+.row
+  label メールアドレス #[span.must 必須]
+  input(name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email"  required)
+
+.row
+  label 電話番号 #[span.must 必須]
+  input(name="電話番号" type="text"  required  placeholder="0123456789")
+.row
+  label 当ジムを知ったきっかけ
+  select(name="当ジムを知ったきっかけ")
+    option(value="")  選択してください
+    option(value="インターネット検索")  インターネット検索
+    option(value="GOOGLEマップ検索")  GOOGLEマップ検索
+    option(value="看板")  看板
+    option(value="チラシ")  チラシ
+    option(value="Instagram")  Instagram
+    option(value="Facebook")  Facebook
+    option(value="Twitter")  Twitter
+    option(value="TikTok")  TikTok
+    option(value="会員様のご紹介")  会員様のご紹介
 
 
+.dateBox
+  h3 初回体験をご希望の方 
+  .row
+    label ご希望の店舗 
+    ul.column
+      li 
+        label 
+          input(name="ご希望の店舗" type="hidden" value=shopName)
+          | #{shopName} 
 
-    // class, action, methodを変更しないでください
-  .formBox
-    form.formrun(action="https://form.run/api/v1/r/74etx5odnmeb53u6zr9c6b4v" method="post")
-      // ↓自由に要素を追加・編集することができます
-      .row
-        label お名前 #[span.must 必須]
-        input(name="お名前" type="text" placeholder="山田 太郎"  required)
-      .row
-        label メールアドレス #[span.must 必須]
-        input(name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email"  required)
-      .row
-        label ご希望の店舗 #[span.must 必須]
-        ul
-          li 
-            label 
-              input(name="ご希望の店舗" type="radio" value="代々木店" )
-              | 代々木店 
-          li 
-            label 
-              input(name="ご希望の店舗" type="radio" value="東日本橋店")
-              | 東日本橋店
-          li  
-            label 
-              input(name="ご希望の店舗" type="radio" value="浅草店")
-              | 浅草店
-      .row
-        label ご希望のプラン #[span.must 必須]
-        ul
-          li 
-            label 
-              input(name="ご希望のプラン" type="checkbox" value="無料カウンセリング" )
-              | 無料カウンセリング 
-          li 
-            label 
-              input(name="ご希望のプラン" type="checkbox" value="初回体験")
-              | 初回体験
-          li  
-            label 
-              input(name="ご希望のプラン" type="checkbox" value="お問い合わせ")
-              | お問い合わせ
-      .row
-        label どちらにご興味がございますか #[span.must 必須]
-        ul
-          li 
-            label 
-              input(name="どちらにご興味がございますか" type="checkbox" value="マンツーマンパーソナル" )
-              | マンツーマンパーソナル 
-          li 
-            label 
-              input(name="どちらにご興味がございますか" type="checkbox" value="セミパーソナル")
-              | セミパーソナル
-          li  
-            label 
-              input(name="どちらにご興味がございますか" type="checkbox" value="分からないので話を聞いてみたい")
-              | 分からないので話を聞いてみたい
-      .row
-        label 当ジムを知ったきっかけ
-        select(name="当ジムを知ったきっかけ")
-          option(value="")  選択してください
-          option(value="インターネット検索")  インターネット検索
-          option(value="GOOGLEマップ検索")  GOOGLEマップ検索
-          option(value="SNS")  SNS
-          option(value="店頭看板、チラシ")  店頭看板、チラシ
-          option(value="知人からの紹介")  知人からの紹介
+  .row
+    label どちらのプランをご希望ですか？ #[span.must 必須]
+    ul.column
+      li 
+        label
+          - if (man1 == "off")
+            input(name="どちらにご興味がございますか" type="radio" value="マンツーマン" disabled)
+            | マンツーマン（定員のため受付停止）
+          - else
+            input(name="どちらにご興味がございますか" type="radio" value="マンツーマン" required)
+            | マンツーマン
+      li 
+        label
+          - if (semipa1 == "off")
+            input(name="どちらにご興味がございますか" type="radio" value="セミパーソナル" disabled)
+            | セミパーソナル（定員のため受付停止）
+          - else
+            input(name="どちらにご興味がございますか" type="radio" value="セミパーソナル" required)
+            | セミパーソナル
+      li  
+        label
+          input(name="どちらにご興味がございますか" type="radio" value="相談して決めたい" required)
+          | 相談して決めたい
+  .row
+    label ご希望の⽇時（第1希望） #[span.must 必須]
+    .date
+      input(name="ご希望の⽇（第1希望）" type="date"   )
+      select(name="ご希望の時間（第1希望）" type="date"   )
+        option(value="")  選択してください
+        option(value="何時でもOK")  何時でもOK
+        option(value="9～15時")  9～15時
+        option(value="15～22時")  15～22時
+        option(value="9～13時")  9～13時
+        option(value="12～16時")  12～16時
+        option(value="15～19時")  15～19時
+        option(value="20～22時")  20～22時
+  .row
+    label ご希望の⽇時（第2希望） #[span.must 必須]
+    .date
+      input(name="ご希望の⽇（第2希望）" type="date"   )
+      select(name="ご希望の時間（第2希望）" type="date"   )
+        option(value="")  選択してください
+        option(value="何時でもOK")  何時でもOK
+        option(value="9～15時")  9～15時
+        option(value="15～22時")  15～22時
+        option(value="9～13時")  9～13時
+        option(value="12～16時")  12～16時
+        option(value="15～19時")  15～19時
+        option(value="20～22時")  20～22時
+  .row
+    label ご希望の⽇時（第3希望） #[span.must 必須]
+    .date
+      input(name="ご希望の⽇（第3希望）" type="date"   )
+      select(name="ご希望の時間（第3希望）" type="date"   )
+        option(value="")  選択してください
+        option(value="何時でもOK")  何時でもOK
+        option(value="9～15時")  9～15時
+        option(value="15～22時")  15～22時
+        option(value="9～13時")  9～13時
+        option(value="12～16時")  12～16時
+        option(value="15～19時")  15～19時
+        option(value="20～22時")  20～22時
+  .row
+    p.notes(style="color:red") ※必ず第3希望まで日時をご指定ください
+h3 サービスに関するご質問をご希望の方
+.row
+  label ご質問の内容を以下にご記入ください 
+  textarea(name="お問い合わせ内容"   placeholder="お問い合わせ内容を入力(知人からの紹介の方はこちらにご紹介者のお名前を記載ください)")
 
-      .row
-        label ご希望の⽇時（第1希望） #[span.must 必須]
-        input(name="ご希望の⽇時（第1希望）" type="datetime-local"  required )
-      .row
-        label ご希望の⽇時（第2希望） #[span.must 必須]
-        input(name="ご希望の⽇時（第2希望）" type="datetime-local"  required )
-      .row
-        label ご希望の⽇時（第3希望） #[span.must 必須]
-        input(name="ご希望の⽇時（第3希望）" type="datetime-local"  required )
-      .row
-        label 電話番号 #[span.must 必須]
-        input(name="電話番号" type="text"  required  placeholder="0123456789")
-      .row
-        label お問い合わせ内容 
-        textarea(name="お問い合わせ内容"   placeholder="お問い合わせ内容を入力")
+// ボット投稿をブロックするためのタグ
+._formrun_gotcha
+  style(media="screen").
+    ._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}
+  label(for="_formrun_gotcha") If you are a human, ignore this field
+  input#_formrun_gotcha(type="text" name="_formrun_gotcha" tabindex="-1")
 
-      // ボット投稿をブロックするためのタグ
-      ._formrun_gotcha
-        style(media="screen").
-          ._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}
-        label(for="_formrun_gotcha") If you are a human, ignore this field
-        input#_formrun_gotcha(type="text" name="_formrun_gotcha" tabindex="-1")
-      
-      .rowRcap
-        .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
-      button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." ) 送信
-  
-  .companyBox
-    h3 運営会社
-    dl
-      dt 会社名　　
-      dd  合同会社GOODLIFE​
-      dt 代表者　　
-      dd  鈴木　涼太​
-      dt 所在地　　
-      dd  東京都渋谷区代々木３－４６－１６小野木ビル６０７
-      dt ​資本金　　
-      dd  1,000,000円
-      dt  事業内容　　
-      dd  フィットネスクラブ経営、サプリメント販売・アパレル販売
+.rowRcap
+  .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
+button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." ) 送信
+
+

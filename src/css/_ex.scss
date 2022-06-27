@@ -1,0 +1,80 @@
+.pageStores.ex{
+  .l-cont{
+    background-color: #333;
+    color: #FFF;
+    .photoZone .slick-dots li.slick-active{
+      background-color: #c2af71;
+    border: #c2af71;
+    }
+  }
+    .ttl{
+        background: #000;
+        color: rgb(194, 175, 113);
+    }
+    .lead{
+      @include mq{
+        text-align: left;
+      }
+    }
+    .trainerZone{
+      padding: 80px 0;
+      @include mq{
+        padding: 5vw 0;
+      }
+    }
+    .daihyouBox{
+      @include mq{
+        width: 100%;
+      }
+      & + .daihyouBox{
+        margin-top: 25px;
+      }
+    }
+    .ttl2{
+      color: #c2af71;
+      @include mq{
+        font-size: 2.6rem;
+      }
+    }
+    .outlineZone{
+      padding-top: 80px;
+      @include mq{
+        padding-top: 10vw;
+      }
+      .in dl,.in dl:last-of-type{
+        border-color:#c2af71 ;
+      }
+      .in dl dt{
+        color: #c2af71;
+      }
+      
+    }
+    .specialZone{
+      background: #333;
+      padding-top: 0px;
+      margin-bottom: 0px;
+      @include mq{
+        padding: 5vw 5vw 10vw 5vw;
+      }
+      .img{
+        margin-bottom: 30px;
+      }
+      .specialPrice {
+        @include mq{
+          width: 100%;
+        }
+        dl{
+          border-color: #8f6f0f;
+          dt{
+            color: #8f6f0f;
+          }
+        }
+      }
+    }
+    .u-enTxt{
+      color: rgba(255,255,255,.1);
+    }
+    .contactZone:before{
+      background: #000;
+    }
+}

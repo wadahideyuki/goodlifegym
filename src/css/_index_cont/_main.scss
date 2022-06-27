@@ -15,6 +15,53 @@ article:not(.mainZone) {
   padding: 0px;
   min-height: 650px;
   max-height: 800px;
+  @include mq{
+    background-position: center -5vw;
+    height: 154vw;
+    margin-bottom: 5vw;
+    min-height: 0px;
+    max-height: none;
+  }
+  .featureTxt{
+    text-align: center;
+  max-width: 520px;
+    margin-top: 30px;
+    position: absolute;
+    right: 5vw;
+    bottom: 5vw;
+    @include mq{
+      position: static;
+      background-color: #0fbac2;
+      padding: 0 5vw;
+      margin: 0 auto;
+    }
+    dt{
+      color: #F0FF68;
+      font-size: 1.9rem;
+      font-weight: bold;
+      text-shadow: 3px 3px 3px rgba(0,0,0,.5);
+      margin-bottom: .8em;
+    }
+    dd{
+      ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+          display: flex;
+          color: #10a9b9;
+          font-weight: bold;
+          height: 4em;
+          width: 32%;
+          margin-bottom: 15px;
+          border-radius: 10px;
+          background-color: #F0FF68;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
   &:before{
     content: "";
     width: 100%;
@@ -28,18 +75,21 @@ article:not(.mainZone) {
     }
   }
   @include mq{
-    background-image: url($p + "main/main_sp.jpg");
+    background-image: url($p + "main/main_sp2.jpg?2021");
   }
   .mainInner {
     background-image: url($p + "main/main_cover.png");
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     height: 100%;
     min-height: 600px;
     position: relative;
     @include mq{
       background-image: none;
-      height: vw(619);
+      height: 116vw;
+      width: 100%;
+      overflow: hidden;
+      min-height: 0;
     }
     @include mq(l){
       background-position:8% 0px ;
@@ -56,21 +106,28 @@ article:not(.mainZone) {
         left: 0px;
         display: block;
         width: 100%;
-        padding: 0px;
       }
       h1{
         color: #FFF;
         margin-bottom: 80px;
         padding-left: 15px;
+        max-width: 360px;
+        text-align: center;
         @include mq{
           display: flex;
+          text-align: left;
           flex-direction: row-reverse;
           justify-content: center;
           align-items: center;
           padding-left: 0px;
           font-size: 1.2rem;
+          padding-top: 3vw;
+          max-width: 100%;
+          position: absolute;
+          left: 13vw;
+          top: 2vw;
           img{
-            margin-top: 3vw;
+            margin-top: 0vw;
           }
         }
         span{
@@ -86,7 +143,7 @@ article:not(.mainZone) {
       p{
         @include mq{
           position: absolute;
-          bottom: vw(100);
+          bottom: 5vw;
           left: 5vw;
         }
         span{
@@ -107,6 +164,18 @@ article:not(.mainZone) {
           }
           &.txt1{
             margin-left: 15px;
+          }
+          &.txt3{background-color: #FFF;
+            overflow: hidden;
+            transform: skewX(-15deg);
+            margin-left: 30px;
+            @include mq{
+              margin-left: 15vw;
+            }
+            em{
+              display: inline-block;
+              transform: skewX(15deg);
+            }
           }
         }
       }

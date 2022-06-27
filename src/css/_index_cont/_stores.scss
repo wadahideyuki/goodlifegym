@@ -10,11 +10,19 @@ article:not(.storesZone) {
   padding: 0px;
   .stores {
     display: flex;
+    &.stores2{
+      dl{
+        height: 300px;
+        @include mq{
+          height: auto;
+        }
+      }
+
+    }
     @include mq{
       display: block;
     }
     dl {
-      height: 540px;
       width: 100%;
       background-image: url($p + "store/bg_yoyogi.png");
       background-size: cover;
@@ -25,9 +33,12 @@ article:not(.storesZone) {
       line-height: 1.8em;
       flex-direction: column;
       text-align: center;
+      box-sizing: border-box;
+      padding:30px;
       @include mq{
         height: auto;
-        padding: 10vw 0;
+        padding: 7vw 0;
+        width: 100%;
       }
       &.nihonbashi {
         background-image: url($p + "store/bg_nihonbashi.png");
@@ -35,23 +46,67 @@ article:not(.storesZone) {
       &.asakusa {
         background-image: url($p + "store/bg_asakusa.png");
       }
+      &.inage {
+        background-image: url($p + "store/bg_inage.png");
+      }
+      &.kouenji {
+        background-image: url($p + "store/bg_kouenji.png");
+      }
+      &.sendagaya {
+        background-image: url($p + "store/bg_sendagaya.png");
+      }
+      &.nishiarai {
+        background-image: url($p + "store/bg_nishiarai.png");
+      }
+      &.skytree {
+        background-image: url($p + "store/bg_skytree.png");
+      }
+      &.nakano {
+        background-image: url($p + "store/bg_nakano.png");
+      }
+      &.odawara {
+        background-image: url($p + "store/bg_odawara.png");
+      }
+      &.taito {
+        background-image: url($p + "store/bg_taito.png");
+      }
+      &.chibac {
+        background-image: url($p + "store/bg_chibac.png");
+      }
+      &.gotanno {
+        background-image: url($p + "store/bg_gotanno.png");
+      }
+      &.kitasenju {
+        background-image: url($p + "store/bg_kitasenju.png");
+      }
       dt {
         font-weight: bold;
-        font-size: 3.4rem;
+        font-size: 2.8rem;
         font-weight: bold;
-        position: relative;
+        line-height: 1.4;
         margin-bottom: 16px;
+        position: relative;
+        z-index: 10;
+        @include mq(xl){
+          font-size: 2rem;
+        }
+        @include mq{
+          font-size: 2.8rem;
+        }
       }
       dd {
+        position: relative;
+        z-index: 10;
         .btn {
           margin-top: 20px;
-          a {
+          a,span {
             display: block;
             background-color: #fff;
             text-align: center;
             padding: 0.8em 2em;
             font-weight: bold;
             color: #222;
+            line-height: 1.2;
             &:hover{
               opacity: .7;
             }

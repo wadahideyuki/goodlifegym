@@ -10,6 +10,9 @@ article:not(.cont1Zone) {
 .priceZone {
   position: relative;
   background: #cafeff;
+  .u-inner {
+    max-width: 1200px;
+  }
 
   @include mq {
     padding-top: 15vw;
@@ -111,8 +114,8 @@ article:not(.cont1Zone) {
       }
 
       .tableBox {
-        margin-top: 50px;
-        width: 100%;
+        margin: 50px auto 0 auto;
+        width: 98%;
         box-sizing: border-box;
         padding: 35px 25px;
         border-radius: 10px;
@@ -157,13 +160,12 @@ article:not(.cont1Zone) {
               @include mq {
                 width: 100%;
               }
-              small{
+              small {
                 font-weight: normal;
                 font-size: 80%;
               }
 
               .price {
-
               }
 
               em {
@@ -206,6 +208,10 @@ article:not(.cont1Zone) {
                   padding-top: 0;
                   padding-bottom: 0.5em;
                 }
+                .notes {
+                  font-size: 1.4rem;
+                  padding-top: 0.2em;
+                }
               }
             }
 
@@ -230,13 +236,14 @@ article:not(.cont1Zone) {
         ul.planList {
           display: flex;
           justify-content: center;
+          flex-wrap: wrap;
 
           @include mq {
             flex-direction: column;
           }
 
           li {
-            width: 100%;
+            width: 23%;
             box-sizing: border-box;
             border-radius: 10px;
             padding: 30px 20px;
@@ -249,6 +256,43 @@ article:not(.cont1Zone) {
               padding: vw(30) vw(20);
               box-shadow: 5px 5px 8px rgba(0, 161, 179, 0.3);
             }
+            &.special {
+              width: 100%;
+              margin-top: 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              a{
+                &:after{
+                  content: "";
+                  display: inline-block;
+                  width: .5em;
+                  height: .5em;
+                  border-top: 2px solid #00b2b8;
+                  border-right: 2px solid #00b2b8;
+                  transform: rotate(45deg);
+                  margin-left: 5px;
+                                }
+              }
+              @include mq {
+                display: block;
+                text-align: center;
+              }
+              .spIcon {
+                display: inline-block;
+                background-color: #ff3636;
+                font-weight: bold;
+                color: #fff;
+                font-size: 2rem;
+                font-weight: normal;
+                padding: 0.2em 0.8em;
+                @include mq {
+                  width: 48%;
+                  box-sizing: border-box;
+                  padding: 0.3em 0.1.5em;
+                }
+              }
+            }
 
             & + li {
               @include mq {
@@ -257,17 +301,10 @@ article:not(.cont1Zone) {
             }
 
             h3 {
-              font-size: 2.4rem;
+              font-size: 2.2rem;
               text-align: center;
               color: #0099b0;
               font-weight: bold;
-              padding-bottom: 1em;
-              border-bottom: 4px solid #0099b0;
-
-              @include mq {
-                padding-bottom: 0.5em;
-                border-bottom: 2px solid #0099b0;
-              }
             }
 
             .monthly {
@@ -275,10 +312,10 @@ article:not(.cont1Zone) {
               font-size: 2rem;
               font-weight: 600;
               text-align: center;
-              padding: 30px 0;
+              padding: 0.5em 0;
 
               @include mq {
-                padding: vw(20) 0;
+                padding: vw(10) 0;
               }
 
               em {
@@ -289,6 +326,7 @@ article:not(.cont1Zone) {
             }
 
             .recommend {
+              margin-top: 0.5em;
               font-size: 1.6rem;
               text-align: center;
               color: #00b2b8;
@@ -322,9 +360,33 @@ article:not(.cont1Zone) {
                 color: #ff3636;
               }
             }
+
+            .tenpo {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: flex-start;
+              @include mq {
+                height: auto;
+              }
+              li {
+                width: auto;
+                height: auto;
+                padding: 0.2em 0.3em;
+                margin: 0px;
+                box-shadow: none;
+                border-radius: 0px;
+                background-color: #ff3636;
+                color: #fff;
+                text-align: center;
+                margin: 1% 1% 1% 1%;
+                width: 48%;
+                color: #FFF;
+                font-size: 2rem;
+                font-weight: bold;
+              }
+            }
           }
         }
-
         .planNote {
           display: block;
           font-size: 1.4rem;

@@ -12,9 +12,65 @@ article:not(.contactZone) {
   background-color: #EEE;
   padding: 100px 50px 90px;
   background-size: cover;
+  &.index{
+    &:before{
+      height: 100%;
+    }
+  }
 
   @include mq {
     padding: 8vw 0vw;
+  }
+  .contactList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li{
+      width: 32%;
+      margin-bottom: 2%;
+      @include mq{
+        width: 48%;
+      }
+      a{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-height: 75px;
+        background-color: #FFF;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+        color: #00b8ba ;
+        font-size: 2rem;
+        font-weight: bold;
+        @include mq{
+          min-height: 50px;
+          font-size: 14px;
+          border-radius: 5px;
+        }
+        &:hover{
+          opacity: .8;
+        }
+        &::after{
+          content: "";
+          display: inline-block;
+          width: .5em;
+          height: .5em;
+          border-top: 2px solid #00b8ba;
+          border-right: 2px solid #00b8ba;
+          transform: rotate(45deg);
+          margin-left: 10px;
+        }
+
+      }
+    }
+  }
+  .dateBox{
+    display: none;
+    &.show{
+      display: block;
+    }
   }
   .u-enTxt{
     //right: 0px;
@@ -37,12 +93,12 @@ article:not(.contactZone) {
     }
 
   .u-inner {
-    max-width: 800px;
+    max-width: 1000px;
   }
 
   .u-ttlBox1{
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     color: #FFF;
     small{
@@ -117,6 +173,18 @@ article:not(.contactZone) {
     box-sizing: border-box;
     box-shadow: 15px 20px 20px 0px rgba(0, 0, 0, .1);
     border: 2px solid #FFF;
+    .row{
+      & + h3{
+        margin-top: 20px;
+      }
+    }
+    h3{
+      background:#0073a5;
+      padding: .5em;
+      border-radius: 5px;
+      color: #FFF;
+      font-weight: bold;
+    }
     button{
       margin: 15px auto;
       max-width: 400px;
@@ -144,6 +212,10 @@ article:not(.contactZone) {
 
     ul{
       display: flex;
+      flex-wrap: wrap;
+      &.column{
+        display: block;
+      }
       @include mq{
         display: block;
       }
@@ -278,6 +350,7 @@ article:not(.contactZone) {
   }
   .companyBox{
     margin-top: 3em;
+    color: #FFF;
     h3{
       font-size: 1.8rem;
       font-weight: bold;

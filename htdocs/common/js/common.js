@@ -14,6 +14,20 @@ $(document).ready(function () {
     $('meta[name="viewport"]').attr("content", "width=1200px");
   }
 
+
+  //お問い合わせフォームの内容切り替え
+  $(".inqType input").change(function(){
+    if($(".showDate").prop("checked") == true){
+      $(".dateBox").addClass("show")
+      $(".dateBox input,.dateBox select").attr('required', true);
+    }else{
+      $(".dateBox").removeClass("show")
+      $(".dateBox select").val('');
+      $(".dateBox input").prop('checked', false);;
+      $(".dateBox input,.dateBox select").attr('required', false);
+    }
+  })
+
   $(".spBtn").click(function(){
     $("nav").toggleClass("show")
   })
@@ -36,14 +50,14 @@ $(document).ready(function () {
   //SPのみ
   var ua = navigator.userAgent;
   if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) || ua.indexOf('Windows Phone') > 0) {
-    $(".aboutBox ul").slick({
-      arrows: false,
-      adaptiveHeight: true,
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    });
+    // $(".aboutBox ul").slick({
+    //   arrows: false,
+    //   adaptiveHeight: true,
+    //   dots: true,
+    //   infinite: true,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    // });
   }
 
   if($(".photoZone").length){

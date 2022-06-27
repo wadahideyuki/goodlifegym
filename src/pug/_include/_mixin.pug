@@ -28,7 +28,7 @@ mixin jsCommon(fileName)
 //- ----- ページパーツ --------------------//
 //- img
 mixin img(fileName, alt, className)
-  img(class=className, src=imgPath + fileName, alt=alt)
+  img(class=className, src=imgPath + fileName, alt=alt, loading="lazy")
 mixin pageImg(fileName, alt, className)
   img(class=className, src=pageImgPath + fileName, alt=alt)
 

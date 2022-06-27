@@ -9,7 +9,9 @@
 @import "_plugin/slick-theme";
 @import "_plugin/animate";
 @import "_plugin/colorbox";
-
+sup{
+    font-size: 60%
+}
 
 //共通
 @import "layout";//全体的なレイアウト(ヘッダーとか)
@@ -24,14 +26,37 @@
 @import "_index_cont/price";
 @import "_index_cont/stores";
 @import "_index_cont/faq";
+@import "_index_cont/note";
 @import "_index_cont/contact";
+@import "_index_cont/media";
 @import "_page";
+@import "_ex";
 
 
 @import "_plugin/class";//単独クラス
 
+.pageTop{
+    .mediaZone{
+      .list{
+        li:nth-child(n + 4){
+            display: none;
+        }
+      }
+    }
+  }
 
-
+.shopMov{
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 90%;
+    iframe{
+        width: 100%;
+        height: 562px;
+        @include mq{
+            height:60vw;
+        }
+    }
+}
 
 
 
