@@ -7,7 +7,7 @@ article:not(.mainZone) {
   //  display: none;
 }
 .mainZone {
-  background-image: url($p + "main/main.jpg");
+  background-image: url($p + "main/main3.jpg");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
@@ -31,9 +31,9 @@ article:not(.mainZone) {
     bottom: 5vw;
     @include mq{
       position: static;
-      background-color: #0fbac2;
       padding: 0 5vw;
-      margin: 0 auto;
+      margin: 5vw auto 0 auto;
+      bottom: 0px;
     }
     dt{
       color: #F0FF68;
@@ -62,7 +62,7 @@ article:not(.mainZone) {
       }
     }
   }
-  &:before{
+  /*&:before{
     content: "";
     width: 100%;
     height: 200px;
@@ -73,9 +73,9 @@ article:not(.mainZone) {
     @include mq{
       display: none;
     }
-  }
+  }*/
   @include mq{
-    background-image: url($p + "main/main_sp2.jpg?2021");
+    background-image: url($p + "main/main_sp3.jpg?2021");
   }
   .mainInner {
     background-image: url($p + "main/main_cover.png");
