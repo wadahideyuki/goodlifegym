@@ -22,7 +22,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 北千住店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 落合南長崎店| グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -46,10 +46,10 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]北千住
+      h1.ttl  GOODLIFE GYM#[sup ®]落合南長崎#[br]#[small.sub 2022年8月オープン予定]
       .info
-        dl
-          dt  キャンペーン実施中！（7月受付分まで）
+        //dl
+          dt  キャンペーン実施中！（6月受付分まで）
           dd  
             ul  
               li
@@ -60,32 +60,31 @@ html(lang="ja")
                 strong カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
-        article.photoZone 
+        //article.photoZone 
           ul 
             li: img(src="./img/ph01.jpg?v3")
             li: img(src="./img/ph02.jpg?v3")
             li: img(src="./img/ph03.jpg?v3")
-            li: img(src="./img/ph04.jpg?v3")
-
+            li: img(src="./img/ph03.jpg?v3")
 
 
 
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            dl
+            //dl
               dt  営業時間
               dd  平日9:00-22:00、土日祝9:00-18:00
-            dl
+            //dl
               dt  定休日
               dd  金曜日
             dl
               dt  住所
-              dd  120-0026#[br]東京都足立区千住旭町２２−４ もつ焼きやまぴー2階
+              dd  161-0032#[br]東京都新宿区中落合3-29-12 第5新栄ビル102
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            dl
+            //dl
               dt  設備・サービス
               dd  ​更衣室・トイレあり、無料レンタルシューズ
             //img(src="./img/sche.png")
@@ -104,15 +103,14 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.1401248539696!2d139.80995479999999!3d35.7473605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188f144aafdf7d%3A0x7a58de1bf6742c8d!2zR09PRExJRkUgR1lNIOWMl-WNg-S9jw!5e0!3m2!1sja!2sjp!4v1655262220032!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen= loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+          iframe(src='https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3239.1474909783383!2d139.68270731553596!3d35.722591035309456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5Lqs6YO95paw5a6_5Yy65Lit6JC95ZCIMy0yOS0xMiDnrKw15paw5qCE44OT44OrMTAy!5e0!3m2!1sja!2sjp!4v1656552955701!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen= loading='lazy' referrerpolicy='no-referrer-when-downgrade')
 
 
-        article.priceZone#price
+        //article.priceZone#price
           .u-enTxt PRICE
           .u-inner
             h2.u-ttl1 ​料金のご案内
             p スケジュールに合わせて通い放題・週1プランからご選択いただけます。
-            p.cTxt 【キャンペーン中】初月会費が以下の金額から10,000円OFFとなります！
             .planArea
               .planBox
                 .contWrap.is-active
@@ -141,7 +139,7 @@ html(lang="ja")
                   table
                     tr
                       th カウンセリング＆初回体験料
-                      td 3,000円→ #[em 【キャンペーン中】無料]
+                      td 3,000円
                     tr
                       th 入会金・登録料
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
@@ -149,17 +147,16 @@ html(lang="ja")
                       th 毎月のお支払い方法
                       td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
 
-
-        article.contactZone
+        //article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("北千住店 お問い合わせ")
+            +ttl1("落合南長崎店お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/ko3hu0p99y4411u2ysb65zz7" method="post")
+              form.formrun(action="https://form.run/api/v1/r/XXXXX" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "北千住店"
+                - var shopName = "東向島店"
                 include /_index_cont/_contact.pug
 
 

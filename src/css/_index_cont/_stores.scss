@@ -79,6 +79,12 @@ article:not(.storesZone) {
       &.kitasenju {
         background-image: url($p + "store/bg_kitasenju.png");
       }
+      &.higashimukoujima {
+        background-image: url($p + "store/bg_higashimukoujima.png");
+      }
+      &.ochiaiminami {
+        background-image: url($p + "store/bg_ochiaiminami.png");
+      }
       dt {
         font-weight: bold;
         font-size: 2.8rem;
