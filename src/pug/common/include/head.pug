@@ -13,11 +13,10 @@ header.l-header
   nav 
     ul.menu
       //li: a(href="/") HOME
-      li: a(href="/#about") GOODLIFE GYM#[sup ®]について
-      li: a(href="/#price") 料金のご案内
-      li: a(href="/trainer/") トレーナー紹介
-      li: a(href="/media/") メディア掲載
-      li: a(href="#contact") お問い合わせ
+      li.row: a(href="/#about") GOODLIFE GYM#[sup ®]について
+      li.row: a(href="/#price") 料金のご案内
+      li.row: a(href="/trainer/") トレーナー紹介
+      li.row: a(href="/media/") メディア掲載
       li.hasChild #[span 店舗紹介]
         .child
           ul
@@ -37,7 +36,7 @@ header.l-header
             li: a(href="/higashimukoujima/") 東向島店
             li: a(href="/ochiaiminami/") 落合南長崎店
             li: a(href="/odawarahigashi/") 小田原駅東口店
-      li: a(href="/recruit") 採用情報
+      li.row: a(href="/recruit") 採用情報
     ul.sns
       li: a(href="https://www.instagram.com/goodlife_gym_personal/" target="_blank")
         +img("instagram.svg")

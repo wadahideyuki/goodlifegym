@@ -4,121 +4,217 @@
  cont1
 ---------------------------------------*/
 article:not(.storesZone) {
-  //  display: none;
+  //    display: none;
 }
+
 .storesZone {
-  padding: 0px;
-  .stores {
+  color: #fff;
+  padding: 90px 0;
+  background-image: linear-gradient(to right, #006fa4 0%, #00b8ba 100%);
+
+  @include mq {
+    padding: vw(90) 0;
+  }
+  .u-inner {
+  @media screen and (min-width: 768px) {
+    max-width: 1200px;
+  }
+    }
+  .u-enTxt {
+    line-height: .61;
+  }
+
+  h2 {
+    text-align: right;
+    margin: 0 auto 1.5em;
+  }
+
+  .storeArea {
     display: flex;
-    &.stores2{
-      dl{
-        height: 300px;
-        @include mq{
-          height: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1360px;
+    margin: 0 auto;
+
+    @include mq {
+    }
+
+    li {
+      position: relative;
+      margin: 0 5px 15px;
+      text-align: center;
+
+      @include mq {
+        margin: 0 0 vw(15);
+      }
+      &:hover {
+        opacity: .7;
+      }
+
+      .s-pic {
+        position: relative;
+        width: 132px;
+        height: 132px;
+        border-radius: 15px;
+        overflow: hidden;
+        background: #000;
+
+        @include mq {
+          width: vw(280);
+          height: vw(280);
         }
       }
 
-    }
-    @include mq{
-      display: block;
-    }
-    dl {
-      width: 100%;
-      background-image: url($p + "store/bg_yoyogi.png");
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      line-height: 1.8em;
-      flex-direction: column;
-      text-align: center;
-      box-sizing: border-box;
-      padding:30px;
-      @include mq{
-        height: auto;
-        padding: 7vw 0;
-        width: 100%;
-      }
-      &.nihonbashi {
-        background-image: url($p + "store/bg_nihonbashi.png");
-      }
-      &.asakusa {
-        background-image: url($p + "store/bg_asakusa.png");
-      }
-      &.inage {
-        background-image: url($p + "store/bg_inage.png");
-      }
-      &.kouenji {
-        background-image: url($p + "store/bg_kouenji.png");
-      }
-      &.sendagaya {
-        background-image: url($p + "store/bg_sendagaya.png");
-      }
-      &.nishiarai {
-        background-image: url($p + "store/bg_nishiarai.png");
-      }
-      &.skytree {
-        background-image: url($p + "store/bg_skytree.png");
-      }
-      &.nakano {
-        background-image: url($p + "store/bg_nakano.png");
-      }
-      &.odawara {
-        background-image: url($p + "store/bg_odawara.png");
-      }
-      &.taito {
-        background-image: url($p + "store/bg_taito.png");
-      }
-      &.chibac {
-        background-image: url($p + "store/bg_chibac.png");
-      }
-      &.gotanno {
-        background-image: url($p + "store/bg_gotanno.png");
-      }
-      &.kitasenju {
-        background-image: url($p + "store/bg_kitasenju.png");
-      }
-      &.higashimukoujima {
-        background-image: url($p + "store/bg_higashimukoujima.png");
-      }
-      &.ochiaiminami {
-        background-image: url($p + "store/bg_ochiaiminami.png");
-      }
-      dt {
-        font-weight: bold;
-        font-size: 2.4rem;
-        font-weight: bold;
-        line-height: 1.4;
-        margin-bottom: 16px;
-        position: relative;
-        z-index: 10;
-        @include mq(xl){
-          font-size: 2rem;
-        }
-        @include mq{
-          font-size: 2.8rem;
+      .s-name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 132px;
+        height: 132px;
+        border-radius: 15px;
+        background: rgba(0, 0, 0, .5);
+
+        @include mq {
+          width: vw(280);
+          height: vw(280);
         }
       }
-      dd {
-        position: relative;
-        z-index: 10;
-        .btn {
-          margin-top: 20px;
-          a,span {
-            display: block;
-            background-color: #fff;
-            text-align: center;
-            padding: 0.8em 2em;
-            font-weight: bold;
-            color: #222;
-            line-height: 1.2;
-            &:hover{
-              opacity: .7;
-            }
-          }
+
+      &.spcBblock {
+        width: 132px;
+        margin-bottom: 0;
+
+        @include mq {
+          display: none;
+        }
+      }
+
+      &.csBlock {
+        .s-pic {
+          background: #fff;
+        }
+        .s-name {
+          color: #008DAD;
+          background: none;
         }
       }
     }
   }
+
+  //  .stores {
+  //    display: flex;
+  //    &.stores2{
+  //      dl{
+  //        height: 300px;
+  //        @include mq{
+  //          height: auto;
+  //        }
+  //      }
+  //
+  //    }
+  //    @include mq{
+  //      display: block;
+  //    }
+  //    dl {
+  //      width: 100%;
+  //      background-image: url($p + "store/bg_yoyogi.png");
+  //      background-size: cover;
+  //      display: flex;
+  //      justify-content: center;
+  //      align-items: center;
+  //      color: #fff;
+  //      line-height: 1.8em;
+  //      flex-direction: column;
+  //      text-align: center;
+  //      box-sizing: border-box;
+  //      padding:30px;
+  //      @include mq{
+  //        height: auto;
+  //        padding: 7vw 0;
+  //        width: 100%;
+  //      }
+  //      &.nihonbashi {
+  //        background-image: url($p + "store/bg_nihonbashi.png");
+  //      }
+  //      &.asakusa {
+  //        background-image: url($p + "store/bg_asakusa.png");
+  //      }
+  //      &.inage {
+  //        background-image: url($p + "store/bg_inage.png");
+  //      }
+  //      &.kouenji {
+  //        background-image: url($p + "store/bg_kouenji.png");
+  //      }
+  //      &.sendagaya {
+  //        background-image: url($p + "store/bg_sendagaya.png");
+  //      }
+  //      &.nishiarai {
+  //        background-image: url($p + "store/bg_nishiarai.png");
+  //      }
+  //      &.skytree {
+  //        background-image: url($p + "store/bg_skytree.png");
+  //      }
+  //      &.nakano {
+  //        background-image: url($p + "store/bg_nakano.png");
+  //      }
+  //      &.odawara {
+  //        background-image: url($p + "store/bg_odawara.png");
+  //      }
+  //      &.taito {
+  //        background-image: url($p + "store/bg_taito.png");
+  //      }
+  //      &.chibac {
+  //        background-image: url($p + "store/bg_chibac.png");
+  //      }
+  //      &.gotanno {
+  //        background-image: url($p + "store/bg_gotanno.png");
+  //      }
+  //      &.kitasenju {
+  //        background-image: url($p + "store/bg_kitasenju.png");
+  //      }
+  //      &.higashimukoujima {
+  //        background-image: url($p + "store/bg_higashimukoujima.png");
+  //      }
+  //      &.ochiaiminami {
+  //        background-image: url($p + "store/bg_ochiaiminami.png");
+  //      }
+  //      dt {
+  //        font-weight: bold;
+  //        font-size: 2.4rem;
+  //        font-weight: bold;
+  //        line-height: 1.4;
+  //        margin-bottom: 16px;
+  //        position: relative;
+  //        z-index: 10;
+  //        @include mq(xl){
+  //          font-size: 2rem;
+  //        }
+  //        @include mq{
+  //          font-size: 2.8rem;
+  //        }
+  //      }
+  //      dd {
+  //        position: relative;
+  //        z-index: 10;
+  //        .btn {
+  //          margin-top: 20px;
+  //          a,span {
+  //            display: block;
+  //            background-color: #fff;
+  //            text-align: center;
+  //            padding: 0.8em 2em;
+  //            font-weight: bold;
+  //            color: #222;
+  //            line-height: 1.2;
+  //            &:hover{
+  //              opacity: .7;
+  //            }
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
 }
