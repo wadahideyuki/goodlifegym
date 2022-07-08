@@ -47,6 +47,7 @@ article:not(.storesZone) {
       @include mq {
         margin: 0 0 vw(15);
       }
+      @include hvr;
 
       .s-pic {
         position: relative;
