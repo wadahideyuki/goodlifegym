@@ -215,6 +215,7 @@
   }
 }
 
+
 .l-cont {
 }
 
@@ -233,7 +234,13 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
+.l-footer{
+}
 .l-footer {
+  @include mq{
+    width: 100vw;
+    overflow: hidden;
+  }
   .in {
     max-width: 95%;
     margin: 0 auto;

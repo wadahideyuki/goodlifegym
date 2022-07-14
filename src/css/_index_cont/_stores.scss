@@ -12,6 +12,8 @@ article:not(.storesZone) {
   background-image: linear-gradient(to right, #006fa4 0%, #00b8ba 100%);
   @include mq {
     padding: vw(90) 0;
+    width: 100vw;
+    overflow: hidden;
   }
   .u-enTxt {
     line-height: .61;
