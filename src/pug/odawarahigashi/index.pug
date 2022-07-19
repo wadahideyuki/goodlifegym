@@ -8,7 +8,7 @@ html(lang="ja")
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      
+     
       gtag('config', 'G-8MLD0Z0N3G');
     // Google Tag Manager
     script.
@@ -46,47 +46,45 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]小田原駅東口#[br]#[small.sub 2022年8月オープン予定]
+      h1.ttl  GOODLIFE GYM#[sup ®]小田原駅東口#[br]
+      
       .info
-        //dl
-          dt  キャンペーン実施中！（6月受付分まで）
+        dl
+          dt  キャンペーン実施中！
           dd  
             ul  
               li
-                strong 入会金30,000円→#[em 10,000円]
+                strong 入会金割引#[br]
+                span 入会金30,000円→#[em 10,000円]
               li
-                strong 初月会費→#[em 10,000円割引]
-              li
-                strong カウンセリング＆初回体験料3,000円→#[em 無料]
+                strong 体験料無料#[br]
+                span カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
-        //article.photoZone 
+        article.photoZone 
           ul 
-            li: img(src="./img/ph01.jpg?v3")
-            li: img(src="./img/ph02.jpg?v3")
-            li: img(src="./img/ph03.jpg?v3")
-            li: img(src="./img/ph03.jpg?v3")
+            li: img(src="./img/ph01.jpg?v1")
 
 
 
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            //dl
+            dl
               dt  営業時間
               dd  平日9:00-22:00、土日祝9:00-18:00
-            //dl
+            dl
               dt  定休日
-              dd  金曜日
+              dd  木曜日 ※8/31までは月も定休日
             dl
               dt  住所
               dd  250-0011#[br] 神奈川県小田原市栄町２丁目１１−５ カクヨー栄町ビル 2F 
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            //dl
+            dl
               dt  設備・サービス
-              dd  ​更衣室・トイレあり、無料レンタルシューズ
+              dd  更衣室・トイレあり、無料レンタルシューズ#[br]駐車場がありませんので、車でお越しの方は#[a(href="/odawara/" class="linkTxt") 小田原店]にご来店下さい。
             //img(src="./img/sche.png")
 
 
@@ -106,7 +104,7 @@ html(lang="ja")
           iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.9851830194243!2d139.1591408!3d35.2566244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a518a1a27423%3A0xedf28407e117864c!2zR09PRExJRkUgR1lN77yI44Kw44OD44OJ44Op44Kk44OV44K444Og77yJ5bCP55Sw5Y6f6aeF5p2x5Y-j5bqX!5e0!3m2!1sja!2sjp!4v1657175421889!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen= loading='lazy' referrerpolicy='no-referrer-when-downgrade')
 
 
-        //article.priceZone#price
+        article.priceZone#price
           .u-enTxt PRICE
           .u-inner
             h2.u-ttl1 ​料金のご案内
@@ -147,14 +145,14 @@ html(lang="ja")
                       th 毎月のお支払い方法
                       td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
 
-        //article.contactZone
+        article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
             +ttl1("小田原駅東口店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/XXXXX" method="post")
+              form.formrun(action="https://form.run/api/v1/r/9dphzrxod0w6wwbkhdtpdqiy" method="post")
                 // ↓自由に要素を追加・編集することができます
                 - var shopName = "小田原駅東口店"
                 include /_index_cont/_contact.pug
