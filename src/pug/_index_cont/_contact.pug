@@ -125,8 +125,12 @@ h3 サービスに関するご質問をご希望の方
   label(for="_formrun_gotcha") If you are a human, ignore this field
   input#_formrun_gotcha(type="text" name="_formrun_gotcha" tabindex="-1")
 
-.rowRcap
-  .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
+- if (recapcha == "off")
+  .s
+- else
+  .rowRcap
+    .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
+
 button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." ) 送信
 
 
