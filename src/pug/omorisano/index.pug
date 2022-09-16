@@ -46,10 +46,10 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]大森山王#[br]#[small.sub 2022年10月オープン予定]
+      h1.ttl  GOODLIFE GYM#[sup ®]大森山王#[br]#[small.sub 2022年10月1日オープン]
       .info
-        //dl
-          dt  キャンペーン実施中！（6月受付分まで）
+        dl
+          dt  キャンペーン実施中！（10月受付分まで）
           dd  
             ul  
               li
@@ -84,7 +84,7 @@ html(lang="ja")
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            //dl
+            dl
               dt  設備・サービス
               dd  ​更衣室・トイレあり、無料レンタルシューズ
             //img(src="./img/sche.png")
@@ -106,11 +106,12 @@ html(lang="ja")
           iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.7266538721674!2d139.71796691559538!3d35.58513804284267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018602533f16065%3A0xe793d0a92fcb4bc6!2z44CSMTQzLTAwMjMg5p2x5Lqs6YO95aSn55Sw5Yy65bGx546L77yU5LiB55uu77yR77yZ4oiS77yZ!5e0!3m2!1sja!2sjp!4v1660615595965!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen= loading='lazy' referrerpolicy='no-referrer-when-downgrade')
 
 
-        //article.priceZone#price
+        article.priceZone#price
           .u-enTxt PRICE
           .u-inner
             h2.u-ttl1 ​料金のご案内
             p スケジュールに合わせて通い放題・週1プランからご選択いただけます。
+            p.cTxt 【キャンペーン中】初月会費が以下の金額から10,000円OFFとなります！
             .planArea
               .planBox
                 .contWrap.is-active
@@ -139,24 +140,24 @@ html(lang="ja")
                   table
                     tr
                       th カウンセリング＆初回体験料
-                      td 3,000円
+                      td 3,000円 → #[em 【キャンペーン中】無料]
                     tr
                       th 入会金・登録料
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
                     tr
                       th 毎月のお支払い方法
-                      td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
+                      td クレジットカード、銀行振込
 
-        //article.contactZone
+        article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("柏店 お問い合わせ")
+            +ttl1("大森山王店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/XXXXX" method="post")
+              form.formrun(action="https://form.run/api/v1/r/2gvzguqejech77fkbdblle9f" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "柏店"
+                - var shopName = "大森山王店"
                 include /_index_cont/_contact.pug
 
 

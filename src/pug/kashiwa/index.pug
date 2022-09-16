@@ -46,10 +46,10 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]柏#[br]#[small.sub 2022年10月オープン予定]
+      h1.ttl  GOODLIFE GYM#[sup ®]柏#[br]#[small.sub 2022年10月1日オープン]
       .info
-        //dl
-          dt  キャンペーン実施中！（6月受付分まで）
+        dl
+          dt  キャンペーン実施中！（10月受付分まで）
           dd  
             ul  
               li
@@ -75,19 +75,19 @@ html(lang="ja")
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            //dl
+            dl
               dt  営業時間
-              dd  平日9:00-22:00、土日祝9:00-18:00
-            //dl
+              dd  平日9:00-22:00、土日祝10:00-18:00
+            dl
               dt  定休日
-              dd  金曜日
+              dd  月曜日
             dl
               dt  住所
               dd  277-0023#[br]千葉県柏市中央2-2-18 MAKE BLDG 203
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            //dl
+            dl
               dt  設備・サービス
               dd  ​更衣室・トイレあり、無料レンタルシューズ
             //img(src="./img/sche.png")
@@ -106,14 +106,15 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.7128744843862!2d139.96981881553853!3d35.856043427971585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189cdc05397d3d%3A0x4bf0afb89dcda385!2z44CSMjc3LTAwMjMg5Y2D6JGJ55yM5p-P5biC5Lit5aSu77yS5LiB55uu77yS4oiS77yR77yY!5e0!3m2!1sja!2sjp!4v1657243606364!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen= loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.7130510181196!2d139.9720075!3d35.85603909999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189dfe9e1599d5%3A0xbef2a4ba5b219a39!2sGOODLIFE%20GYM%20%E6%9F%8F!5e0!3m2!1sja!2sjp!4v1662693183226!5m2!1sja!2sjp", width="600", height="450", style="border:0;",  loading="lazy", referrerpolicy="no-referrer-when-downgrade")
 
 
-        //article.priceZone#price
+        article.priceZone#price
           .u-enTxt PRICE
           .u-inner
             h2.u-ttl1 ​料金のご案内
             p スケジュールに合わせて通い放題・週1プランからご選択いただけます。
+            p.cTxt 【キャンペーン中】初月会費が以下の金額から10,000円OFFとなります！
             .planArea
               .planBox
                 .contWrap.is-active
@@ -142,22 +143,22 @@ html(lang="ja")
                   table
                     tr
                       th カウンセリング＆初回体験料
-                      td 3,000円
+                      td 3,000円 → #[em 【キャンペーン中】無料]
                     tr
                       th 入会金・登録料
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
                     tr
                       th 毎月のお支払い方法
-                      td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
+                      td クレジットカード、銀行振込
 
-        //article.contactZone
+        article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
             +ttl1("柏店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/XXXXX" method="post")
+              form.formrun(action="https://form.run/api/v1/r/mciz0dfcripcgfie88vpx67g" method="post")
                 // ↓自由に要素を追加・編集することができます
                 - var shopName = "柏店"
                 include /_index_cont/_contact.pug
