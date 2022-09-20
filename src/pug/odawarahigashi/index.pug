@@ -3,6 +3,14 @@ include /_include/_mixin.pug
 doctype html
 html(lang="ja")
   head
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N5CM4HX');
+    // End Google Tag Manager
     script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
     script.
       window.dataLayer = window.dataLayer || [];
@@ -44,6 +52,10 @@ html(lang="ja")
 
 
   body.pageStores
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-N5CM4HX", height="0", width="0", style="display:none;visibility:hidden")
+    // End Google Tag Manager (noscript)
     .l-wrapper
       include /_include/_header.pug
       h1.ttl  GOODLIFE GYM#[sup ®]小田原駅東口#[br]
