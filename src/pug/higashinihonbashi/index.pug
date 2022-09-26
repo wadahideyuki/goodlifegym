@@ -48,6 +48,14 @@ html(lang="ja")
       h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]東日本橋
       .info
         dl
+          dt  会員数上限によりご新規様受付停止中
+          dd  
+            ul  
+              li
+                span 10月中旬より順次受付を再開予定ですのでお問合せください。#[br]または、同エリア店舗(台東入谷店・東京スカイツリー前店)でのお申し込みをご検討ください。
+            a(href="#contact").u-btn1  お問い合わせはこちらv
+      //.info
+        dl
           dt  体験当日ご入会で初期費用が２万円お得に！
           dd  
             ul  
@@ -190,7 +198,7 @@ html(lang="ja")
               form.formrun(action="https://form.run/api/v1/r/dvzjphzj09mqm82255ookdz1" method="post")
                 // ↓自由に要素を追加・編集することができます
                 - var shopName = "東日本橋"
-                - var uketsuke = "on"
+                - var uketsuke = "off"
                 - var man2 = "on"
                 include /_index_cont/_contact.pug
 
