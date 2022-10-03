@@ -48,7 +48,7 @@ html(lang="ja")
       include /_include/_header.pug
               
       h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]代々木
-      .info
+      //.info
         dl
           dt  会員数上限によりご新規様受付停止中
           dd  
@@ -56,7 +56,7 @@ html(lang="ja")
               li
                 span 10月中旬より順次受付を再開予定ですのでお問合せください。#[br]または、同エリア店舗(千駄ヶ谷店)でのお申し込みをご検討ください。
             a(href="#contact").u-btn1  お問い合わせはこちら
-      //.info
+      .info
         dl
           dt  体験当日ご入会で初期費用が２万円お得に！
           dd  
@@ -222,7 +222,7 @@ html(lang="ja")
                 // ↓自由に要素を追加・編集することができます
                 - var shopName = "代々木店"
                 - var man1 = "on"
-                - var uketsuke = "off"
+                - var uketsuke = "on"
                 - var man2 = "off"
                 include /_index_cont/_contact.pug
 
