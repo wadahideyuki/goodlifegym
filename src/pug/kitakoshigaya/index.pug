@@ -107,7 +107,8 @@ html(lang="ja")
 
         .mapZone
           iframe(src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12926.969816143936!2d139.7817991816076!3d35.904322901303544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5Z-8546J55yM6LaK6LC35biC5p2x5aSn5rKiMS00Ni0xMiDpmY3nlLDjg5Pjg6s!5e0!3m2!1sja!2sjp!4v1662364149775!5m2!1sja!2sjp")
-        //article.priceZone#price
+
+        article.priceZone#price
           .u-enTxt PRICE
           .u-inner
             h2.u-ttl1 ​料金のご案内
@@ -146,18 +147,18 @@ html(lang="ja")
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
                     tr
                       th 毎月のお支払い方法
-                      td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
+                      td クレジットカード、銀行振込
 
-        //article.contactZone
+        article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("柏店 お問い合わせ")
+            +ttl1("北越谷店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/XXXXX" method="post")
+              form.formrun(action="https://form.run/api/v1/r/dz3nztnqmsa7xa6212kuu840" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "柏店"
+                - var shopName = "北越谷店"
                 include /_index_cont/_contact.pug
 
 
