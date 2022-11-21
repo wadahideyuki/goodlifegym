@@ -48,16 +48,13 @@ html(lang="ja")
       include /_include/_header.pug
       h1.ttl  GOODLIFE GYM#[sup ®]足立江北#[br]#[small.sub 2023年1月オープン予定]
       .info
-        //dl
-          dt  キャンペーン実施中！（6月受付分まで）
+        dl
+          dt  体験当日ご入会で初期費用が２万円お得に！
           dd  
             ul  
               li
-                strong 入会金30,000円→#[em 10,000円]
-              li
-                strong 初月会費→#[em 10,000円割引]
-              li
-                strong カウンセリング＆初回体験料3,000円→#[em 無料]
+                strong 入会金割引#[br]
+                span 入会金30,000円→#[em 10,000円]
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
         //article.photoZone 
@@ -75,22 +72,21 @@ html(lang="ja")
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            //dl
+            dl
               dt  営業時間
-              dd  平日9:00-22:00、土日祝9:00-18:00
-            //dl
+              dd  平日9:00-22:00#[br]土日祝10:00-18:00　
+            dl
               dt  定休日
-              dd  金曜日
+              dd  日曜
             dl
               dt  住所
               dd  123-0871#[br]東京都足立区椿2-10-11
             //dl
               dt  アクセス
-              dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            //dl
+              dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]千駄ヶ谷駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
+            dl
               dt  設備・サービス
-              dd  ​更衣室・トイレあり、無料レンタルシューズ
-            //img(src="./img/sche.png")
+              dd  ​更衣室・トイレあり、無料マイシューズ保管
 
 
         //article.outlineZone 
@@ -107,7 +103,7 @@ html(lang="ja")
 
         .mapZone
           iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.794262502728!2d139.75657031553698!3d35.78042983213204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018923beaded2b7%3A0x9d71ec18226303b!2z44CSMTIzLTA4NzEg5p2x5Lqs6YO96Laz56uL5Yy65qS_77yS5LiB55uu77yR77yQ4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1664152446144!5m2!1sja!2sjp")
-        //article.priceZone#price
+        article.priceZone#price
           .u-enTxt PRICE
           .u-inner
             h2.u-ttl1 ​料金のご案内
@@ -146,18 +142,18 @@ html(lang="ja")
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
                     tr
                       th 毎月のお支払い方法
-                      td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
+                      td クレジットカード、銀行振込
 
-        //article.contactZone
+        article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("柏店 お問い合わせ")
+            +ttl1("足立江北店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/XXXXX" method="post")
+              form.formrun(action="https://form.run/api/v1/r/jybnjgnvo5nytuuagth5agp5" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "柏店"
+                - var shopName = "足立江北店"
                 include /_index_cont/_contact.pug
 
 
