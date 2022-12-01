@@ -22,7 +22,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 中野野方店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 中野新井店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -46,119 +46,69 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]中野野方
+      h1.ttl  GOODLIFE GYM#[sup ®]中野新井前#[br]2023年1月オープン予定
       .info
-        dl
-          dt  体験当日ご入会で初期費用が２万円お得に！
+        //dl
+          dt  キャンペーン実施中！（2023年1月受付分まで）
           dd  
             ul  
               li
-                strong 入会金割引#[br]
-                span 入会金30,000円→#[em 10,000円]
+                strong 入会金30,000円→#[em 10,000円]
+              li
+                strong 初月会費→#[em 10,000円割引]
+              li
+                strong カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
-        article.photoZone 
+        //article.photoZone 
           ul 
-            li: img(src="./img/ph08.jpg?2021062")
-            li: img(src="./img/ph09.jpg?2021062")
-            li: img(src="./img/ph03.jpg?v2")
-            li: img(src="./img/ph04.jpg?2021062")
-            li: img(src="./img/ph05.jpg?2021062")
-            li: img(src="./img/ph06.jpg?2021062")
-            li: img(src="./img/ph07.jpg?2021062")
-            li: img(src="./img/ph10.jpg?2021062")
-            li: img(src="./img/ph11.jpg?2021062")
-            li: img(src="./img/ph12.jpg?2021062")
+            li: img(src="./img/p1.jpg?v3")
+            li: img(src="./img/p2.jpg?v3")
+            li: img(src="./img/p3.jpg?v3")
+            li: img(src="./img/p4.jpg?v3")
+            li: img(src="./img/p5.jpg?v3")
+            li: img(src="./img/p6.jpg?v3")
+            li: img(src="./img/p7.jpg?v3")
 
 
 
-        //article.featureZone 
-          h2.ttl2  東日本橋店の特徴
-          ul 
-            li 
-              .img
-                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
-              p 特徴が入るテキストテキストテキストテキスト
-            li 
-              .img
-                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
-              p 特徴が入るテキストテキストテキストテキスト
-            li 
-              .img
-                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
-              p 特徴が入るテキストテキストテキストテキスト
-            li 
-              .img
-                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
-              p 特徴が入るテキストテキストテキストテキスト
-
-
-        article.outlineZone #[br]
+        article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            dl
+            //dl
               dt  営業時間
-              dd  平日9:00-22:00、土日祝10:00-18:00
-            dl
+              dd  平日10:00-22:00、土日祝12:00-20:00
+            //dl
               dt  定休日
-              dd  水曜日
+              dd  月木
             dl
               dt  住所
-              dd  165-0027#[br]東京都中野区野方2-23-5 ルース中野B1階
+              dd  165-0026#[br]東京都中野区新井1-34-16アネックス新井201
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            dl
+            //dl
               dt  設備・サービス
-              dd  ​更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
+              dd  更衣室・トイレあり、無料レンタルシューズ
             //img(src="./img/sche.png")
 
 
-        article.trainerZone
-          .u-enTxt TRAINER
-          .u-inner
-            h2.u-ttl1 ​トレーナー紹介
 
-          .trainerBox.box2
-            .col 
-              .ph
-                +img("trainer/ph03.png?202104")
-                +img("trainer/ph03-2.png?202104","","cov")
-              h3.taC #[span リュウト]#[br]スーパーバイザー#[br]中野野方店メイントレーナー
-            .col 
-              .ph
-                +img("trainer/ph_nakano1.jpg?20210622")
-                +img("trainer/ph_nakano2.jpg?2021062","","cov")
-              h3.taC #[span リュウ]#[br]中野野方トレーナー
-            .col 
-              .ph
-                +img("trainer/nogata-ph3.png?20210622")
-                +img("trainer/nogata-ph3-2.png?2021062","","cov")
-              h3.taC #[span リュウキ]#[br]中野野方店トレーナー
-        article.outlineZone 
+        //article.outlineZone 
           h2.ttl2  お客様の声
-          ul.voice
-            li: img(src="img/v04.png")
-            li: img(src="img/v05.png")
-            li: img(src="img/v06.png")
-            li: img(src="img/v07.png") 
-          //
+          ul.voice 
             li 
-              a(href="https://goo.gl/maps/YMuC8yTYrgF6jEk77" target="_blank")
-                img(src="img/v01.png")
+              a(href="https://goo.gl/maps/7yvPZ6uRywzinj4Q8" target="_blank")
+                img(src="img/i_v01.png")
             li 
-              a(href="https://goo.gl/maps/ZLXGBtLXHDuzg7ke6" target="_blank")
-                img(src="img/v02.png")
-            li 
-              a(href="https://goo.gl/maps/h6Yxywoo794JxTfW7" target="_blank")
-                img(src="img/v03.png")
+              a(href="https://goo.gl/maps/PqK4aV3fA3Jgw6Pb8" target="_blank")
+                img(src="img/i_v02.png")
           .voiceBtn
-            a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E4%B8%AD%E9%87%8E%E9%87%8E%E6%96%B9/@35.7126623,139.6535538,17z/data=!4m8!3m7!1s0x6018f37dad4a2069:0x92060910f1d963ad!8m2!3d35.7126623!4d139.6557425!9m1!1b1!16s%2Fg%2F11pdwhkwhv?hl=ja" target="_blank") もっと見る
+            a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12958.204477926227!2d139.6557425!3d35.7126623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x92060910f1d963ad!2zR09PRExJRkUgR1lNKOOCsOODg-ODieODqeOCpOODleOCuOODoCnkuK3ph47ph47mlrk!5e0!3m2!1sja!2sjp!4v1640564682420!5m2!1sja!2sjp' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy')
-
-        article.priceZone#price
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.568181824269!2d139.66668591553557!3d35.712242535877614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f29837cd0ee7%3A0x17f8196ce319256b!2z44Ki44ON44OD44Kv44K55paw5LqV!5e0!3m2!1sja!2sjp!4v1669859717428!5m2!1sja!2sjp")
+        //article.priceZone#price
           .u-enTxt PRICE
           .u-inner
             h2.u-ttl1 ​料金のご案内
@@ -197,19 +147,18 @@ html(lang="ja")
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
                     tr
                       th 毎月のお支払い方法
-                      td クレジットカード、銀行振込
-
+                      td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
 
         article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("中野野方店 お問い合わせ")
+            +ttl1("中井駅前店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/u3p7l6ahmywabt63vj4sa5gp" method="post")
+              form.formrun(action="https://form.run/api/v1/r/elav15becgegs6cp0ud973sf" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "中野野方店"
+                - var shopName = "中井駅前店"
                 include /_index_cont/_contact.pug
 
 
