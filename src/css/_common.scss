@@ -420,3 +420,51 @@ $innerW2: 1200;
     color: #fff;
   }
 }
+.txt-pp{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 0;
+  line-height: 1.8;
+  @include mq{
+    max-width: none;
+    width: auto;
+    padding: 10vw vw(25);
+  }
+  h2{
+    color: #00b5b9;
+    font-size: 2rem;
+    margin:2.5em 0 .8em 0;
+    font-weight: bold;
+    @include mq{
+      margin: vw(25) 0;
+    }
+  }
+  ul{
+    padding-left: 2em;
+    margin-top: 10px;
+    margin-bottom: 1em;
+    @include mq{
+      margin-top: vw(10);
+    }
+    li{
+      list-style-type: disc;
+    }
+  }
+  .mail{
+    color: #006fa4;
+    text-decoration: underline;
+    &:hover{
+      opacity: .8;
+      text-decoration: none;
+    }
+  }
+}
+.prv{
+  text-align: center;
+  font-size: 1.4rem;
+  color: #00A4B4;
+  &:hover{
+    opacity: .7;
+  }
+}
