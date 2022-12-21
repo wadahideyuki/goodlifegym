@@ -156,6 +156,13 @@
       padding-bottom: 0.5em;
       @include mq {
         font-size: 2rem;
+        text-align: center;
+      }
+      .di_camp{
+        font-size: 2rem;
+        @include mq{
+          font-size: 1.6rem;
+        }
       }
     }
     .col2box {

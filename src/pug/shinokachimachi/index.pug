@@ -22,7 +22,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 足立江北店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 新御徒町店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -46,10 +46,10 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]足立江北#[br]#[small.sub 2023年1月オープン予定]
-      .info
+      h1.ttl  GOODLIFE GYM#[sup ®]新御徒町#[br]#[small.sub 2023年3月オープン予定]
+      //.info
         dl
-          dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
+          dt  キャンペーン実施中！（2023年2月受付分まで）
           dd  
             ul  
               li
@@ -61,7 +61,7 @@ html(lang="ja")
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
         article.photoZone 
-          ul 
+          //ul 
             li: img(src="./img/ph01.jpg?v3")
             li: img(src="./img/ph02.jpg?v3")
             li: img(src="./img/ph03.jpg?v3")
@@ -74,19 +74,19 @@ html(lang="ja")
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            dl
+            //dl
               dt  営業時間
               dd  平日9:00-22:00#[br]土日祝10:00-18:00　
-            dl
+            //dl
               dt  定休日
               dd  日曜
             dl
               dt  住所
-              dd  123-0871#[br]東京都足立区椿2-10-11
+              dd  110-0015#[br]東京都台東区東上野1-2-13カーニープレイス新御徒町202
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]千駄ヶ谷駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            dl
+            //dl
               dt  設備・サービス
               dd  ​更衣室・トイレあり、無料マイシューズ保管
 
@@ -104,7 +104,7 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.794262502728!2d139.75657031553698!3d35.78042983213204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018923beaded2b7%3A0x9d71ec18226303b!2z44CSMTIzLTA4NzEg5p2x5Lqs6YO96Laz56uL5Yy65qS_77yS5LiB55uu77yR77yQ4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1664152446144!5m2!1sja!2sjp")
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.767772283764!2d139.77911471553546!3d35.70733193614683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea311bfe483%3A0xaaccf82657754103!2z44CSMTEwLTAwMTUg5p2x5Lqs6YO95Y-w5p2x5Yy65p2x5LiK6YeO77yR5LiB55uu77yS4oiS77yR77ySIOOCq-ODvOODi-ODvOODl-ODrOOCpOOCueaWsOW-oeW-kueUug!5e0!3m2!1sja!2sjp!4v1671595614242!5m2!1sja!2sjp")
         article.priceZone#price
           .u-enTxt PRICE
           .u-inner
@@ -146,16 +146,16 @@ html(lang="ja")
                       th 毎月のお支払い方法
                       td クレジットカード、銀行振込
 
-        article.contactZone
+        //article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("足立江北店 お問い合わせ")
+            +ttl1("新御徒町店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
               form.formrun(action="https://form.run/api/v1/r/jybnjgnvo5nytuuagth5agp5" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "足立江北店"
+                - var shopName = "新御徒町店"
                 include /_index_cont/_contact.pug
 
 
