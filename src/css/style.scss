@@ -71,4 +71,14 @@ sup{
 .di_blue{
   color: #0094af;
 }
+.one_more{
+  text-align: center;
+  p{
+    margin: 50px 0;
+    font-weight: bold;
+    @include mq{
+      margin: 5vw 0;
+    }
+  }
+}
 
