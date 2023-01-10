@@ -49,7 +49,6 @@ article:not(.informationZone){
                 display: flex;
                 border: 0px;
                 justify-content: flex-start;
-                align-items: flex-start;
                 margin-top: 0px;
                 padding-top: 0px;
                 @include mq{
@@ -59,18 +58,30 @@ article:not(.informationZone){
                     margin-top: 1em;
                     padding-top: 1em;
                     border-top: 1px dotted #CCC;
+                    @include mq{
+                      border: 0px;
+                    }
                 }
                 .ttl{
                     flex-shrink: 0;
                     width: 18%;
+                    background-color: #1389c1;
+                    color: #FFF;
+                    font-weight: bold;
+                    box-sizing: border-box;
+                    padding: 1em;
+                    margin-right: 2%;
+                    text-align: center;
                     
                 @include mq{
-                 width: 100%;   
+                 width: 100%;
+                 padding: .3em;
+                 font-size: 2rem;
+                 padding: .5em;   
                 }
                     
                 }
             }
-              border-top: 1px dotted #CCC;
               padding-top: 1em;
               margin-top: 1em;
               p{
@@ -102,8 +113,6 @@ article:not(.informationZone){
                     }
                 }
                 .right{
-                    background-color: #EEE;
-                    padding: 1em;
                     width: 40%;
                     box-sizing: border-box;
                     @include mq{
@@ -122,6 +131,7 @@ article:not(.informationZone){
             background:linear-gradient(transparent 75%, #fff799 75%);
             font-weight:bold; 
             font-size: 2.2rem;
+            color: #1389c1;
             @include mq{
                 font-size: 1.8rem;
             }
