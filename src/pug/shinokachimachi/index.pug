@@ -47,9 +47,9 @@ html(lang="ja")
     .l-wrapper
       include /_include/_header.pug
       h1.ttl  GOODLIFE GYM#[sup ®]新御徒町#[br]#[small.sub 2023年2月2日オープン/新規申込受付中]
-      //.info
+      .info
         dl
-          dt  キャンペーン実施中！（2023年2月受付分まで）
+          dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
           dd  
             ul  
               li
@@ -60,8 +60,8 @@ html(lang="ja")
                 strong カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
-        article.photoZone 
-          //ul 
+        //article.photoZone 
+          ul 
             li: img(src="./img/ph01.jpg?v3")
             li: img(src="./img/ph02.jpg?v3")
             li: img(src="./img/ph03.jpg?v3")
