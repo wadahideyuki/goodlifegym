@@ -11,6 +11,7 @@ article:not(.informationZone){
     @include mq{
         padding-bottom: 10vw;
     }
+
   dl{
       position: relative;
       background-color: #FFF;
@@ -43,6 +44,32 @@ article:not(.informationZone){
           font-weight: normal;
           line-height: 1.8;
           .box{
+            position: relative;
+            &.top{
+                display: flex;
+                border: 0px;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-top: 0px;
+                padding-top: 0px;
+                @include mq{
+                    display: block;
+                }
+                & + .box.top{
+                    margin-top: 1em;
+                    padding-top: 1em;
+                    border-top: 1px dotted #CCC;
+                }
+                .ttl{
+                    flex-shrink: 0;
+                    width: 18%;
+                    
+                @include mq{
+                 width: 100%;   
+                }
+                    
+                }
+            }
               border-top: 1px dotted #CCC;
               padding-top: 1em;
               margin-top: 1em;
@@ -50,14 +77,45 @@ article:not(.informationZone){
                   padding-top: .5em;
                   b{
                       font-weight: bold;
+                      em{
+                        font-weight: normal;
+                        color: #000;
+                        font-size: 1.6rem;
+                      }
                   }
+                  &.notes{
+                    font-size: 1.6rem;
+                  }
+              }
+              .in_b{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                @include mq{
+                    display: block;
+                }
+                .left{
+                    width: 60%;
+                    flex-shrink: 0;
+                    @include mq{
+                     width: 100%;   
+                    }
+                }
+                .right{
+                    background-color: #EEE;
+                    padding: 1em;
+                    width: 40%;
+                    box-sizing: border-box;
+                    @include mq{
+                        margin-top: 3vw;
+                     width: 100%;   
+                    }
+                }
               }
           }
           @include mq{
               padding:.5em 0 0 0;
-              margin-top: .5em;
               border-left: 0px;
-              border-top: 1px solid #1389c1;
               font-size: 1.5rem;
           }
           strong{
