@@ -46,7 +46,7 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]本郷三丁目#[br]今春オープン
+      h1.ttl  GOODLIFE GYM#[sup ®]本郷三丁目#[br]2023年3月オープン
       //.info
         dl
           dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
@@ -92,13 +92,13 @@ html(lang="ja")
               dd  更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ、無料駐車場あり
             //img(src="./img/sche.png")
 
-        //article.trainerZone
+        article.trainerZone
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('東日本橋店')")
+              .col(v-if="item.acf.store.includes('本郷三丁目店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")
