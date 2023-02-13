@@ -117,18 +117,33 @@ html(lang="ja")
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('台東入谷店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
 
-          .trainerBox.box2
+          //.trainerBox.box2
             .col 
               .ph
                 +img("trainer/ph_taitou.png?2021062")
                 +img("trainer/ph_taitou-2.png?2021062","","cov")
-              h3.taC #[span トモヒロ]#[br]台東入谷店メイントレーナー
+              h3.taC #[span トモヒロ]#[br]メイントレーナー
             .col 
               .ph
                 +img("trainer/taito-ph2-1.png?20210622")
                 +img("trainer/taito-ph2-2.png?2021062","","cov")
-              h3.taC #[span ナオキ]#[br]台東入谷トレーナー
+              h3.taC #[span ナオキ]#[br]トレーナー
+              
+            .col 
+              .ph
+                +img("trainer/ryou1.jpg?20210622")
+                +img("trainer/ryou2.jpg?2021062","","cov")
+              h3.taC #[span リョウ]#[br]トレーナー
         article.outlineZone 
           h2.ttl2  お客様の声
           ul.voice

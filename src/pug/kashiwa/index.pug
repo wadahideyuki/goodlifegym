@@ -98,14 +98,22 @@ html(lang="ja")
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('柏店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
 
-          .trainerBox.box2
+          //.trainerBox.box2
             .col 
               .ph
                 +img("trainer/kashiwa-ph1.png?20210622")
                 +img("trainer/kashiwa-ph2.png?2021062","","cov")
-              h3.taC #[span マサ]#[br]柏トレーナー
-
+              h3.taC #[span マサ]#[br]トレーナー
 
         //article.outlineZone 
           h2.ttl2  お客様の声

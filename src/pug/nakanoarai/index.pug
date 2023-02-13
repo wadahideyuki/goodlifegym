@@ -36,7 +36,7 @@ html(lang="ja")
     +css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
     script(src="https://sdk.form.run/js/v2/formrun.js")
     script(src="https://www.google.com/recaptcha/api.js")
-    +cssCommon("style.css?202106")
+    +cssCommon("style.css?202108")
     +jsCommon("jquery-1.11.1.min.js")
     +jsCommon("slick.min.js")
     +jsCommon("jquery.colorbox-min.js")
@@ -62,15 +62,19 @@ html(lang="ja")
       main.l-cont
         article.photoZone 
           ul 
-            li: img(src="./img/ph01.jpg?v3")
-            li: img(src="./img/ph02.jpg?v3")
-            li: img(src="./img/ph03.jpg?v3")
-            li: img(src="./img/ph04.jpg?v3")
+            li: img(src="./img/ph05.jpg?v3")
+            li: img(src="./img/ph06.jpg?v3")
+            li: img(src="./img/ph07.jpg?v3")
+            li: img(src="./img/ph08.jpg?v3")
+            li: img(src="./img/ph09.jpg?v3")
+            li: img(src="./img/ph10.jpg?v3")
+            li: img(src="./img/ph11.jpg?v3")
+            li: img(src="./img/ph12.jpg?v3")
+            li: img(src="./img/ph13.jpg?v3")
+            li: img(src="./img/ph14.jpg?v3")
 
-
-        .one_more
-          .img: img(src="./img/ph_more.jpg")
-          p 【2023年1月中旬に専用マシン5台追加します！】
+        .box3d
+          iframe(width="853", height="480", src="https://my.matterport.com/show/?m=UaxncXYqsbU", frameborder="0", allowfullscreen, allow="xr-spatial-tracking")
 
           
         article.outlineZone 
@@ -81,7 +85,7 @@ html(lang="ja")
               dd  平日9:00-22:00、土日祝10:00-18:00
             dl
               dt  定休日
-              dd  土曜
+              dd  月曜日
             dl
               dt  住所
               dd  165-0026#[br]東京都中野区新井1-34-16アネックス新井201
@@ -114,23 +118,33 @@ html(lang="ja")
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('中野店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
 
-          .trainerBox.box2
+
+          //.trainerBox.box2
             .col 
               .ph
                 +img("trainer/nakanoarai-ph1.png?20210622")
                 +img("trainer/nakanoarai-ph2.png?2021062","","cov")
-              h3.taC #[span シュウナ]#[br]中野店トレーナー
+              h3.taC #[span シュウナ]#[br]トレーナー
             .col 
               .ph
                 +img("trainer/nogata-ph3.png?20210622")
                 +img("trainer/nogata-ph3-2.png?2021062","","cov")
-              h3.taC #[span リュウキ]#[br]中野野方店,中野店トレーナー
+              h3.taC #[span リュウキ]#[br]トレーナー
             .col 
               .ph
                 +img("trainer/nakano-ph1.png?20210622")
                 +img("trainer/nakano-ph2.png?2021062","","cov")
-              h3.taC #[span ノム]#[br]中野店、中野野方店トレーナー
+              h3.taC #[span ノム]#[br]トレーナー
         
         article.priceZone#price
           .u-enTxt PRICE

@@ -147,20 +147,29 @@ html(lang="ja")
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('小田原店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
 
-          .trainerBox.box2
+          //.trainerBox.box2
             .col 
               .ph
                 +img("trainer/ph09.png?2021062")
-              h3.taC #[span リュウキ]#[br]小田原店,小田原駅東口店メイントレーナー#[br]保健体育教員
+              h3.taC #[span リュウキ]#[br]メイントレーナー#[br]保健体育教員
             .col 
               .ph
                 +img("trainer/odawara-2-1.png?20210622")
-              h3.taC #[span リョウタ]#[br]小田原店,小田原駅東口店トレーナー
+              h3.taC #[span リョウタ]#[br]トレーナー
             .col 
               .ph
                 +img("trainer/odawara-3-1.png?20210622")
-              h3.taC #[span ショウゴ]#[br]小田原店,小田原駅東口店トレーナー
+              h3.taC #[span ショウゴ]#[br]トレーナー
 
         article.outlineZone 
           h2.ttl2  お客様の声

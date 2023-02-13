@@ -46,7 +46,7 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]西新宿#[br]#[small.sub 2023年1月25日オープン/新規申込受付中]
+      h1.ttl  GOODLIFE GYM#[sup ®]西新宿#[br]#[small.sub 新規申込受付中]
       .info
         dl
           dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
@@ -60,15 +60,13 @@ html(lang="ja")
                 strong カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
-        //article.photoZone 
+        article.photoZone 
           ul 
-            li: img(src="./img/p1.jpg?v3")
-            li: img(src="./img/p2.jpg?v3")
-            li: img(src="./img/p3.jpg?v3")
-            li: img(src="./img/p4.jpg?v3")
-            li: img(src="./img/p5.jpg?v3")
-            li: img(src="./img/p6.jpg?v3")
-            li: img(src="./img/p7.jpg?v3")
+            li: img(src="./img/ph01.jpg")
+            li: img(src="./img/ph02.jpg")
+            li: img(src="./img/ph03.jpg")
+            li: img(src="./img/ph04.jpg")
+            li: img(src="./img/ph05.jpg")
 
 
 
@@ -93,6 +91,20 @@ html(lang="ja")
             //img(src="./img/sche.png")
 
 
+        article.trainerZone
+          .u-enTxt TRAINER
+          .u-inner
+            h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('西新宿店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
+
         //article.outlineZone 
           h2.ttl2  お客様の声
           ul.voice 
@@ -106,7 +118,7 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.5513205286957!2d139.67785221553518!3d35.68804833720477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f327f667ec2d%3A0x66a592fed9d7f912!2z44CSMTUxLTAwNzEg5p2x5Lqs6YO95riL6LC35Yy65pys55S677yU5LiB55uu77yR77yX4oiS77ySIOOBqOOCiuS5hSAy6ZqO!5e0!3m2!1sja!2sjp!4v1669002563590!5m2!1sja!2sjp")
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.5511067362177!2d139.6800408!3d35.688053599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f38e665d2e0b%3A0x446990b1135ff03c!2z44Kw44OD44OJ44Op44Kk44OV44K444Og6KW_5paw5a6_!5e0!3m2!1sja!2sjp!4v1674435270068!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         article.priceZone#price
           .u-enTxt PRICE
           .u-inner

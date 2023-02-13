@@ -36,7 +36,7 @@ html(lang="ja")
     +css("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
     script(src="https://sdk.form.run/js/v2/formrun.js")
     script(src="https://www.google.com/recaptcha/api.js")
-    +cssCommon("style.css?202106")
+    +cssCommon("style.css?202108")
     +jsCommon("jquery-1.11.1.min.js")
     +jsCommon("slick.min.js")
     +jsCommon("jquery.colorbox-min.js")
@@ -60,14 +60,11 @@ html(lang="ja")
                 strong カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
-        //article.photoZone 
+        article.photoZone 
           ul 
-            li: img(src="./img/ph01.jpg?v3")
-            li: img(src="./img/ph02.jpg?v3")
-            li: img(src="./img/ph03.jpg?v3")
-            li: img(src="./img/ph04.jpg?v3")
-            li: img(src="./img/ph05.jpg?v3")
-            li: img(src="./img/ph06.jpg?v3")
+            - for(var i = 1;i<10; i++)
+              li: img(src="./img/ph0"+i+".jpg?v3")
+            li: img(src="./img/ph10.jpg?v3")
 
 
 
@@ -79,7 +76,7 @@ html(lang="ja")
               dd  平日9:00-22:00#[br]土日祝10:00-18:00　
             dl
               dt  定休日
-              dd  日曜日
+              dd  火曜日
             dl
               dt  住所
               dd  110-0015#[br]東京都台東区東上野1-2-13カーニープレイス新御徒町202
@@ -110,19 +107,33 @@ html(lang="ja")
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('新御徒町店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
             
-          .trainerBox.box2
+          //.trainerBox.box2
             .col 
               .ph
                 +img("trainer/ph-asakusa2-1.png?20210622")
                 +img("trainer/ph-asakusa2-2.png?2021062","","cov")
-              h3.taC #[span ゴウ]#[br]新御徒町店トレーナー
+              h3.taC #[span ゴウ]#[br]トレーナー
             .col 
               .ph
                 +img("trainer/ph-asakusa3-1.png?20210622")
                 +img("trainer/ph-asakusa3-2.png?2021062","","cov")
-              h3.taC #[span ジェイソン]#[br]浅草店,新御徒町店トレーナー
+              h3.taC #[span ジェイソン]#[br]トレーナー
         
+            .col 
+              .ph
+                +img("trainer/ryou1.jpg?20210622")
+                +img("trainer/ryou2.jpg?2021062","","cov")
+              h3.taC #[span リョウ]#[br]トレーナー
         article.priceZone#price
           .u-enTxt PRICE
           .u-inner

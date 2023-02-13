@@ -1,0 +1,75 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    // Global site tag (gtag.js) - Google Analytics
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-8MLD0Z0N3G');
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P36PRNS');
+    // End Google Tag Manager
+
+    include /_include/_head.pug
+
+  body.pageStores
+    .l-wrapper
+      include /_include/_header.pug
+
+
+      main.l-cont
+
+        article.trainerZone
+          .u-enTxt TRAINER
+          .u-inner
+            h2.u-ttl1 ​トレーナー紹介
+
+          .trainerBox.box2#app
+            template(v-for="(item, index) in posts")
+              .col
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
+          
+
+          article.specialZone 
+            
+            h3#prof 代表プロフィール
+            .daihyouBox
+              .txt 
+                h4 GOODLIFE GYM 代表 リョウタ
+                  span  起業家、パーソナルトレーナー、#[br]フィジークコンペティター#[br]1986年9月14日生　東京都足立区出身
+                p 10年間の会社員生活(セールスマン・セールスマネジャー)を経て、自らのダイエットやボディメイクの経験を活かしパーソナルトレーナーに転身。#[br]2019年8月　GOODLIFE GYMを独立開業。#[br]2020年8月　GOODLIFE GYM複数店舗展開。#[br]2021年1月　合同会社GOODLIFE設立。#[br]指導実績延べ1万セッション超え。#[br]ボディコンテスト選手指導実績多数。
+                
+              .img 
+                img(src="img/prof.png")
+              
+              .box 
+                h4 ボディコンテスト実績
+                .img2
+                  img(src="../koenji/img/prof2.jpg?202112")
+                p.con APF/2021 BREAK A ROAD#[br]クラス別２冠達成、フィジーク年代別30代クラス 優勝、フィジーク体重別-60kgクラス 優勝
+                .img2
+                  img(src="../koenji/img/prof1.jpg?202112")
+                p.con FWJ/2021 POWERHOUSE GYM JAPAN CLASSIC#[br]フィジークオープンクラス-170cm 6位、フィジークノービスクラス-168cm 3位
+              
+        article.storesZone#access
+          include /_index_cont/_stores.pug
+
+
+      include /_include/_footer.pug
+      
+

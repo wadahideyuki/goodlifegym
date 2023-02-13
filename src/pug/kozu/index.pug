@@ -3,6 +3,14 @@ include /_include/_mixin.pug
 doctype html
 html(lang="ja")
   head
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N5CM4HX');
+
     script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
     script.
       window.dataLayer = window.dataLayer || [];
@@ -22,7 +30,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 国府津店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 小田原国府津店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -44,9 +52,14 @@ html(lang="ja")
 
 
   body.pageStores
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-N5CM4HX", height="0", width="0", style="display:none;visibility:hidden")
+    // End Google Tag Manager (noscript)
+
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]国府津#[br]#[small.sub 2023年2月15日オープン/新規申込受付中]
+      h1.ttl  GOODLIFE GYM#[sup ®]小田原国府津店#[br]#[small.sub 2023年2月15日オープン/新規申込受付中]
       .info
         dl
           dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
@@ -93,6 +106,19 @@ html(lang="ja")
             //img(src="./img/sche.png")
 
 
+        //article.trainerZone
+          .u-enTxt TRAINER
+          .u-inner
+            h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('小田原国府津店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
 
         //article.outlineZone 
           h2.ttl2  お客様の声
@@ -152,13 +178,13 @@ html(lang="ja")
         article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("国府津店 お問い合わせ")
+            +ttl1("小田原国府津店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
               form.formrun(action="https://form.run/api/v1/r/7xz0hozf51tjfppsj4qlzbrs" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "国府津店"
+                - var shopName = "小田原国府津店"
                 include /_index_cont/_contact.pug
 
 

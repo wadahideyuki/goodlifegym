@@ -30,8 +30,19 @@ html(lang="ja")
       main.l-cont
 
         article.trainerZone
-          include /_index_cont/_trainer.pug
-          
+          .u-enTxt TRAINER
+          .u-inner
+            h2.u-ttl1 ​トレーナー紹介
+
+          .trainerBox.box2#app
+            template(v-for="(item, index) in posts")
+              .col
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
 
           article.specialZone 
             
@@ -41,8 +52,7 @@ html(lang="ja")
                 h4 GOODLIFE GYM 代表 リョウタ
                   span  起業家、パーソナルトレーナー、#[br]フィジークコンペティター#[br]1986年9月14日生　東京都足立区出身
                 p 10年間の会社員生活(セールスマン・セールスマネジャー)を経て、自らのダイエットやボディメイクの経験を活かしパーソナルトレーナーに転身。#[br]2019年8月　GOODLIFE GYMを独立開業。#[br]2020年8月　GOODLIFE GYM複数店舗展開。#[br]2021年1月　合同会社GOODLIFE設立。#[br]指導実績延べ1万セッション超え。#[br]ボディコンテスト選手指導実績多数。
-                .btn 
-                  a(href="https://www.youtube.com/embed/qlA9k2imJN4").ytCBox.btn 代表密着インタビューはこちら
+                
               .img 
                 img(src="img/prof.png")
               
@@ -60,5 +70,5 @@ html(lang="ja")
 
 
       include /_include/_footer.pug
-
+      
 

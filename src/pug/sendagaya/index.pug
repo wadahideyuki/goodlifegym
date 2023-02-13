@@ -101,18 +101,27 @@ html(lang="ja")
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('千駄ヶ谷店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
 
-          .trainerBox.box2
+          //.trainerBox.box2
             .col 
               .ph
                 +img("trainer/ph06.png?v3")
                 +img("trainer/ph06-2.png?v3","","cov")
-              h3.taC #[span ヒロアキ]#[br]千駄ヶ谷店メイントレーナー
+              h3.taC #[span ヒロアキ]#[br]メイントレーナー
             .col 
               .ph
                 +img("trainer/sendagaya-ph1.png?20210622")
                 +img("trainer/sendagaya-ph2.png?2021062","","cov")
-              h3.taC #[span モリヒコ]#[br]千駄ヶ谷トレーナー
+              h3.taC #[span モリヒコ]#[br]トレーナー
 
         article.outlineZone 
           h2.ttl2  お客様の声

@@ -59,13 +59,12 @@ html(lang="ja")
       main.l-cont
         article.photoZone 
           ul 
-            li: img(src="./img/p1.jpg?v3")
-            li: img(src="./img/p2.jpg?v3")
-            li: img(src="./img/p3.jpg?v3")
-            li: img(src="./img/p4.jpg?v3")
-            li: img(src="./img/p5.jpg?v3")
-            li: img(src="./img/p6.jpg?v3")
-            li: img(src="./img/p7.jpg?v3")
+            li: img(src="./img/ph10.jpg?v3")
+            li: img(src="./img/ph11.jpg?v3")
+            li: img(src="./img/ph12.jpg?v3")
+            li: img(src="./img/ph13.jpg?v3")
+            li: img(src="./img/ph14.jpg?v3")
+            li: img(src="./img/ph15.jpg?v3")
             li: img(src="./img/p8.jpg?v3")
             li: img(src="./img/p9.jpg?v3")
 
@@ -111,18 +110,27 @@ html(lang="ja")
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
+          #app.trainerBox.box2
+            template(v-for="(item, index) in posts")
+              .col(v-if="item.acf.store.includes('東向島店')")
+                .ph
+                  img(v-bind:src="item.acf.photo1", loading="lazy")
+                  img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+                h3.taC
+                  span {{item.title.rendered}}
+                  div(v-html="item.content.rendered")
 
-          .trainerBox.box2
+          //.trainerBox.box2
             .col 
               .ph
                 +img("trainer/mukojima-ph1.png?20210622")
                 +img("trainer/mukojima-ph2.png?2021062","","cov")
-              h3.taC #[span アツヒロ]#[br]東向島トレーナー
+              h3.taC #[span アツヒロ]#[br]トレーナー
             .col 
               .ph
                 +img("trainer/ph_kousuke_02.jpg?2021062")
                 +img("trainer/ph_kousuke_01.jpg?2021062","","cov")
-              h3.taC #[span コウスケ]#[br]東向島トレーナー
+              h3.taC #[span コウスケ]#[br]トレーナー
 
 
         article.priceZone#price

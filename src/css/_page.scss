@@ -240,6 +240,15 @@
     padding-top: 20px;
     .slick-slide {
       margin: 0 10px;
+      img{
+        width: 721px;
+        height:539px;
+        object-fit: contain;
+        @include mq {
+          width: 90vw;
+          height: auto;
+        }
+      }
       @include mq {
         width: 90vw;
         margin: 0 1vw;
