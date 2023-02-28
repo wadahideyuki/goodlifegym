@@ -22,7 +22,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 本郷三丁目店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 代田橋店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -46,7 +46,7 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]本郷三丁目
+      h1.ttl  GOODLIFE GYM#[sup ®]代田橋
       .info
         dl
           dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
@@ -60,7 +60,7 @@ html(lang="ja")
                 strong カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="#contact").u-btn1  お問い合わせはこちら
       main.l-cont
-        article.photoZone 
+        //article.photoZone 
           ul 
             li: img(src="./img/p1.jpg?v3")
             li: img(src="./img/p2.jpg?v3")
@@ -71,33 +71,33 @@ html(lang="ja")
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            dl
+            //dl
               dt  営業時間
               dd  平日9:00-22:00、土日祝10:00-18:00
-            dl
+            //dl
               dt  定休日
               dd  月曜日
             dl
               dt  住所
-              dd  113-0033#[br]文京区本郷3-43-8 湯島武蔵野マンション102
-            dl
+              dd  〒168-0063#[br]東京都杉並区和泉１丁目４６−５スターホームズ代田橋102
+            //dl
               dt  メールアドレス
               dd add.life.farm@gmail.com
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            dl
+            //dl
               dt  設備・サービス
               dd  更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
             //img(src="./img/p3.jpg")
 
-        article.trainerZone
+        //article.trainerZone
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('本郷三丁目店')")
+              .col(v-if="item.acf.store.includes('代田橋店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")
@@ -120,7 +120,7 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.795410356985!2d139.7640538!3d35.7066519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188de9d9529a75%3A0x30e3288575a0ef84!2z44Kw44OD44OJ44Op44Kk44OV44K444Og!5e0!3m2!1sja!2sjp!4v1676944592459!5m2!1sja!2sjp")
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0644920935156!2d139.6500707314227!3d35.67541397456457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f30176ecf3ab%3A0xda383443e9415da8!2z44CSMTY4LTAwNjMg5p2x5Lqs6YO95p2J5Lim5Yy65ZKM5rOJ77yR5LiB55uu77yU77yW4oiS77yVIOOCueOCv-ODvOODm-ODvOODoOOCuuS7o-eUsOapiw!5e0!3m2!1sja!2sjp!4v1677558330347!5m2!1sja!2sjp")
         //article.priceZone#price
           .u-enTxt PRICE
           .u-inner
@@ -162,16 +162,16 @@ html(lang="ja")
                       th 毎月のお支払い方法
                       td 口座振替またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
 
-        article.contactZone
+        //article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("本郷三丁目店 お問い合わせ")
+            +ttl1("代田橋店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
               form.formrun(action="https://form.run/api/v1/r/tc01mjp4lir2pzc8fvmr7ou5" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "本郷三丁目店"
+                - var shopName = "代田橋店"
                 include /_index_cont/_contact.pug
 
 
