@@ -183,9 +183,9 @@ article:not(.aboutZone) {
             margin-bottom: 5vw;
           }
           &.ph1 {
-            height: 420px;
+            height: 500px;
             right: 0px;
-            @include mq{height: 60vw;}
+            @include mq{height: 90vw;}
             img {
               height: 100%;
               width: 100%;
