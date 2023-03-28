@@ -130,62 +130,207 @@
         <div class="mapZone">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.693492107835!2d139.724457791918!3d35.75862459219147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018928c55ebcd09%3A0xf080cd971776f545!2z44CSMTE0LTAwMzQg5p2x5Lqs6YO95YyX5Yy65LiK5Y2B5p2h77yR5LiB55uu77yU4oiS77yR77yX!5e0!3m2!1sja!2sjp!4v1678420522805!5m2!1sja!2sjp"></iframe>
         </div>
-        <!--article.priceZone#price
-        .u-enTxt PRICE
-        .u-inner
-          h2.u-ttl1 ​料金のご案内
-          p スケジュールに合わせて通い放題・週1プランからご選択いただけます。
-          .planArea
-            .planBox
-              .contWrap.is-active
-                ul.planList
-                  li
-                    h3 セミパ通い放題
-                    span.monthly 月額<em>19,800</em>円(税込)
-        
-                    p.recommend セミパーソナルトレーニング<br>通い放題<br>【他店舗相互利用可能】
-                    
-                  li
-                    h3 セミパ週１回
-                    span.monthly 月額<em>14,800</em>円(税込)
-                    p.recommend セミパーソナルトレーニング<br>週１回（月４～５回分）​​
-                  li
-                    h3 マンツーマン通い放題
-                    span.monthly 月額<em>34,800</em>円(税込)
-                    p.recommend マンツーマンパーソナル<br>トレーニング通い放題<br>【他店舗相互利用可能】
-                  li
-                    h3 マンツーマン週１回
-                    span.monthly 月額<em>24,800</em>円(税込)
-                    p.recommend マンツーマン<br>パーソナルトレーニング<br>週１回（月４～５回分）
-                span.planNote ＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます<br>＊月の途中からのプラン開始も可能です<br>(例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます
-                
-              .tableBox
-                table
-                  tr
-                    th カウンセリング＆初回体験料
-                    td 3,000円 → <em>【キャンペーン中】無料</em>
-                  tr
-                    th 入会金・登録料
-                    td <span class="price">30,000円</span> → <em>【キャンペーン中】初回体験当日のご入会で入会金10,000円</em>
-                  tr
-                    th 毎月のお支払い方法
-                    td 口座振替またはクレジットカード<small>(VISA/master/AMEX/JCB/Diners/Discover)</small>
-        
-        -->
-        <!--article.contactZone
-        .u-enTxt#contact CONTACT
-        .u-inner
-          +ttl1("十条店 お問い合わせ")
-          p.u-lead1 カウンセリング、初回体験をご希望の方は、<br>以下のメールフォームよりお問合せください。
-          // class, action, methodを変更しないでください
-          .formBox
-            form.formrun(action="https://form.run/api/v1/r/tc01mjp4lir2pzc8fvmr7ou5" method="post")
-              // ↓自由に要素を追加・編集することができます
-              - var shopName = "十条店"
-              include /_index_cont/_contact.pug
-        
-        
-        -->
+        <article class="priceZone" id="price">
+          <div class="u-enTxt">PRICE</div>
+          <div class="u-inner">
+            <h2 class="u-ttl1">​料金のご案内</h2>
+            <p>スケジュールに合わせて通い放題・週1プランからご選択いただけます。</p>
+            <div class="planArea">
+              <div class="planBox">
+                <div class="contWrap is-active">
+                  <ul class="planList">
+                    <li>
+                      <h3>セミパ通い放題</h3><span class="monthly">月額<em>19,800</em>円(税込)</span>
+                      <p class="recommend">セミパーソナルトレーニング<br>通い放題<br>【他店舗相互利用可能】</p>
+                    </li>
+                    <li>
+                      <h3>セミパ週１回</h3><span class="monthly">月額<em>14,800</em>円(税込)</span>
+                      <p class="recommend">セミパーソナルトレーニング<br>週１回（月４～５回分）​​</p>
+                    </li>
+                    <li>
+                      <h3>マンツーマン通い放題</h3><span class="monthly">月額<em>34,800</em>円(税込)</span>
+                      <p class="recommend">マンツーマンパーソナル<br>トレーニング通い放題<br>【他店舗相互利用可能】</p>
+                    </li>
+                    <li>
+                      <h3>マンツーマン週１回</h3><span class="monthly">月額<em>24,800</em>円(税込)</span>
+                      <p class="recommend">マンツーマン<br>パーソナルトレーニング<br>週１回（月４～５回分）</p>
+                    </li>
+                  </ul><span class="planNote">＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます<br>＊月の途中からのプラン開始も可能です<br>(例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます</span>
+                </div>
+                <div class="tableBox">
+                  <table>
+                    <tr>
+                      <th>カウンセリング＆初回体験料</th>
+                      <td>3,000円 → <em>【キャンペーン中】無料</em></td>
+                    </tr>
+                    <tr>
+                      <th>入会金・登録料</th>
+                      <td><span class="price">30,000円</span> → <em>【キャンペーン中】初回体験当日のご入会で入会金10,000円</em></td>
+                    </tr>
+                    <tr>
+                      <th>毎月のお支払い方法</th>
+                      <td>口座振替またはクレジットカード<small>(VISA/master/AMEX/JCB/Diners/Discover)</small></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="contactZone">
+          <div class="u-enTxt" id="contact">CONTACT</div>
+          <div class="u-inner">
+            <h2 class="u-ttlBox1"><small>十条店 お問い合わせ</small><span></span></h2>
+            <p class="u-lead1">カウンセリング、初回体験をご希望の方は、<br>以下のメールフォームよりお問合せください。</p>
+            <!-- class, action, methodを変更しないでください-->
+            <div class="formBox">
+              <form class="formrun" action="https://form.run/api/v1/r/ir7elt7olyz8i62rufkvko2d" method="post">
+                <!-- ↓自由に要素を追加・編集することができます-->
+                <h3>お問い合わせ種別</h3>
+                <div class="row inqType">
+                  <label>お問い合わせ種別を選択してください <span class="must">必須</span></label>
+                  <ul class="column">
+                    <li> 
+                      <label>
+                        <input class="showDate" name="お問い合わせ種別" type="radio" value="初回体験" required>初回体験
+                      </label>
+                      <label> 
+                        <input name="お問い合わせ種別" type="radio" value="サービスに関するご質問" required>サービスに関するご質問
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <h3>お客様情報 </h3>
+                <div class="row">
+                  <label>お名前 <span class="must">必須</span></label>
+                  <input name="お名前" type="text" placeholder="山田 太郎" required>
+                </div>
+                <div class="row">
+                  <label>メールアドレス <span class="must">必須</span></label>
+                  <input name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email" required>
+                </div>
+                <div class="row">
+                  <label>電話番号 <span class="must">必須</span></label>
+                  <input name="電話番号" type="text" required placeholder="0123456789">
+                </div>
+                <div class="row">
+                  <label>当ジムを知ったきっかけ</label>
+                  <select name="当ジムを知ったきっかけ">
+                    <option value=""> 選択してください</option>
+                    <option value="インターネット検索"> インターネット検索</option>
+                    <option value="GOOGLEマップ検索"> GOOGLEマップ検索</option>
+                    <option value="看板"> 看板</option>
+                    <option value="チラシ"> チラシ</option>
+                    <option value="Instagram"> Instagram</option>
+                    <option value="Facebook"> Facebook</option>
+                    <option value="Twitter"> Twitter</option>
+                    <option value="TikTok"> TikTok</option>
+                    <option value="会員様のご紹介"> 会員様のご紹介</option>
+                  </select>
+                </div>
+                <div class="dateBox">
+                  <h3>初回体験をご希望の方 </h3>
+                  <div class="row">
+                    <label>ご希望の店舗 </label>
+                    <ul class="column">
+                      <li> 
+                        <label> 
+                          <input name="ご希望の店舗" type="hidden" value="十条店">十条店 
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <label>どちらのプランをご希望ですか？ <span class="must">必須</span></label>
+                    <ul class="column">
+                      <li> 
+                        <label>
+                          <input name="どちらにご興味がございますか" type="radio" value="マンツーマン" required>マンツーマン
+                        </label>
+                      </li>
+                      <li> 
+                        <label>
+                          <input name="どちらにご興味がございますか" type="radio" value="セミパーソナル" required>セミパーソナル
+                        </label>
+                      </li>
+                      <li> 
+                        <label>
+                          <input name="どちらにご興味がございますか" type="radio" value="相談して決めたい" required>相談して決めたい
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <label>ご希望の⽇時（第1希望） <span class="must">必須</span></label>
+                    <div class="date">
+                      <input name="ご希望の⽇（第1希望）" type="date">
+                      <select name="ご希望の時間（第1希望）" type="date">
+                        <option value=""> 選択してください</option>
+                        <option value="何時でもOK"> 何時でもOK</option>
+                        <option value="9～15時"> 9～15時</option>
+                        <option value="15～22時"> 15～22時</option>
+                        <option value="9～13時"> 9～13時</option>
+                        <option value="12～16時"> 12～16時</option>
+                        <option value="15～19時"> 15～19時</option>
+                        <option value="20～22時"> 20～22時</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label>ご希望の⽇時（第2希望） <span class="must">必須</span></label>
+                    <div class="date">
+                      <input name="ご希望の⽇（第2希望）" type="date">
+                      <select name="ご希望の時間（第2希望）" type="date">
+                        <option value=""> 選択してください</option>
+                        <option value="何時でもOK"> 何時でもOK</option>
+                        <option value="9～15時"> 9～15時</option>
+                        <option value="15～22時"> 15～22時</option>
+                        <option value="9～13時"> 9～13時</option>
+                        <option value="12～16時"> 12～16時</option>
+                        <option value="15～19時"> 15～19時</option>
+                        <option value="20～22時"> 20～22時</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label>ご希望の⽇時（第3希望） <span class="must">必須</span></label>
+                    <div class="date">
+                      <input name="ご希望の⽇（第3希望）" type="date">
+                      <select name="ご希望の時間（第3希望）" type="date">
+                        <option value=""> 選択してください</option>
+                        <option value="何時でもOK"> 何時でもOK</option>
+                        <option value="9～15時"> 9～15時</option>
+                        <option value="15～22時"> 15～22時</option>
+                        <option value="9～13時"> 9～13時</option>
+                        <option value="12～16時"> 12～16時</option>
+                        <option value="15～19時"> 15～19時</option>
+                        <option value="20～22時"> 20～22時</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <p class="notes" style="color:red">※必ず第3希望まで日時をご指定ください</p>
+                  </div>
+                </div>
+                <h3>サービスに関するご質問をご希望の方</h3>
+                <div class="row">
+                  <label>ご質問の内容を以下にご記入ください </label>
+                  <textarea name="お問い合わせ内容" placeholder="お問い合わせ内容を入力(知人からの紹介の方はこちらにご紹介者のお名前を記載ください)"></textarea>
+                </div>
+                <!-- ボット投稿をブロックするためのタグ-->
+                <div class="_formrun_gotcha">
+                  <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+                  <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+                  <input id="_formrun_gotcha" type="text" name="_formrun_gotcha" tabindex="-1">
+                </div>
+                <div class="rowRcap">
+                  <div class="g-recaptcha" data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW"></div>
+                </div>
+                <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+              </form>
+            </div>
+          </div>
+        </article>
         <article class="storesZone" id="access"><!--#include virtual="/common/include/stores.html" --></article>
       </main><!--#include virtual="/common/include/foot.html" -->
     </div>
