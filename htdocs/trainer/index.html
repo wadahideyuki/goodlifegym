@@ -60,35 +60,141 @@
           <div class="u-inner">
             <h2 class="u-ttl1">​トレーナー紹介</h2>
           </div>
-          <div class="trainerBox box2" id="app">
-            <template v-for="(item, index) in posts">
-              <div class="col">
-                <div class="ph"><img v-bind:src="item.acf.photo1" loading="lazy"><img class="cov" v-bind:src="item.acf.photo2" loading="lazy"></div>
-                <h3 class="taC"><span>{{item.title.rendered}}</span>
-                  <div v-html="item.content.rendered"></div>
-                </h3>
+          <!--.trainerBox.box2#app
+          template(v-for="(item, index) in posts")
+            .col
+              .ph
+                img(v-bind:src="item.acf.photo1", loading="lazy")
+                img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+              h3.taC
+                span {{item.title.rendered}}
+                div(v-html="item.content.rendered")
+          
+          
+          -->
+        </article>
+        <article class="renew_2023"> 
+          <section class="top"> 
+            <div class="fist_im"><img src="/common/img/trainer/renew2023/fist_im.jpg" alt="" loading="lazy"/>
+            </div>
+            <h2 class="big">GOODLIFE GYMは<br class="sp">様々な経歴を持つ<br>トレーナーたちによって<br class="sp">運営されております。</h2>
+            <p>ボディビルコンテスト入賞者から、柔道整復師、理学療法士、アスレティックトレーナーなど、<br class="pc">GOODLIFEGYMには様々なバックグラウンドを持つ個性豊かなトレーナーが在籍しています。<br class="pc">多様性がもたらす相乗効果により多様なニーズにお応えできるパーソナルジムを目指しております。</p>
+          </section>
+          <section class="education">
+            <div class="in_st">
+              <div class="fl_it"> 
+                <div class="img"><img src="/common/img/trainer/renew2023/edct_im01.jpg" alt="" loading="lazy"/>
+                </div>
+                <div class="txt">
+                  <div class="t_txt">
+                    <h2 class="bor">充実のトレーナー教育制度で</h2><span class="like_bor">高い専門性と接客スキルを保持</span>
+                  </div>
+                  <p>スポーツ専門学校講師や国家資格保有者による専門<br class="pc">スキルの勉強会や接客スキル向上のため<br class="pc">ミーティングを定期的に行い、<br class="pc">サービスのアップデートに日々励んでおります。</p>
+                </div>
               </div>
-            </template>
-          </div>
-          <article class="specialZone"> 
-            <h3 id="prof">代表プロフィール</h3>
-            <div class="daihyouBox">
-              <div class="txt"> 
-                <h4>GOODLIFE GYM 代表 リョウタ<span> 起業家、パーソナルトレーナー、<br>フィジークコンペティター<br>1986年9月14日生　東京都足立区出身</span></h4>
-                <p>10年間の会社員生活(セールスマン・セールスマネジャー)を経て、自らのダイエットやボディメイクの経験を活かしパーソナルトレーナーに転身。<br>2019年8月　GOODLIFE GYMを独立開業。<br>2020年8月　GOODLIFE GYM複数店舗展開。<br>2021年1月　合同会社GOODLIFE設立。<br>指導実績延べ1万セッション超え。<br>ボディコンテスト選手指導実績多数。</p>
-              </div>
-              <div class="img"> <img src="img/prof.png"></div>
+              <ul> 
+                <li><img src="/common/img/trainer/renew2023/edct_im02.jpg" alt="" loading="lazy"/>
+                </li>
+                <li><img src="/common/img/trainer/renew2023/edct_im03.jpg" alt="" loading="lazy"/>
+                </li>
+                <li><img src="/common/img/trainer/renew2023/edct_im04.jpg" alt="" loading="lazy"/>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="introduction">
+            <div class="ct"> 
+              <h2>教育部門紹介</h2>
               <div class="box"> 
-                <h4>ボディコンテスト実績</h4>
-                <div class="img2"><img src="../koenji/img/prof2.jpg?202112"></div>
-                <p class="con">APF/2021 BREAK A ROAD<br>クラス別２冠達成、フィジーク年代別30代クラス 優勝、フィジーク体重別-60kgクラス 優勝</p>
-                <div class="img2"><img src="../koenji/img/prof1.jpg?202112"></div>
-                <p class="con">FWJ/2021 POWERHOUSE GYM JAPAN CLASSIC<br>フィジークオープンクラス-170cm 6位、フィジークノービスクラス-168cm 3位</p>
+                <ul> 
+                  <li> 
+                    <div class="img"><img src="/common/img/trainer/renew2023/intro_im01.jpg" alt="" loading="lazy"/>
+                    </div>
+                    <h3>森 恒太</h3>
+                    <div class="next_ttl">ストレングス&コンディショニング実践指導責任者</div>
+                    <p>保有資格</p><span>・日本スポーツ協会公認 アスレティックトレーナー<br>・柔道整復師</span>
+                  </li>
+                  <li> 
+                    <div class="img"><img src="/common/img/trainer/renew2023/intro_im02.jpg" alt="" loading="lazy"/>
+                    </div>
+                    <h3>中川 健二</h3>
+                    <div class="next_ttl">ファンクショナルトレーニング実践指導責任者</div>
+                    <p>保有資格</p>
+                  </li>
+                  <li> 
+                    <div class="img"><img src="/common/img/trainer/renew2023/intro_im03.jpg" alt="" loading="lazy"/>
+                    </div>
+                    <h3>吉澤 彰峻</h3>
+                    <div class="next_ttl">トレーナー教育部門責任者</div>
+                    <p>保有資格</p><span>・全米エクササイズ＆スポーツトレーナー協会認定 NESTA-PFT</span>
+                  </li>
+                  <li> 
+                    <div class="img"><img src="/common/img/trainer/renew2023/intro_im04.jpg" alt="" loading="lazy"/>
+                    </div>
+                    <h3>小田 拓哉</h3>
+                    <div class="next_ttl">運営管理部門責任者<br>人事担当<br>広報担当</div>
+                  </li>
+                </ul>
               </div>
             </div>
-          </article>
+          </section>
+          <section class="history"> 
+            <h2><img src="/common/img/trainer/renew2023/history_ttl.svg" alt="HISTORY" loading="lazy"/>
+            </h2>
+            <table> 
+              <tr> 
+                <th>2019年8月</th>
+                <td>GOODLIFE GYM創業。<br>第1号店を代々木にオープン。</td>
+              </tr>
+              <tr> 
+                <th>2020年8月</th>
+                <td>創業2期目より多店舗展開を開始。</td>
+              </tr>
+              <tr> 
+                <th>2023年現在</th>
+                <td>30店舗出店達成。</td>
+              </tr>
+            </table>
+          </section>
+          <section class="concept"> 
+            <div class="concept_ct"> 
+              <h2><img src="/common/img/trainer/renew2023/concept_ttl.svg" alt="CONCEPT" loading="lazy"/>
+              </h2>
+              <div class="next_t">フィットネスを日常に</div>
+              <ul> 
+                <li>
+                  <div class="img"><img src="/common/img/trainer/renew2023/vision_txt.svg" alt="VISION" loading="lazy"/>
+                  </div>
+                  <p>全国120店舗出店<br>フィットネス市場拡大</p>
+                </li>
+                <li>
+                  <div class="img"><img src="/common/img/trainer/renew2023/mission_txt.svg" alt="MISSION" loading="lazy"/>
+                  </div>
+                  <p>縁あるすべての人が<br>輝くステージを創造する</p>
+                </li>
+                <li>
+                  <div class="img"><img src="/common/img/trainer/renew2023/value_txt.svg" alt="VALUE" loading="lazy"/>
+                  </div>
+                  <dl> 
+                    <dt>professional：得意を見つけ得意を磨き続ける</dt>
+                    <dt>think big：大きな夢を持ち豊かな創造性を持つ</dt>
+                    <dt>go for mine,got to shine：輝くために無我夢中に努力する</dt>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="bot"> 
+            <p>(運営代表)<br>GOODLIFE GYM創業者<br>鈴木　涼太<br>起業家、パーソナルトレーナー、フィジーク コンペティター</p>
+            <div class="img"><img src="/common/img/trainer/renew2023/bot_im.jpg" alt="" loading="lazy"/>
+            </div>
+          </section>
         </article>
-        <article class="storesZone" id="access"><!--#include virtual="/common/include/stores.html" --></article>
+        <!--article.storesZone#access
+        include /_index_cont/_stores.pug
+        
+        
+        -->
       </main><!--#include virtual="/common/include/foot.html" -->
     </div>
   </body>
