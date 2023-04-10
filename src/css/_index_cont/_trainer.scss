@@ -15,9 +15,8 @@ article:not(.trainerZone) {
     padding-bottom: 5vw;
   }
   &.isType2{
-    padding-bottom: 80px;
+    padding: 80px 0;
     background-attachment: fixed;
-    padding-top: 0px;
     @include mq{
       background-size: cover;
       background-attachment:scroll;
@@ -65,12 +64,9 @@ article:not(.trainerZone) {
   }
   .u-ttl1 {
     color: #fff;
-    text-align: right;
+    text-align: center;
     width: auto;
-    padding-right: 2em;
-    margin-top: -.8em;
     @include mq{
-      padding-right: 1em;
       padding-top: 9vw;
     }
   }
@@ -461,8 +457,12 @@ article:not(.trainerZone) {
       padding: 10vw ;
     }
     .concept_ct{
-      max-width: 676px;
+      max-width: 1120px;
       margin: 0 auto;
+      @include mq{
+        max-width: none;
+        width: auto;
+      }
       h2{
         text-align: center;
         @include mq{
@@ -481,21 +481,37 @@ article:not(.trainerZone) {
           font-size: 8vw;
         }
       }
-      ul{
+      .fl-new-im{
+        display: flex;
+        justify-content: space-between;
         margin-top: 54px;
+        @include mq{
+          margin-top: 8vw;
+          display: block;
+        }
+        .im-this{
+          width: 407px;
+          @include mq{
+            width: auto;
+            margin-top: 7vw;
+          }
+        }
+      }
+      ul{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         color: #FFF;
+        width: 676px;
         @include mq{
-          margin-top: 8vw;
+          width: auto;
         }
         li{
           display: flex;
           flex-direction: column;
           box-sizing: border-box;
           border: 1px solid#fff;
-          width: 310px;
+          width: 325px;
           justify-content: center;
           align-items: center;
           padding: 27px;
@@ -517,7 +533,7 @@ article:not(.trainerZone) {
           &:nth-child(3){
             flex-direction: row;
             width: 100%;
-            margin-top: 35px;
+            margin-top: 25px;
             box-sizing: border-box;
             @include mq{
               margin: 0;
