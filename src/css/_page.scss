@@ -93,6 +93,102 @@
       margin-top: 0.5em;
     }
   }
+  .joblist{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include mq{
+      flex-direction: column;
+    }
+    li{
+      width: 48%;
+      @include mq{
+        width: 100%;
+      }
+      a{
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        @include mq{
+          padding: 5vw;
+        }
+        .img{
+          margin-bottom: 0 !important;
+          img{
+            box-shadow: none;
+            width: 100%;
+            max-width: none;
+          }
+        }
+        .txt{
+          margin-top: 25px;
+          @include mq{
+            margin-top: 3vw;
+          }
+          h3{
+            font-size: 2rem;
+            color: #00bad0;
+            text-align: left;
+            font-weight: bold;
+            line-height: 1.7;
+            @include mq{
+              font-size: 1.8rem;
+              line-height: 1.6;
+            }
+          }
+          dl{
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            @include mq{
+              margin-top: 3vw;
+            }
+            dt{
+              color: #fff;
+              background-color: #0070a4;
+              font-size: 1.6rem;
+              font-weight: bold;
+              line-height: 1;
+              padding: 8px 20px;
+              border-radius: 5px;
+              @include mq{
+                padding: 2vw 5vw;
+              }
+            }
+            dd{
+              color: #00a8b5;
+              background-color: #f0ff00;
+              border: 1px solid#00a8b5;
+              font-size: 1.6rem;
+              font-weight: bold;
+              line-height: 1;
+              padding: 8px 20px;
+              border-radius: 5px;
+              margin-left: 10px;
+              box-sizing: border-box;
+              @include mq{
+                padding: 2vw 5vw;
+                margin-left: 2vw;
+              }
+            }
+          }
+        }
+        &:hover{
+          filter: brightness(120%);
+          transition: 0.3s;
+        }
+      }
+      +li{
+        @include mq{
+          margin-top: 5vw;
+        }
+      }
+    }
+  }
 }
 .pageStores {
   .voiceBtn {
