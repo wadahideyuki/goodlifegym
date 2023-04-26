@@ -117,6 +117,7 @@ $(document).ready(function () {
     });
   }
   clkScrl($(".menu a"), 0);
+  clkScrl($(".pageNav a"), 0);
   
     $(".planArea .tabName li").click(function(){
     $(".planArea .tabName li").removeClass("is-selected");
