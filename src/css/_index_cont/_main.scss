@@ -7,183 +7,136 @@ article:not(.mainZone) {
   //  display: none;
 }
 .mainZone {
-  background-image: url($p + "main/main3.jpg");
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: cover;
-  height: 50vw;
-  padding: 0px;
-  min-height: 650px;
+  background: linear-gradient(90deg, rgba(0,113,165,1) 35%, rgba(0,182,185,1) 65%);
+  padding: 0;
   max-height: 800px;
   @include mq{
-    background-position: center -5vw;
-    height: 154vw;
-    margin-bottom: 5vw;
-    min-height: 0px;
     max-height: none;
   }
-  .featureTxt{
-    text-align: center;
-  max-width: 520px;
-    margin-top: 30px;
-    position: absolute;
-    right: 5vw;
-    bottom: 5vw;
+  .fl_three{
+    display: flex;
+    justify-content: space-between;
     @include mq{
-      position: static;
-      padding: 0 5vw;
-      margin: 5vw auto 0 auto;
-      bottom: 0px;
-    }
-    dt{
-      color: #F0FF68;
-      font-size: 2.6rem;
-      font-weight: bold;
-      text-shadow: 3px 3px 3px rgba(0,0,0,.5);
-      margin-bottom: .8em;
-    }
-    dd{
-      ul{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        li{
-          display: flex;
-          color: #10a9b9;
-          font-weight: bold;
-          height: 4em;
-          width: 129px;
-          margin-bottom: 15px;
-          border-radius: 10px;
-          background-color: #F0FF68;
-          justify-content: center;
-          align-items: center;
-          @include mq{
-            width: 110px;
-          }
-          +li{
-            margin-left: 10px;
-            @include mq{
-              margin-left: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-  /*&:before{
-    content: "";
-    width: 100%;
-    height: 200px;
-    position: absolute;
-    right: 0px;
-    display: block;
-    background:linear-gradient(to bottom,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 100%) ;
-    @include mq{
-      display: none;
-    }
-  }*/
-  @include mq{
-    background-image: url($p + "main/main_sp3.jpg?2021");
-  }
-  .mainInner {
-    background-image: url($p + "main/main_cover.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    min-height: 600px;
-    position: relative;
-    @include mq{
-      background-image: none;
-      height: 116vw;
-      width: 100%;
-      overflow: hidden;
-      min-height: 0;
-    }
-    @include mq(l){
-      background-position:8% 0px ;
-    }
-    .u-inner{
-      position: absolute;
-      width: 600px;
-      display: flex;
-      height: 100%;
-      justify-content: center;
       flex-direction: column;
-      left: 5vw;
+      padding: 1vw 0;
+    }
+    .img{
+      width: 32%;
+      height: 800px;
       @include mq{
-        left: 0px;
-        display: block;
+        height: auto;
         width: 100%;
       }
-      h1{
-        color: #FFF;
-        margin-bottom: 80px;
-        padding-left: 15px;
-        max-width: 360px;
-        text-align: center;
+      img{
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
         @include mq{
-          display: flex;
-          text-align: left;
-          flex-direction: row-reverse;
-          justify-content: center;
-          align-items: center;
-          padding-left: 0px;
-          font-size: 1.2rem;
-          padding-top: 3vw;
-          max-width: 100%;
-          position: absolute;
-          left: 13vw;
-          top: 2vw;
-          img{
-            margin-top: 0vw;
-          }
+          height: auto;
+        }
+      }
+    }
+    .txt{
+      width: 27%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include mq{
+        width: 97%;
+        margin: 3vw;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      h2{
+        font-size: 3.6rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+        color: #fff;
+        line-height: 1;
+        padding: 8px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        @include mq{
+          width: auto;
+          font-size: 2rem;
+          display: block;
+          text-align: center;
+          border-radius: 50%;
+          line-height: 1.5;
+          padding: 3vw;
+          width: 20%;
         }
         span{
+          font-size: 5rem;
+          color: #ffea3c;
+          line-height: 1;
           display: inline-block;
-          margin-top: 16px;
           @include mq{
-            margin-top: 0px;
-            margin-right: 5vw;
-            width: 26.5vw;
+            font-size: 2.6rem;
           }
         }
       }
-      p{
+      .bot{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         @include mq{
-          position: absolute;
-          bottom: 5vw;
-          left: 5vw;
+          flex-direction: column-reverse;
+          width: 75%;
         }
-        span{
-          display: inline-block;
-          background-image: url($p + "main/text_bg.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          margin-bottom: 5px;
-          background-size: 100%;
-          line-height: 1;
-          padding: .3em 1em;
-          font-size:3.5rem ;
+        p{
+          font-size: 2.4rem;
+          color: #fff;
           font-weight: bold;
-          color: $green;
+          line-height: 1.6;
+          margin: 45px 0 20px 0;
           @include mq{
-            
-            font-size: 2.5rem;
+            margin: 3vw 0 0 0;
+            font-size: 1.9rem;
           }
-          &.txt1{
-            margin-left: 15px;
+        }
+        .img{
+          width: 100%;
+          height: 100%;
+          img{
+            height: auto;
           }
-          &.txt3{background-color: #FFF;
-            overflow: hidden;
-            transform: skewX(-15deg);
-            margin-left: 30px;
+        }
+        ul{
+          display: flex;
+          justify-content: space-between;
+          margin-top: 70px;
+          @include mq{
+            margin-top: 0;
+          }
+          li{
+            font-size: 1.8rem;
+            color: #006fa4;
+            font-weight: bold;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 5px;
+            margin: 0 8px;
             @include mq{
-              margin-left: 15vw;
-            }
-            em{
-              display: inline-block;
-              transform: skewX(15deg);
+              width: auto;
+              height: auto;
+              font-size: 1rem;
+              margin: 0;
+              border-radius: 0;
+              display: block;
+              clip-path: polygon(10% 0%, 100% 0, 90% 100%, 0% 100%);
+              padding: 1vw 3vw;
             }
           }
         }

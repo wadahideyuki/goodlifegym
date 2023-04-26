@@ -9,7 +9,7 @@ article:not(.informationZone){
 .informationZone{
     padding: 0px 0 80px 0;
     @include mq{
-        padding-bottom: 10vw;
+        padding: 7vw 0 10vw 0;
     }
 
   dl{
