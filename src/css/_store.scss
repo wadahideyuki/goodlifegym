@@ -67,6 +67,7 @@
       align-items: center;
       color: #fff;
       font-weight: bold;
+      @include hvr(0.5);
       &:before{
         content: "";
         background: url("../../store/img/arw_b_wht.svg") 0 0 no-repeat;
@@ -129,6 +130,7 @@
     }
     a{
       color: #0079A8;
+      @include hvr(0.5);
     }
     > ul{
       @include pc{
