@@ -1,0 +1,184 @@
+.pageStore{
+  background: linear-gradient(
+    to right,
+    #0072A5 0,
+    #00B5B9 100%
+  );
+  @include pc{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include mq{
+  }
+  .inner{
+    @include pc{
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 100px;
+      padding-bottom: 204px;
+    }
+    @include mq{
+      padding: vw(60) vw(25) vw(40);
+    }
+  }
+  .ttlEn{
+    position: absolute;
+    @include pc{
+      top: 1.7px;
+      left: 2.5px;
+    }
+    @include mq{
+      width: vw(340);
+      top: vw(1.7);
+      left: vw(2.5);
+    }
+  }
+  .ttl{
+    color: #fff;
+    margin-bottom: em(38/52);
+    font-weight: bold;
+    text-align: right;
+    @include pc{font-size: 5.2rem;}
+    @include mq{font-size: 4.0rem;}
+  }
+  .pageNav{
+    ul{
+      display: flex;
+      @include pc{
+        margin-bottom: 42px;
+        font-size: 2.1rem;
+      }
+      @include mq{
+        margin-bottom: vw(30);
+        font-size: 1.8rem;
+      }
+    }
+    li{
+      @include pc{
+        margin-right: em(33.8/21);
+      }
+      @include mq{
+        width: 25%;
+      }
+    }
+    a{
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      @include hvr(0.5);
+      &:before{
+        content: "";
+        background: url("../../store/img/arw_b_wht.svg") 0 0 no-repeat;
+        background-size: 100% 100%;
+        width: em(15.79/21);
+        height: em(10.02/21);
+        margin-right: em(10.4/21);
+      }
+    }
+  }
+  .scrlPos{
+    position: relative;
+    @include pc{
+    }
+    @include mq{
+      top: vw(-20);
+    }
+  }
+  section{
+    background-color: #fff;
+    @include pc{
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 41px 48px px(41-8.5) 43.5px;
+      border-radius: 20px;
+    }
+    @include mq{
+      margin-bottom: vw(30);
+      padding: vw(20) vw(30) vw(12);
+      border-radius: vw(20);
+    }
+    h2{
+      color: #0075A6;
+      font-weight: bold;
+      @include pc{
+        flex-shrink: 0;
+        width: 136px;
+        margin-bottom: em(8.5/26);
+        font-size: 2.6rem;
+      }
+      @include mq{
+        margin-bottom: vw(20);
+        font-size: 2.6rem;
+      }
+    }
+    h3{
+      color: #333;
+      font-weight: bold;
+      @include pc{
+        flex-shrink: 0;
+        width: 121px;
+        margin-bottom: em(8.5/18);
+        font-size: 1.8rem;
+      }
+      @include mq{
+        margin-bottom: vw(10);
+        font-size: 2.0rem;
+      }
+    }
+    a{
+      color: #0079A8;
+      @include hvr(0.5);
+    }
+    > ul{
+      @include pc{
+        align-self: center;
+        width: 100%;
+      }
+      @include mq{
+      }
+      > li{
+        @include pc{
+          display: flex;
+          align-items: flex-start;
+        }
+        @include mq{
+        }
+        + li{
+          border-top: 1px dashed #ccc;
+          @include pc{padding-top: 18.5px;}
+          @include mq{padding-top: vw(20);}
+        }
+        &:not(:last-child){
+          @include pc{padding-bottom: 10px;}
+          @include mq{padding-bottom: vw(20);}
+        }
+      }
+      ul{//～店
+        @include pc{
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          align-self: center;
+          width: 100%;
+          font-size: 1.6rem;
+        }
+        @include mq{
+        }
+        > li{
+          margin-right: 2.0em;
+          margin-bottom: em(8.5/16);
+          @include pc{
+          }
+          @include mq{
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
