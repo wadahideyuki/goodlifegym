@@ -43,10 +43,10 @@ html(lang="ja")
     +jsCommon("common.js?2022-3")
 
 
-  body.pageStore
+  body.pageStores
     .l-wrapper
       include /_include/_header.pug
-
+    .pageStore
       img.ttlEn(src="./img/ttl.svg", alt="STORE")
 
       .inner
@@ -78,7 +78,7 @@ html(lang="ja")
             li
               h3 杉並区
               ul
-                li: a(href="/daitabashi") 代田橋店（2023年4月25日オープン）
+                li: a(href="/daitabashi") 代田橋店
             li
               h3 中野区
               ul
@@ -88,11 +88,11 @@ html(lang="ja")
               h3 大田区
               ul
                 li: a(href="/omorisano") 大森山王店
-                li: a(href="/odakuikegami") 大田区池上店（COMING SOON）
+                li: a(href="/odakuikegami") 大田区池上店（2023年6月オープン予定）
             li
               h3 北区
               ul
-                li: a(href="/jujo") 十条店（COMING SOON）
+                li: a(href="/jujo") 十条店（2023年6月オープン予定）
             li
               h3 文京区
               ul
@@ -115,13 +115,13 @@ html(lang="ja")
             li
               h3 葛飾区
               ul
-                li: a(href="/nishikameari") 西亀有店（COMING SOON）
+                li: a(href="/nishikameari") 西亀有店（2023年5月10日オープン）
             li
               h3 足立区
               ul
                 li: a(href="/kitasenju") 北千住店
                 li: a(href="/gotanno") 五反野店
-                li: a(href="/rokucho") 六町店（COMING SOON）
+                li: a(href="/rokucho") 六町店（2023年6月オープン予定）
                 li: a(href="/nishiarai") 西新井大師店
                 li: a(href="/adachikouhoku") 足立江北店
 
@@ -154,9 +154,9 @@ html(lang="ja")
               ul
                 li: a(href="/odawara") 小田原店
                 li: a(href="/odawarahigashi/") 小田原駅東口店
-                li: a(href="/odawaracityhall") 小田原市役所前店（2023年4月25日オープン）
+                li: a(href="/odawaracityhall") 小田原市役所前店
                 li: a(href="/kozu") 小田原国府津店
 
 
-      include /_include/_footer.pug
+  include /_include/_footer.pug
 

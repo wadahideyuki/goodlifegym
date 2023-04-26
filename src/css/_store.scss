@@ -25,12 +25,12 @@
   .ttlEn{
     position: absolute;
     @include pc{
-      top: 1.7px;
+      top: 98px;
       left: 2.5px;
     }
     @include mq{
       width: vw(340);
-      top: vw(1.7);
+      top: 20vw;
       left: vw(2.5);
     }
   }
@@ -39,6 +39,7 @@
     margin-bottom: em(38/52);
     font-weight: bold;
     text-align: right;
+    background: none;
     @include pc{font-size: 5.2rem;}
     @include mq{font-size: 4.0rem;}
   }
@@ -145,6 +146,7 @@
           align-items: flex-start;
         }
         @include mq{
+          display: flex;
         }
         + li{
           border-top: 1px dashed #ccc;
@@ -154,6 +156,11 @@
         &:not(:last-child){
           @include pc{padding-bottom: 10px;}
           @include mq{padding-bottom: vw(20);}
+        }
+        h3{
+          @include mq{
+            width: 25%;
+          }
         }
       }
       ul{//～店
@@ -166,6 +173,9 @@
           font-size: 1.6rem;
         }
         @include mq{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap
         }
         > li{
           margin-right: 2.0em;

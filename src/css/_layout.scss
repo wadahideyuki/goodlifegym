@@ -5,15 +5,12 @@
 ---------------------------------------*/
 .l-wrapper {
 }
-.pageTop {
-  .logo {
-    opacity: 0;
-  }
-}
-.pageStores {
+
+.pageStores,.pageTop,.pageStore {
   .l-header {
     position: static;
     width: 95%;
+    background-color: #FFF;
 
     margin: 20px auto;
     box-sizing: border-box;
@@ -107,7 +104,7 @@
   box-sizing: border-box;
 
   @include mq {
-    display: none;
+    
   }
   nav {
     display: flex;
