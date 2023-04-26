@@ -30,14 +30,14 @@ article:not(.trainerZone) {
         background-color: #fff363;
         color: #ff3636;
         text-align: center;
-        padding: 1.2em;
+        padding: 1.2em 0;
         font-size: 2.4rem;
         margin-top: 1em;
         font-weight: bold;
         justify-content: center;
         align-items: center;
         @include mq{
-          font-size: 2rem;
+          font-size: 2.2rem;
         }
         &:hover{
           filter: brightness(1.2);

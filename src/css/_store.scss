@@ -10,6 +10,7 @@
   }
   @include mq{
   }
+
   .inner{
     @include pc{
       max-width: 1000px;
@@ -126,7 +127,7 @@
       }
       @include mq{
         margin-bottom: vw(10);
-        font-size: 2.0rem;
+        font-size: 1.6rem;
       }
     }
     a{
@@ -183,6 +184,11 @@
           @include pc{
           }
           @include mq{
+            margin-right: 1em;
+            
+            &:last-of-type{
+              margin-right: 0;
+            }
           }
         }
       }
