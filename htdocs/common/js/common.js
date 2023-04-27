@@ -145,6 +145,11 @@ $(document).ready(function () {
     $(this).next().slideToggle();
   })
 
+//toggle area
+$(".name_str").click(function () {
+  $(this).toggleClass("trans_ar");
+  $(this).next().slideToggle();
+});
 
 
 });//DocRdyFncEnd
