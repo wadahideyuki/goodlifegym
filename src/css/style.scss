@@ -92,4 +92,16 @@ sup{
     }
   }
 }
+.d_more{
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 10px;
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+  @include mq{
+    font-size: 1.4rem;
+    margin-top: 3vw;
+  }
+}
 

@@ -373,15 +373,6 @@
     @include mq {
       font-size: 3rem;
     }
-    .d_more{
-      display: block;
-      font-size: 1.6rem;
-      margin-top: 10px;
-      @include mq{
-        font-size: 1.4rem;
-        margin-top: 0.5vw;
-      }
-    }
   }
   .ttl2 {
     font-size: 3.4rem;
