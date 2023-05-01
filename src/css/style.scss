@@ -71,7 +71,28 @@ sup{
     }
 }
 
-
+.toHome{
+  background-color: #007ca8;
+  font-size: 2rem;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a{
+    display: block;
+    padding: .5em 1em;
+    &::before{
+      content: "";
+      display: inline-block;
+      width: .5em;
+      height: .5em;
+      margin-right: .5em;
+      transform: rotate(45deg);
+      border-left: 2px solid #FFF;
+      border-bottom: 2px solid #FFF;
+    }
+  }
+}
 .mt10{
   margin-top: 10px;
 }

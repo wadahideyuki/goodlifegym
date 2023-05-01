@@ -44,6 +44,8 @@ html(lang="ja")
 
 
   body.pageStores
+    .toHome 
+      a(href="/") 公式サイトはこちら
     .l-wrapper
       include /_include/_header.pug
     .pageAreaofodawara 
@@ -200,6 +202,8 @@ html(lang="ja")
           <iframe class="custom-google-map" src="https://www.google.com/maps/d/u/0/embed?mid=1RNxKyx1Iu5VC_35oVS9TEZVoRzWfx8w&ehbc=2E312F"></iframe>
         
       .info.d_three
+        h2.ttl2 今だけのキャンペーン
+        .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
         dl
           dt 小田原店のキャンペーン情報
           dd  
@@ -211,7 +215,6 @@ html(lang="ja")
                 strong 体験料無料#[br]
                 span カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="/odawara/#contact").u-btn1  お問い合わせはこちら
-            .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
         dl
           dt 小田原駅東口店のキャンペーン情報
           dd  
@@ -223,7 +226,6 @@ html(lang="ja")
                 strong 体験料無料#[br]
                 span カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="/odawarahigashi/#contact").u-btn1  お問い合わせはこちら
-            .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
         
         dl
           dt 小田原市役所前店のキャンペーン情報
@@ -236,7 +238,6 @@ html(lang="ja")
                 strong 体験料無料#[br]
                 span カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="/odawaracityhall/#contact").u-btn1  お問い合わせはこちら
-            .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
         dl
           dt 小田原国府津店のキャンペーン情報
           dd  
@@ -245,7 +246,6 @@ html(lang="ja")
                 strong 入会金割引#[br]
                 span 入会金30,000円→#[em 10,000円]
             a(href="/kozu/#contact").u-btn1  お問い合わせはこちら
-            .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
       
       article.informationZone
         .u-inner
@@ -340,7 +340,9 @@ html(lang="ja")
               span ジュンペイ
               div 
                 h3.wp-block-heading 小田原駅東口店、小田原国府津店トレーナー
-              
+    
+    .toHome 
+      a(href="/") 公式サイトはこちら          
 
   include /_include/_footer.pug
 
