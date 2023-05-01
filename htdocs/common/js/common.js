@@ -144,12 +144,13 @@ $(document).ready(function () {
     $(this).toggleClass("on");
     $(this).next().slideToggle();
   })
-
-//toggle area
-$(".name_str").click(function () {
-  $(this).toggleClass("trans_ar");
-  $(this).next().slideToggle();
-});
-
+//toggle area sp
+var ua = navigator.userAgent;
+  if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) || ua.indexOf('Windows Phone') > 0) {
+    $(".name_str").click(function () {
+      $(this).toggleClass("trans_ar");
+      $(this).next().slideToggle();
+    });
+  }
 
 });//DocRdyFncEnd
