@@ -44,8 +44,6 @@ html(lang="ja")
 
 
   body.pageStores
-    .toHome 
-      a(href="/") 公式サイトはこちら
     .l-wrapper
       include /_include/_header.pug
     .pageAreaofodawara 
@@ -67,6 +65,8 @@ html(lang="ja")
         .inner
           h2.tit 小田原エリアの#[br.sp]GOODLIFE GYM®
           .next_ttl 定額通い放題・初心者も安心のパーソナルトレーニングジム#[br]GOODLIFE GYMは小田原エリアで4店舗展開中です。
+          .ttl2 お得なキャンペーン実施中
+          .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、#[br.sp]お早めに体験日確定をしていただくことをおすすめしております。
           dl.list_store-tab 
             dt.name_str 小田原店
             dd.box_in_w 
@@ -201,7 +201,7 @@ html(lang="ja")
         div
           <iframe class="custom-google-map" src="https://www.google.com/maps/d/u/0/embed?mid=1RNxKyx1Iu5VC_35oVS9TEZVoRzWfx8w&ehbc=2E312F"></iframe>
         
-      .info.d_three
+      //.info.d_three
         h2.ttl2 今だけのキャンペーン
         .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
         dl
@@ -246,12 +246,27 @@ html(lang="ja")
                 strong 入会金割引#[br]
                 span 入会金30,000円→#[em 10,000円]
             a(href="/kozu/#contact").u-btn1  お問い合わせはこちら
-      
+      article.d_ses
+        .u-enTxt Session
+        .u-inner 
+          h2 セッション
+          ul.fl_ss
+            li
+              .img: +img("area/ss_im_ph01.png","")
+              .cap マンツーマンパーソナルトレーニング
+              p GOODLIFE GYMでは、毎日通っても飽きずに楽しめるトレーニングメソッドを提供し、皆様の日常にフィットネスがあることが当たり前と思えるような環境作りに励んでいます。フィットネスの日常化から始まるGOODLIFE(より良い人生)を体感してください。 
+            li
+              .img: +img("area/ss_im_ph02.png","")
+              .cap セミパーソナルトレーニング
+              p 最大4名を同時に指導するセミパーソナルトレーニング。初心者の方でも安心して通っていただけるようにトレーナー陣が個人の目的やレベルに合ったトレーニングを丁寧に1人1人指導いたします。
       article.informationZone
         .u-inner
           .movieBox
             h2 セミパーソナルの様子はこちらの動画をご覧ください
             +mov("OJHTV5iRYQo")
+
+      .toHome 
+        a(href="/") 公式サイトはこちら
 
       article.priceZone#price
         .u-enTxt PRICE
@@ -298,7 +313,7 @@ html(lang="ja")
       article.faqZone
         include /_index_cont/_faq.pug
 
-      article.trainerZone
+      //article.trainerZone
         .u-enTxt TRAINER
         .u-inner
           h2.u-ttl1 ​トレーナー紹介
