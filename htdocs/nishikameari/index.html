@@ -58,7 +58,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript)-->
     <div class="l-wrapper"><!--#include virtual="/common/include/head.html" -->
-      <h1 class="ttl"> GOODLIFE GYM<sup>®</sup><br class="sp">西亀有<br>2023年5月10日オープン</h1>
+      <h1 class="ttl"> GOODLIFE GYM<sup>®</sup><br class="sp">西亀有</h1>
       <div class="info">
         <dl>
           <dt> キャンペーン実施中！<br><span class="di_camp">限定人数に達した時点で終了いたします。お早めにお申し込みください。</span></dt>
@@ -73,25 +73,13 @@
         </dl>
       </div>
       <main class="l-cont">
-        <!--article.photoZone 
-        ul 
-          li: img(src="./img/ph01.jpg?2022")
-          li: img(src="./img/ph02.jpg?2022")
-          li: img(src="./img/ph03.jpg?2022")
-          li: img(src="./img/ph04.jpg?2022")
-          li: img(src="./img/ph05.jpg?2022")
-          li: img(src="./img/ph06.jpg?2022")
-          li: img(src="./img/ph07.jpg?2022")
-          li: img(src="./img/ph08.jpg?2022")
-          li: img(src="./img/ph09.jpg?2022")
-          li: img(src="./img/ph10.jpg?2022")
-          li: img(src="./img/ph12.jpg?2022")
-        
-        
-        
-        
-        
-        -->
+        <article class="photoZone"> 
+          <ul> 
+            <li><img src="./img/ph01.jpg?2022"></li>
+            <li><img src="./img/ph02.jpg?2022"></li>
+            <li><img src="./img/ph03.jpg?2022"></li>
+          </ul>
+        </article>
         <!--article.featureZone 
         h2.ttl2  紹介動画
         .shopMov 
@@ -155,21 +143,22 @@
             <!--img(src="./img/sche.png")-->
           </div>
         </article>
-        <!--article.trainerZone
-        .u-enTxt TRAINER
-        .u-inner
-          h2.u-ttl1 ​トレーナー紹介
-        #app.trainerBox.box2
-          template(v-for="(item, index) in posts")
-            .col(v-if="item.acf.store.includes('小田原店')")
-              .ph
-                img(v-bind:src="item.acf.photo1", loading="lazy")
-                img.cov(v-bind:src="item.acf.photo2", loading="lazy")
-              h3.taC
-                span {{item.title.rendered}}
-                div(v-html="item.content.rendered")
-        
-        -->
+        <article class="trainerZone">
+          <div class="u-enTxt">TRAINER</div>
+          <div class="u-inner">
+            <h2 class="u-ttl1">​トレーナー紹介</h2>
+          </div>
+          <div class="trainerBox box2" id="app">
+            <template v-for="(item, index) in posts">
+              <div class="col" v-if="item.acf.store.includes('西亀有店')">
+                <div class="ph"><img v-bind:src="item.acf.photo1" loading="lazy"><img class="cov" v-bind:src="item.acf.photo2" loading="lazy"></div>
+                <h3 class="taC"><span>{{item.title.rendered}}</span>
+                  <div v-html="item.content.rendered"></div>
+                </h3>
+              </div>
+            </template>
+          </div>
+        </article>
         <!--article.outlineZone 
         h2.ttl2  お客様の声
         ul.voice 
@@ -189,7 +178,7 @@
         
         -->
         <div class="mapZone">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.672632918016!2d139.83135501744385!3d35.75885029999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188fa2b2eac8fd%3A0xd450186efc5e338f!2z44CSMTI0LTAwMDIg5p2x5Lqs6YO96JGb6aO-5Yy66KW_5LqA5pyJ77yS5LiB55uu77yT77yQ4oiS77yRIOOCs-ODvOODl-mHjuWPo--8kg!5e0!3m2!1sja!2sjp!4v1682059835503!5m2!1sja!2sjp"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.6726329180156!2d139.8335437!3d35.7588503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188fde5c8f8cd7%3A0x826753a112cf5d6!2zR09PRExJRkUgR1lNIOilv-S6gOacieW6lw!5e0!3m2!1sja!2sjp!4v1683766775867!5m2!1sja!2sjp"></iframe>
         </div>
         <article class="priceZone" id="price">
           <div class="u-enTxt">PRICE</div>
