@@ -80,7 +80,9 @@ sup{
   justify-content: center;
   a{
     display: block;
-    padding: .5em 1em;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 2em 1em;
     &::before{
       content: "";
       display: inline-block;

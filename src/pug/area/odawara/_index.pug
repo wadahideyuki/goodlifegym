@@ -45,22 +45,18 @@ html(lang="ja")
 
   body.pageStores
     .l-wrapper
-      include /_include/_header.pug
+      
     .pageAreaofodawara 
       .mainInner
         .mainZone
-          .fl_three 
-            .img: +pic("main/left_im.png","main/left_im-sp.png","")
-            .txt 
-              h2 関東#[br.sp]#[span 32]店舗#[br.sp]展開
-              .bot 
-                p 定額通い放題・初心者も安心の#[br]パーソナルトレーニングジム
-                .img.pc: +img("main/logo.png","")
-                ul
-                  li 運動#[br.pc]初心者#[br]歓迎
-                  li ご夫婦#[em.sp ・]#[br.pc]ご友人#[br.sp]同士#[br.pc]歓迎
-                  li 当日予約#[br]キャンセル#[br.pc]OK
-            .img: +pic("main/right_im.png","main/right_im-sp.png","")
+          .areaTitle
+            .fl_three 
+              .txt 
+                h2 関東#[br.sp]#[span 32]店舗#[br.sp]展開
+                .bot 
+                  p 定額通い放題・初心者も安心の#[br]パーソナルトレーニングジム
+                  .img.pc: +img("main/logo.png","")
+            .img: +img("area/main.jpg")
       .content_in
         .inner
           h2.tit 小田原エリアの#[br.sp]GOODLIFE GYM®
