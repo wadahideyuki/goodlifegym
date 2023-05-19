@@ -47,6 +47,7 @@
   .pageNav{
     ul{
       display: flex;
+      flex-wrap: wrap;
       @include pc{
         margin-bottom: 42px;
         font-size: 2.1rem;
@@ -62,6 +63,7 @@
       }
       @include mq{
         width: 25%;
+        margin-top: 2vw;
       }
     }
     a{

@@ -109,7 +109,7 @@
       padding-top: 40px;
       width: 94%;
       margin: 0 auto;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
       @include mq{
         padding-top: 4vw;
@@ -152,7 +152,11 @@
             font-weight: bold;
           }
         }
-  
+        &:nth-child(n+2){
+          @include pc{
+            margin-left: 20px;
+          }
+        }
       }
       .list_store-tab {
         position: relative;
@@ -163,7 +167,34 @@
         @include mq{
           padding: 4vw;
         }
-  
+        &.d_new-icons{
+          .name_str{
+            position: relative;
+            display: flex;
+            align-items: center;
+            &::after{
+              content: "NEW";
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              justify-content: center;
+              padding-bottom: 5px;
+              font-size: 1rem;
+              color: #fff;
+              background: red;
+              width: 40px;
+              height: 30px;
+              clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 34% 100%, 50% 75%, 0% 75%);
+              margin-left: 10px;
+              @include mq{
+                width: 10vw;
+                height: 7vw;
+                margin-left: 3vw;
+                padding-bottom: 2vw;
+              }
+            }
+          }
+        }
   
   
         .box_in_w {
