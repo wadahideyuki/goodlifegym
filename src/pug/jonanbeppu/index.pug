@@ -122,12 +122,12 @@ html(lang="ja")
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            //dl
+            dl
               dt  営業時間
-              dd  平日9:00-22:00、土日祝9:00-19:30
-            //dl
+              dd  平日9:00-22:00、土日祝10:00-18:00
+            dl
               dt  定休日
-              dd  土曜日
+              dd  月曜日
             //dl 
               dt 期間限定休業
               dd 火曜日（6/1~営業予定）
@@ -137,9 +137,9 @@ html(lang="ja")
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            //dl
+            dl
               dt  設備・サービス
-              dd  更衣室・トイレあり、無料レンタルシューズ
+              dd  更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
             //dl
               dt  無料駐車場あり
               dd （2台）
@@ -147,13 +147,13 @@ html(lang="ja")
 
 
 
-        //article.trainerZone
+        article.trainerZone
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('小田原店')")
+              .col(v-if="item.acf.store.includes('城南別府店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")
@@ -179,7 +179,7 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1712812412134!2d130.3683109763275!3d33.5749018427834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541930f665e96d1%3A0xbd390edea063f381!2z44Ki44K544OI44Ki5Yil5bqc!5e0!3m2!1sja!2sjp!4v1684386037763!5m2!1sja!2sjp')
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1725383230055!2d130.3708971!3d33.5748692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541934f82857c87%3A0x86f3e34c31d9354e!2zR09PRExJRkUgR1lNKOOCsOODg-ODieODqeOCpOODleOCuOODoCnln47ljZfliKXlupw!5e0!3m2!1sja!2sjp!4v1684715646529!5m2!1sja!2sjp')
 
 
         article.priceZone#price
@@ -224,14 +224,14 @@ html(lang="ja")
                       td 銀行振込またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
 
 
-        //article.contactZone
+        article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
             +ttl1("城南別府店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/hao23w543nmx2q07n6a9zob7" method="post")
+              form.formrun(action="https://form.run/api/v1/r/yvzt1sezpiaqu8uoiduuumgm" method="post")
                 // ↓自由に要素を追加・編集することができます
                 - var shopName = "城南別府店"
                 include /_index_cont/_contact.pug

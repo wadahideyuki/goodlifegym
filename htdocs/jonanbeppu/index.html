@@ -124,14 +124,14 @@
         <article class="outlineZone"> 
           <h2 class="ttl2"> ご利用案内</h2>
           <div class="in">
-            <!--dl
-            dt  営業時間
-            dd  平日9:00-22:00、土日祝9:00-19:30
-            -->
-            <!--dl
-            dt  定休日
-            dd  土曜日
-            -->
+            <dl>
+              <dt> 営業時間</dt>
+              <dd> 平日9:00-22:00、土日祝10:00-18:00</dd>
+            </dl>
+            <dl>
+              <dt> 定休日</dt>
+              <dd> 月曜日</dd>
+            </dl>
             <!--dl 
             dt 期間限定休業
             dd 火曜日（6/1~営業予定）
@@ -144,10 +144,10 @@
             dt  アクセス
             dd  小伝馬町駅　徒歩2分<br>馬喰町駅　徒歩２分<br>馬喰横山駅　徒歩３分<br>東日本橋駅　徒歩5分<br>浅草橋駅　徒歩7分<br>秋葉原駅　徒歩９分
             -->
-            <!--dl
-            dt  設備・サービス
-            dd  更衣室・トイレあり、無料レンタルシューズ
-            -->
+            <dl>
+              <dt> 設備・サービス</dt>
+              <dd> 更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ</dd>
+            </dl>
             <!--dl
             dt  無料駐車場あり
             dd （2台）
@@ -155,21 +155,22 @@
             <!--img(src="./img/sche.png")-->
           </div>
         </article>
-        <!--article.trainerZone
-        .u-enTxt TRAINER
-        .u-inner
-          h2.u-ttl1 ​トレーナー紹介
-        #app.trainerBox.box2
-          template(v-for="(item, index) in posts")
-            .col(v-if="item.acf.store.includes('小田原店')")
-              .ph
-                img(v-bind:src="item.acf.photo1", loading="lazy")
-                img.cov(v-bind:src="item.acf.photo2", loading="lazy")
-              h3.taC
-                span {{item.title.rendered}}
-                div(v-html="item.content.rendered")
-        
-        -->
+        <article class="trainerZone">
+          <div class="u-enTxt">TRAINER</div>
+          <div class="u-inner">
+            <h2 class="u-ttl1">​トレーナー紹介</h2>
+          </div>
+          <div class="trainerBox box2" id="app">
+            <template v-for="(item, index) in posts">
+              <div class="col" v-if="item.acf.store.includes('城南別府店')">
+                <div class="ph"><img v-bind:src="item.acf.photo1" loading="lazy"><img class="cov" v-bind:src="item.acf.photo2" loading="lazy"></div>
+                <h3 class="taC"><span>{{item.title.rendered}}</span>
+                  <div v-html="item.content.rendered"></div>
+                </h3>
+              </div>
+            </template>
+          </div>
+        </article>
         <!--article.outlineZone 
         h2.ttl2  お客様の声
         ul.voice 
@@ -189,7 +190,7 @@
         
         -->
         <div class="mapZone">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1712812412134!2d130.3683109763275!3d33.5749018427834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541930f665e96d1%3A0xbd390edea063f381!2z44Ki44K544OI44Ki5Yil5bqc!5e0!3m2!1sja!2sjp!4v1684386037763!5m2!1sja!2sjp"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.1725383230055!2d130.3708971!3d33.5748692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541934f82857c87%3A0x86f3e34c31d9354e!2zR09PRExJRkUgR1lNKOOCsOODg-ODieODqeOCpOODleOCuOODoCnln47ljZfliKXlupw!5e0!3m2!1sja!2sjp!4v1684715646529!5m2!1sja!2sjp"></iframe>
         </div>
         <article class="priceZone" id="price">
           <div class="u-enTxt">PRICE</div>
@@ -238,20 +239,160 @@
             </div>
           </div>
         </article>
-        <!--article.contactZone
-        .u-enTxt#contact CONTACT
-        .u-inner
-          +ttl1("城南別府店 お問い合わせ")
-          p.u-lead1 カウンセリング、初回体験をご希望の方は、<br>以下のメールフォームよりお問合せください。
-          // class, action, methodを変更しないでください
-          .formBox
-            form.formrun(action="https://form.run/api/v1/r/hao23w543nmx2q07n6a9zob7" method="post")
-              // ↓自由に要素を追加・編集することができます
-              - var shopName = "城南別府店"
-              include /_index_cont/_contact.pug
-        
-        
-        -->
+        <article class="contactZone">
+          <div class="u-enTxt" id="contact">CONTACT</div>
+          <div class="u-inner">
+            <h2 class="u-ttlBox1"><small>城南別府店 お問い合わせ</small><span></span></h2>
+            <p class="u-lead1">カウンセリング、初回体験をご希望の方は、<br>以下のメールフォームよりお問合せください。</p>
+            <!-- class, action, methodを変更しないでください-->
+            <div class="formBox">
+              <form class="formrun" action="https://form.run/api/v1/r/yvzt1sezpiaqu8uoiduuumgm" method="post">
+                <!-- ↓自由に要素を追加・編集することができます-->
+                <h3>お問い合わせ種別</h3>
+                <div class="row inqType">
+                  <label>お問い合わせ種別を選択してください <span class="must">必須</span></label>
+                  <ul class="column">
+                    <li> 
+                      <label>
+                        <input class="showDate" name="お問い合わせ種別" type="radio" value="初回体験" required>初回体験
+                      </label>
+                      <label> 
+                        <input name="お問い合わせ種別" type="radio" value="サービスに関するご質問" required>サービスに関するご質問
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <h3>お客様情報 </h3>
+                <div class="row">
+                  <label>お名前 <span class="must">必須</span></label>
+                  <input name="お名前" type="text" placeholder="山田 太郎" required>
+                </div>
+                <div class="row">
+                  <label>メールアドレス <span class="must">必須</span></label>
+                  <input name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email" required>
+                </div>
+                <div class="row">
+                  <label>電話番号 <span class="must">必須</span></label>
+                  <input name="電話番号" type="text" required placeholder="0123456789">
+                </div>
+                <div class="row">
+                  <label>当ジムを知ったきっかけ</label>
+                  <select name="当ジムを知ったきっかけ">
+                    <option value=""> 選択してください</option>
+                    <option value="インターネット検索"> インターネット検索</option>
+                    <option value="GOOGLEマップ検索"> GOOGLEマップ検索</option>
+                    <option value="看板"> 看板</option>
+                    <option value="チラシ"> チラシ</option>
+                    <option value="Instagram"> Instagram</option>
+                    <option value="Facebook"> Facebook</option>
+                    <option value="Twitter"> Twitter</option>
+                    <option value="TikTok"> TikTok</option>
+                    <option value="会員様のご紹介"> 会員様のご紹介</option>
+                  </select>
+                </div>
+                <div class="dateBox">
+                  <h3>初回体験をご希望の方 </h3>
+                  <div class="row">
+                    <label>ご希望の店舗 </label>
+                    <ul class="column">
+                      <li> 
+                        <label> 
+                          <input name="ご希望の店舗" type="hidden" value="城南別府店">城南別府店 
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <label>どちらのプランをご希望ですか？ <span class="must">必須</span></label>
+                    <ul class="column">
+                      <li> 
+                        <label>
+                          <input name="どちらにご興味がございますか" type="radio" value="マンツーマン" required>マンツーマン
+                        </label>
+                      </li>
+                      <li> 
+                        <label>
+                          <input name="どちらにご興味がございますか" type="radio" value="セミパーソナル" required>セミパーソナル
+                        </label>
+                      </li>
+                      <li> 
+                        <label>
+                          <input name="どちらにご興味がございますか" type="radio" value="相談して決めたい" required>相談して決めたい
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <label>ご希望の⽇時（第1希望） <span class="must">必須</span></label>
+                    <div class="date">
+                      <input name="ご希望の⽇（第1希望）" type="date">
+                      <select name="ご希望の時間（第1希望）" type="date">
+                        <option value=""> 選択してください</option>
+                        <option value="何時でもOK"> 何時でもOK</option>
+                        <option value="9～15時"> 9～15時</option>
+                        <option value="15～22時"> 15～22時</option>
+                        <option value="9～13時"> 9～13時</option>
+                        <option value="12～16時"> 12～16時</option>
+                        <option value="15～19時"> 15～19時</option>
+                        <option value="20～22時"> 20～22時</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label>ご希望の⽇時（第2希望） <span class="must">必須</span></label>
+                    <div class="date">
+                      <input name="ご希望の⽇（第2希望）" type="date">
+                      <select name="ご希望の時間（第2希望）" type="date">
+                        <option value=""> 選択してください</option>
+                        <option value="何時でもOK"> 何時でもOK</option>
+                        <option value="9～15時"> 9～15時</option>
+                        <option value="15～22時"> 15～22時</option>
+                        <option value="9～13時"> 9～13時</option>
+                        <option value="12～16時"> 12～16時</option>
+                        <option value="15～19時"> 15～19時</option>
+                        <option value="20～22時"> 20～22時</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label>ご希望の⽇時（第3希望） <span class="must">必須</span></label>
+                    <div class="date">
+                      <input name="ご希望の⽇（第3希望）" type="date">
+                      <select name="ご希望の時間（第3希望）" type="date">
+                        <option value=""> 選択してください</option>
+                        <option value="何時でもOK"> 何時でもOK</option>
+                        <option value="9～15時"> 9～15時</option>
+                        <option value="15～22時"> 15～22時</option>
+                        <option value="9～13時"> 9～13時</option>
+                        <option value="12～16時"> 12～16時</option>
+                        <option value="15～19時"> 15～19時</option>
+                        <option value="20～22時"> 20～22時</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <p class="notes" style="color:red">※必ず第3希望まで日時をご指定ください</p>
+                  </div>
+                </div>
+                <h3>サービスに関するご質問をご希望の方</h3>
+                <div class="row">
+                  <label>ご質問の内容を以下にご記入ください </label>
+                  <textarea name="お問い合わせ内容" placeholder="お問い合わせ内容を入力(知人からの紹介の方はこちらにご紹介者のお名前を記載ください)"></textarea>
+                </div>
+                <!-- ボット投稿をブロックするためのタグ-->
+                <div class="_formrun_gotcha">
+                  <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+                  <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+                  <input id="_formrun_gotcha" type="text" name="_formrun_gotcha" tabindex="-1">
+                </div>
+                <div class="rowRcap">
+                  <div class="g-recaptcha" data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW"></div>
+                </div>
+                <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+              </form>
+            </div>
+          </div>
+        </article>
         <article class="storesZone" id="access"><!--#include virtual="/common/include/stores.html" --></article>
       </main><!--#include virtual="/common/include/foot.html" -->
     </div>
