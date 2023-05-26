@@ -93,17 +93,28 @@
       margin-top: 0.5em;
     }
   }
+  .more_w{
+    max-width: none;
+  }
   .joblist{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
+    position: relative;
+    left: -30px;
     @include mq{
       flex-direction: column;
+      left: 0;
     }
     li{
-      width: 48%;
+      width: 415px;
+      margin-top: 30px;
+      margin-left: 30px;
       @include mq{
         width: 100%;
+        margin-top: 0;
+        margin-left: 0;
       }
       a{
         background-color: #fff;
