@@ -292,6 +292,32 @@ article:not(.contactZone) {
 
   }
 
+  .last_cb{
+    margin: 10px 0 20px 0;
+    text-align: center;
+    @include mq{
+      margin: 1vw 0 5vw 0;
+    }
+    label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+      @include mq{
+        font-size: 1.4rem;
+      }
+    }
+    input{
+      margin-right: 0.5em;
+      width: 1.2em;
+      height: 1.2em;
+      @include pc{
+        position: relative;
+        bottom: 1px;
+      }
+    }
+  }
+
   .privacy {
     padding: 15px;
     border: 1px solid #CCC;
