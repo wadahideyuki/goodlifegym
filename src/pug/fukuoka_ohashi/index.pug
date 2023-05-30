@@ -3,6 +3,14 @@ include /_include/_mixin.pug
 doctype html
 html(lang="ja")
   head
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N5CM4HX');
+    // End Google Tag Manager
     script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
     script.
       window.dataLayer = window.dataLayer || [];
@@ -22,7 +30,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 十条店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 福岡大橋店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -44,9 +52,14 @@ html(lang="ja")
 
 
   body.pageStores
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-N5CM4HX", height="0", width="0", style="display:none;visibility:hidden")
+    // End Google Tag Manager (noscript)
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]十条#[br]2023年6月11日オープン
+      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]福岡大橋#[br]2023年7月5日オープン
+      
       .info
         dl
           dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
@@ -63,34 +76,76 @@ html(lang="ja")
       main.l-cont
         //article.photoZone 
           ul 
-            li: img(src="./img/p1.jpg?v3")
-            li: img(src="./img/p2.jpg?v3")
-            li: img(src="./img/p3.jpg?v3")
+            li: img(src="./img/ph01.jpg?2022")
+            li: img(src="./img/ph02.jpg?2022")
+            li: img(src="./img/ph03.jpg?2022")
+            li: img(src="./img/ph04.jpg?2022")
+            li: img(src="./img/ph05.jpg?2022")
+            li: img(src="./img/ph06.jpg?2022")
+            li: img(src="./img/ph07.jpg?2022")
+            li: img(src="./img/ph08.jpg?2022")
+            li: img(src="./img/ph09.jpg?2022")
+            li: img(src="./img/ph10.jpg?2022")
+            li: img(src="./img/ph12.jpg?2022")
 
+
+
+
+
+        //article.featureZone 
+          h2.ttl2  紹介動画
+          .shopMov 
+            iframe(width='560' height='315' src='https://www.youtube.com/embed/lGZHHTpEX3Q' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+
+
+        //article.featureZone 
+          h2.ttl2  東日本橋店の特徴
+          ul 
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
+            li 
+              .img
+                img(src="https://dummyimage.com/600x400/000/fff" loading="lazy")
+              p 特徴が入るテキストテキストテキストテキスト
 
 
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            //dl
+            dl
               dt  営業時間
               dd  平日9:00-22:00、土日祝10:00-18:00
-            //dl
+            dl
               dt  定休日
               dd  月曜日
+            //dl 
+              dt 期間限定休業
+              dd 火曜日（6/1~営業予定）
             dl
               dt  住所
-              dd  〒114-0034#[br]東京都北区上十条1-4-17 ザ・パークハウス十条103
-            //dl
-              dt  メールアドレス
-              dd add.life.farm@gmail.com
+              dd  815-0033#[br]福岡県福岡市南区大橋4-2-3 大橋ライフビル2階
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            //dl
+            dl
               dt  設備・サービス
               dd  更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
-            //img(src="./img/p3.jpg")
+            //dl
+              dt  無料駐車場あり
+              dd （2台）
+            //img(src="./img/sche.png")
+
+
 
         //article.trainerZone
           .u-enTxt TRAINER
@@ -98,7 +153,7 @@ html(lang="ja")
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('十条店')")
+              .col(v-if="item.acf.store.includes('福岡大橋店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")
@@ -106,11 +161,14 @@ html(lang="ja")
                   span {{item.title.rendered}}
                   div(v-html="item.content.rendered")
 
-
-
         //article.outlineZone 
           h2.ttl2  お客様の声
           ul.voice 
+            li: img(src="img/v04.png")
+            li: img(src="img/v05.png")
+            li: img(src="img/v06.png")
+            li: img(src="img/v07.png")
+          //
             li 
               a(href="https://goo.gl/maps/7yvPZ6uRywzinj4Q8" target="_blank")
                 img(src="img/i_v01.png")
@@ -121,7 +179,9 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.6772068304977!2d139.7245833!3d35.7587379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018930edba60aa7%3A0x9556078c43a3f90e!2zR09PRExJRkUgR1lNIOWNgeadoQ!5e0!3m2!1sja!2sjp!4v1680491563841!5m2!1sja!2sjp")
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.036991754103!2d139.68585797639182!3d35.651460231607835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4aba0121983%3A0x74cdb7da27437452!2z44Op44Kk44OVIOebrum7kuWkp-api-W6lw!5e0!3m2!1sja!2sjp!4v1685427198573!5m2!1sja!2sjp')
+
+
         article.priceZone#price
           .u-enTxt PRICE
           .u-inner
@@ -155,7 +215,7 @@ html(lang="ja")
                   table
                     tr
                       th カウンセリング＆初回体験料
-                      td 3,000円 → #[em 【キャンペーン中】無料]
+                      td 3,000円→ #[em 【キャンペーン中】無料]
                     tr
                       th 入会金・登録料
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
@@ -163,16 +223,17 @@ html(lang="ja")
                       th 毎月のお支払い方法
                       td 銀行振込またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
 
+
         article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("十条店 お問い合わせ")
+            +ttl1("福岡大橋店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/ir7elt7olyz8i62rufkvko2d" method="post")
+              form.formrun(action="https://form.run/api/v1/r/gbieftk1kkog4veqzy08eocq" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "十条店"
+                - var shopName = "福岡大橋店"
                 include /_index_cont/_contact.pug
 
 
