@@ -119,8 +119,9 @@ h3 サービスに関するご質問をご希望の方
   textarea(name="お問い合わせ内容"   placeholder="お問い合わせ内容を入力(知人からの紹介の方はこちらにご紹介者のお名前を記載ください)")
 .last_cb 
   label 
-    input(name="プライバシーポリシー、申込書への記載に同意する" type="checkbox" value="申込書への記載に同意する" required)
-    | プライバシーポリシー、申込書への記載に同意する
+    input(name="プライバシーポリシーに同意する" type="checkbox" value="プライバシーポリシーに同意する" required)
+    | 
+    a(href="/privacy/" target="_blank") プライバシーポリシーに同意する
 // ボット投稿をブロックするためのタグ
 ._formrun_gotcha
   style(media="screen").
