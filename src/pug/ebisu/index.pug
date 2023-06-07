@@ -30,7 +30,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 福岡大橋店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 恵比寿店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -58,7 +58,7 @@ html(lang="ja")
     // End Google Tag Manager (noscript)
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]福岡大橋#[br]2023年7月5日オープン
+      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]恵比寿#[br]7月オープン予定
       
       .info
         dl
@@ -122,10 +122,10 @@ html(lang="ja")
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            dl
+            //dl
               dt  営業時間
               dd  平日9:00-22:00、土日祝10:00-18:00
-            dl
+            //dl
               dt  定休日
               dd  日曜日
             //dl 
@@ -133,11 +133,11 @@ html(lang="ja")
               dd 火曜日（6/1~営業予定）
             dl
               dt  住所
-              dd  815-0033#[br]福岡県福岡市南区大橋4-2-3 大橋ライフビル2階
+              dd  150-0013#[br]東京都渋谷区恵比寿2-6-26 TQ恵比寿B1F
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            dl
+            //dl
               dt  設備・サービス
               dd  更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
             //dl
@@ -147,13 +147,13 @@ html(lang="ja")
 
 
 
-        article.trainerZone
+        //article.trainerZone
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('福岡大橋店')")
+              .col(v-if="item.acf.store.includes('恵比寿店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")
@@ -179,7 +179,7 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.9262167910897!2d130.428211!3d33.555293299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541911c50fdd6e3%3A0x164a2137d7ef8c70!2z44CSODE1LTAwMzMg56aP5bKh55yM56aP5bKh5biC5Y2X5Yy65aSn5qmL77yU5LiB55uu77yS4oiS77yTIOODqeOCpOODleODk-ODqw!5e0!3m2!1sja!2sjp!4v1685429876081!5m2!1sja!2sjp')
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.212163169761!2d139.7086481763917!3d35.64714408184463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ba8cbe955b5%3A0xeb09a951845ea036!2zVFHmgbXmr5Tlr78!5e0!3m2!1sja!2sjp!4v1686102799755!5m2!1sja!2sjp')
 
 
         article.priceZone#price
@@ -227,13 +227,13 @@ html(lang="ja")
         article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("福岡大橋店 お問い合わせ")
+            +ttl1("恵比寿店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/gbieftk1kkog4veqzy08eocq" method="post")
+              form.formrun(action="https://form.run/api/v1/r/z17a04wldoagdohwl31ovmml" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "福岡大橋店"
+                - var shopName = "恵比寿店"
                 include /_index_cont/_contact.pug
 
 
