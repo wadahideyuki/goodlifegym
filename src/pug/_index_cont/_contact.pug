@@ -135,6 +135,8 @@ h3 サービスに関するご質問をご希望の方
   .rowRcap
     .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
 
-button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." ) 送信
+button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." onclick="gtag('event', 'contact', {'event_category': 'contact','event_label': 'contact','value': 'contact'});" ) 送信
 
+
+<!--#include virtual="/common/include/storetag.html" -->
 
