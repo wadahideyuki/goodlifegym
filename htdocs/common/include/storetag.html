@@ -1,7 +1,10 @@
 <script>
-    function loadFinished() {
-    gtag("event", "shopPageView", { event_category: "shopPageView", event_label: "shopPageView" });
-    }
-    
-    window.onload = loadFinished;
-  </script>
+  var directoryPath = window.location.pathname;
+  directoryPath = directoryPath.replace(/^\/|\/$/g, '');
+  var eventName = "shopPageView_" + directoryPath;
+  console.log(eventName);
+  function loadFinished() {
+    gtag("event", eventName, { event_category: "shopPageView", event_label: directoryPath });
+  }
+  window.onload = loadFinished;
+</script>

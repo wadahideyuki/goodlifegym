@@ -1,6 +1,12 @@
 <script>
+  var directoryPath = window.location.pathname;
+var directoryParts = directoryPath.split('/');
+var lastDirectory = directoryParts[directoryParts.length - 2];
+
+var eventName = "areaPageView_" + lastDirectory;
+console.log(eventName);
     function loadFinished() {
-    gtag("event", "areaPageView", { event_category: "areaPageView", event_label: "areaPageView" });
+    gtag("event", eventName, { event_category: "areaPageView", event_label: lastDirectory });
     }
     
     window.onload = loadFinished;
