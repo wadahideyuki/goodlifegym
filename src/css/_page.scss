@@ -755,6 +755,53 @@
       padding-top: 10vw;
     }
   }
+  .prm_moretxt{
+    background: linear-gradient(to right, #006fa4 0%, #00b8ba 100%);
+    color: #fff;
+    h2{
+      font-size: 4rem;
+      margin-bottom: 0.8em;
+    }
+    p{
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.7;
+    }
+    a{
+      display: block;
+      text-align: center;
+      margin-top: 1em;
+      text-decoration: underline;
+      &:hover{
+        opacity: .7;
+        transition: 0.3s;
+      }
+    }
+    .movieBox{
+      .ttl_mv{
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        margin-top: 50px;
+        @include mq{
+          font-size: 2.4rem;
+          margin-top: 2vw;
+        }
+      }
+      iframe{
+        width: 100%;
+        margin: 0 auto;
+        height: 670px;
+        @include mq{
+          width: 100%;
+          height: 70vw;
+        }
+      }
+    }
+  }
   .mapZone {
     iframe {
     }

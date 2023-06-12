@@ -30,7 +30,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 恵比寿店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title セミパーソナルGOODLIFE GYM prime恵比寿 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -51,26 +51,26 @@ html(lang="ja")
     +jsCommon("common.js?2022-3")
 
 
-  body.pageStores
+  body.pageStores.prime_page
     // Google Tag Manager (noscript)
     noscript
       iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-N5CM4HX", height="0", width="0", style="display:none;visibility:hidden")
     // End Google Tag Manager (noscript)
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]恵比寿#[br]7月オープン予定
+      h1.ttl セミパーソナル#[br.sp]GOODLIFE GYM prime#[br.sp]恵比寿#[br]7月オープン予定
       
       .info
         dl
-          dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
+          dt  セミパーソナル特化型店舗GOODLIFE GYM primeリリースキャンペーン#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
           dd  
             ul  
               li
+                strong 初回体験無料
+              li
                 strong 入会金30,000円→#[em 10,000円]
               li
-                strong 初月会費→#[em 10,000円割引]
-              li
-                strong カウンセリング＆初回体験料3,000円→#[em 無料]
+                strong 2023年12月末までのご入会でセミパ通い放題prime#[br.pc]会費24,800円→#[em 19,800円]
             a(href="#contact").u-btn1  お問い合わせはこちら
             .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
       main.l-cont
@@ -122,12 +122,12 @@ html(lang="ja")
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            //dl
+            dl
               dt  営業時間
               dd  平日9:00-22:00、土日祝10:00-18:00
-            //dl
+            dl
               dt  定休日
-              dd  日曜日
+              dd  不定休
             //dl 
               dt 期間限定休業
               dd 火曜日（6/1~営業予定）
@@ -137,7 +137,7 @@ html(lang="ja")
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            //dl
+            dl
               dt  設備・サービス
               dd  更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
             //dl
@@ -145,8 +145,14 @@ html(lang="ja")
               dd （2台）
             //img(src="./img/sche.png")
 
-
-
+        article.prm_moretxt 
+          .u-inner
+            h2.ttl2 GOODLIFE GYM primeとは
+            p セミパーソナル特化型の新ブランド‼#[br]GOODLIFE GYMトップトレーナー在籍‼#[br]セミパーソナル向けにつくられた最高の環境で朝から夜までセミパセッションを実施‼
+            a(href="/store/") ※マンツーマンをご希望の方は近隣のGOODLIFE GYM店舗にお問い合わせください。 
+            .movieBox
+              .ttl_mv セミパーソナルの様子はこちらの動画をご覧ください
+              +mov("OJHTV5iRYQo")
         //article.trainerZone
           .u-enTxt TRAINER
           .u-inner
@@ -192,23 +198,24 @@ html(lang="ja")
                 .contWrap.is-active
                   ul.planList
                     li
-                      h3 セミパ通い放題
-                      span.monthly 月額#[em 19,800]円(税込)
-
+                      .lm_ic 人数限定
+                      h3 セミパ通い放題prime
+                      span.monthly 月額#[em 24,800]円(税込)
+                      .note_store GOODLIFE GYM prime店舗限定プラン/恵比寿店、南千住駅前店
                       p.recommend セミパーソナルトレーニング#[br]通い放題#[br]【他店舗相互利用可能】
-                      
+
                     li
                       h3 セミパ週１回
                       span.monthly 月額#[em 14,800]円(税込)
                       p.recommend セミパーソナルトレーニング#[br]週１回（月４～５回分）​​
-                    li
-                      h3 マンツーマン通い放題
-                      span.monthly 月額#[em 34,800]円(税込)
-                      p.recommend マンツーマンパーソナル#[br]トレーニング通い放題#[br]【他店舗相互利用可能】
-                    li
-                      h3 マンツーマン週１回
-                      span.monthly 月額#[em 24,800]円(税込)
-                      p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
+                    //- li
+                    //-   h3 マンツーマン通い放題
+                    //-   span.monthly 月額#[em 34,800]円(税込)
+                    //-   p.recommend マンツーマンパーソナル#[br]トレーニング通い放題#[br]【他店舗相互利用可能】
+                    //- li
+                    //-   h3 マンツーマン週１回
+                    //-   span.monthly 月額#[em 24,800]円(税込)
+                    //-   p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
                   span.planNote ＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます#[br]＊月の途中からのプラン開始も可能です#[br](例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます
                   
                 .tableBox
@@ -219,6 +226,9 @@ html(lang="ja")
                     tr
                       th 入会金・登録料
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
+                    tr 
+                      th 2023年12月末までの#[br]ご入会でセミパ通い放題prime会費
+                      td 24,800円→ #[em 【キャンペーン中】19,800円]
                     tr
                       th 毎月のお支払い方法
                       td 銀行振込またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
