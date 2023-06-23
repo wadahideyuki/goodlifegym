@@ -58,7 +58,7 @@ html(lang="ja")
     // End Google Tag Manager (noscript)
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl セミパーソナル#[br.sp]GOODLIFE GYM prime#[br.sp]恵比寿#[br]7月オープン予定
+      h1.ttl セミパーソナル#[br.sp]GOODLIFE GYM prime#[br.sp]恵比寿#[br]2023年7月4日オープン
       
       .info
         dl
@@ -124,7 +124,7 @@ html(lang="ja")
           .in
             dl
               dt  営業時間
-              dd  平日9:00-22:00、土日祝10:00-18:00
+              dd  平日9:00-22:00、土日祝9:00-17:00
             dl
               dt  定休日
               dd  不定休
@@ -244,7 +244,146 @@ html(lang="ja")
               form.formrun(action="https://form.run/api/v1/r/z17a04wldoagdohwl31ovmml" method="post")
                 // ↓自由に要素を追加・編集することができます
                 - var shopName = "恵比寿店"
-                include /_index_cont/_contact.pug
+                h3 お問い合わせ種別
+
+                .row.inqType
+                  label お問い合わせ種別を選択してください #[span.must 必須]
+                  ul.column
+                    li 
+                      - if (uketsuke != "off")
+                        label
+                          input(name="お問い合わせ種別" type="radio" value="初回体験" required).showDate
+                          | 初回体験
+                      label 
+                        input(name="お問い合わせ種別" type="radio" value="サービスに関するご質問" required)
+                        | サービスに関するご質問
+
+                h3 お客様情報 
+                .row
+                  label お名前 #[span.must 必須]
+                  input(name="お名前" type="text" placeholder="山田 太郎"  required)
+                .row
+                  label メールアドレス #[span.must 必須]
+                  input(name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email"  required)
+
+                .row
+                  label 電話番号 #[span.must 必須]
+                  input(name="電話番号" type="text"  required  placeholder="0123456789")
+                .row
+                  label 当ジムを知ったきっかけ
+                  select(name="当ジムを知ったきっかけ")
+                    option(value="")  選択してください
+                    option(value="インターネット検索")  インターネット検索
+                    option(value="GOOGLEマップ検索")  GOOGLEマップ検索
+                    option(value="看板")  看板
+                    option(value="チラシ")  チラシ
+                    option(value="Instagram")  Instagram
+                    option(value="Facebook")  Facebook
+                    option(value="Twitter")  Twitter
+                    option(value="TikTok")  TikTok
+                    option(value="会員様のご紹介")  会員様のご紹介
+
+
+                .dateBox
+                  h3 初回体験をご希望の方 
+                  .row
+                    label ご希望の店舗 
+                    ul.column
+                      li 
+                        label 
+                          input(name="ご希望の店舗" type="hidden" value=shopName)
+                          | #{shopName} 
+
+                  .row
+                    label どちらのプランをご希望ですか？ #[span.must 必須]
+                    ul.column
+                      li 
+                        label
+                          - if (man1 == "off")
+                            input(name="どちらにご興味がございますか" type="radio" value="通い放題" disabled)
+                            | 通い放題（定員のため受付停止）
+                          - else
+                            input(name="どちらにご興味がございますか" type="radio" value="通い放題" required)
+                            | 通い放題
+                      li 
+                        label
+                          - if (semipa1 == "off")
+                            input(name="どちらにご興味がございますか" type="radio" value="週一回" disabled)
+                            | 週一回（定員のため受付停止）
+                          - else
+                            input(name="どちらにご興味がございますか" type="radio" value="週一回" required)
+                            | 週一回
+                      li  
+                        label
+                          input(name="どちらにご興味がございますか" type="radio" value="相談して決めたい" required)
+                          | 相談して決めたい
+                  .row
+                    label ご希望の⽇時（第1希望） #[span.must 必須]
+                    .date
+                      input(name="ご希望の⽇（第1希望）" type="date"   )
+                      select(name="ご希望の時間（第1希望）" type="date"   )
+                        option(value="")  選択してください
+                        option(value="何時でもOK")  何時でもOK
+                        option(value="9～15時")  9～15時
+                        option(value="15～22時")  15～22時
+                        option(value="9～13時")  9～13時
+                        option(value="12～16時")  12～16時
+                        option(value="15～19時")  15～19時
+                        option(value="20～22時")  20～22時
+                  .row
+                    label ご希望の⽇時（第2希望） #[span.must 必須]
+                    .date
+                      input(name="ご希望の⽇（第2希望）" type="date"   )
+                      select(name="ご希望の時間（第2希望）" type="date"   )
+                        option(value="")  選択してください
+                        option(value="何時でもOK")  何時でもOK
+                        option(value="9～15時")  9～15時
+                        option(value="15～22時")  15～22時
+                        option(value="9～13時")  9～13時
+                        option(value="12～16時")  12～16時
+                        option(value="15～19時")  15～19時
+                        option(value="20～22時")  20～22時
+                  .row
+                    label ご希望の⽇時（第3希望） #[span.must 必須]
+                    .date
+                      input(name="ご希望の⽇（第3希望）" type="date"   )
+                      select(name="ご希望の時間（第3希望）" type="date"   )
+                        option(value="")  選択してください
+                        option(value="何時でもOK")  何時でもOK
+                        option(value="9～15時")  9～15時
+                        option(value="15～22時")  15～22時
+                        option(value="9～13時")  9～13時
+                        option(value="12～16時")  12～16時
+                        option(value="15～19時")  15～19時
+                        option(value="20～22時")  20～22時
+                  .row
+                    p.notes(style="color:red") ※必ず第3希望まで日時をご指定ください
+                h3 サービスに関するご質問をご希望の方
+                .row
+                  label ご質問の内容を以下にご記入ください 
+                  textarea(name="お問い合わせ内容"   placeholder="お問い合わせ内容を入力(知人からの紹介の方はこちらにご紹介者のお名前を記載ください)")
+                .last_cb 
+                  label 
+                    input(name="プライバシーポリシーに同意する" type="checkbox" value="プライバシーポリシーに同意する" required)
+                    | 
+                    a(href="/privacy/" target="_blank") プライバシーポリシーに同意する
+                // ボット投稿をブロックするためのタグ
+                ._formrun_gotcha
+                  style(media="screen").
+                    ._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}
+                  label(for="_formrun_gotcha") If you are a human, ignore this field
+                  input#_formrun_gotcha(type="text" name="_formrun_gotcha" tabindex="-1")
+
+                - if (recapcha == "off")
+                  .s
+                - else
+                  .rowRcap
+                    .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
+
+                button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." onclick="gtag('event', 'contact', {'event_category': 'contact','event_label': 'contact','value': 'contact'});" ) 送信
+
+
+                <!--#include virtual="/common/include/storetag.html" -->
 
 
         article.storesZone#access
