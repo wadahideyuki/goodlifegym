@@ -30,7 +30,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 春日後楽園店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 静岡駿河店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -58,7 +58,7 @@ html(lang="ja")
     // End Google Tag Manager (noscript)
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]春日後楽園#[br]2023年7月オープン
+      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]静岡駿河
       
       .info
         dl
@@ -122,28 +122,28 @@ html(lang="ja")
         article.outlineZone 
           h2.ttl2  ご利用案内
           .in
-            dl
+            //dl
               dt  営業時間
               dd  平日9:00-22:00、土日祝10:00-18:00
-            dl
+            //dl
               dt  定休日
-              dd  水曜日
+              dd  日曜日
             //dl 
               dt 期間限定休業
               dd 火曜日（6/1~営業予定）
             dl
               dt  住所
-              dd  113-0033#[br]東京都文京区本郷4-25-8 レッチフィールド本郷4丁目9階
+              dd  422-8064#[br]静岡県静岡市駿河区新川1-11-28MAビル2階
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
-            dl
+            //dl
               dt  設備・サービス
               dd  更衣室・トイレあり、無料マイシューズ保管、無料レンタルシューズ
             //dl
               dt  無料駐車場あり
               dd （2台）
-            //img(src="./img/p3.jpg")
+            //img(src="./img/sche.png")
 
 
 
@@ -153,7 +153,7 @@ html(lang="ja")
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('小田原店')")
+              .col(v-if="item.acf.store.includes('静岡駿河店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")
@@ -179,7 +179,7 @@ html(lang="ja")
             a(href="https://www.google.com/maps/place/GOODLIFE+GYM(%E3%82%B0%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B8%E3%83%A0)%E7%A8%B2%E6%AF%9B%E6%B5%B7%E5%B2%B8/@35.6282722,140.0723032,17z/data=!3m1!5s0x602283a6c7b34185:0xbcf612720f2434c7!4m8!3m7!1s0x602283ed04e3b1a1:0x7d74a5c4779817db!8m2!3d35.6282192!4d140.0745508!9m1!1b1!16s%2Fg%2F11nn1dw5rp?hl=ja-JP" target="_blank") もっと見る
 
         .mapZone
-          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.617106474296!2d139.75054717639364!3d35.71103887833506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188de99c4ca4d1%3A0xe8fee75f2c345774!2z44Os44OD44OB44OV44Kj44O844Or44OJIOacrOmDt--8lOS4geebrg!5e0!3m2!1sja!2sjp!4v1684385510282!5m2!1sja!2sjp')
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.750071623408!2d138.37985447637013!3d34.962872369099834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a49edb929e85f%3A0x785dcbb7138a8af3!2z44CSNDIyLTgwNjQg6Z2Z5bKh55yM6Z2Z5bKh5biC6ae_5rKz5Yy65paw5bed77yR5LiB55uu77yR77yR4oiS77yS77yY!5e0!3m2!1sja!2sjp!4v1688343560955!5m2!1sja!2sjp')
 
 
         article.priceZone#price
@@ -225,16 +225,16 @@ html(lang="ja")
                       td 銀行振込またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
 
 
-        article.contactZone
+        //article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("春日後楽園店 お問い合わせ")
+            +ttl1("静岡駿河店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
-              form.formrun(action="https://form.run/api/v1/r/lwvn6obhdtao8yaws7a64d7v" method="post")
+              form.formrun(action="https://form.run/api/v1/r/gbieftk1kkog4veqzy08eocq" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "春日後楽園店"
+                - var shopName = "静岡駿河店"
                 include /_index_cont/_contact.pug
 
 

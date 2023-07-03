@@ -18,11 +18,11 @@ article:not(.storesZone) {
   }
   .shoplist{
     display: flex;
-    justify-content: space-between;
     max-width: 1120px;
     margin: 0 auto;
     width: 90%;
     flex-wrap: wrap;
+    justify-content: space-between;
     li{
       width: 23%;
       @include mq{
@@ -30,24 +30,24 @@ article:not(.storesZone) {
       }
       a{
         background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 3px 5px 15px rgba(0, 161, 179, 0.2);
-    margin-bottom: 1em;
-    padding: 1.5em;font-weight: bold;
-    color: #00bad0;
-    display: flex;
-    justify-content: space-between;
-    font-size: 2rem;
-    align-items: center;
-    &::after{
-      content: "";
-      width: 0.5em;
-      height: 0.5em;
-      display: inline-block;
-      border-right: 2px solid #00bad0;
-      border-bottom: 2px solid #00bad0;
-      transform: rotate(-45deg);
-    }
+        border-radius: 10px;
+        box-shadow: 3px 5px 15px rgba(0, 161, 179, 0.2);
+        margin-bottom: 1em;
+        padding: 1.5em;font-weight: bold;
+        color: #00bad0;
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+        align-items: center;
+        &::after{
+          content: "";
+          width: 0.5em;
+          height: 0.5em;
+          display: inline-block;
+          border-right: 2px solid #00bad0;
+          border-bottom: 2px solid #00bad0;
+          transform: rotate(-45deg);
+        }
       }
     }
   }
