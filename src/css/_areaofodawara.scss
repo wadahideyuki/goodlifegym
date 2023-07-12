@@ -164,7 +164,9 @@
         border-radius: 20px;
         padding: 20px;
         box-sizing: border-box;
+        margin-top: 20px;
         @include mq{
+          margin-top: 0;
           padding: 4vw;
         }
         &.d_new-icons{
