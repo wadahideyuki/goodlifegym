@@ -106,22 +106,21 @@
         <div class="mapZone">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.429598890042!2d139.6876078!3d35.715651799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f315cf82d49f%3A0xe77293ebb87f2c50!2z44Kw44OD44OJ44Op44Kk44OV44K444OgIOS4reS6lemnheWJjQ!5e0!3m2!1sja!2sjp!4v1669364082207!5m2!1sja!2sjp"></iframe>
         </div>
-        <article class="trainerZone">
-          <div class="u-enTxt">TRAINER</div>
-          <div class="u-inner">
-            <h2 class="u-ttl1">​トレーナー紹介</h2>
-          </div>
-          <div class="trainerBox box2" id="app">
-            <template v-for="(item, index) in posts">
-              <div class="col" v-if="item.acf.store.includes('中井駅前店')">
-                <div class="ph"><img v-bind:src="item.acf.photo1" loading="lazy"><img class="cov" v-bind:src="item.acf.photo2" loading="lazy"></div>
-                <h3 class="taC"><span>{{item.title.rendered}}</span>
-                  <div v-html="item.content.rendered"></div>
-                </h3>
-              </div>
-            </template>
-          </div>
-          <!--.trainerBox.box2
+        <!--article.trainerZone
+        .u-enTxt TRAINER
+        .u-inner
+          h2.u-ttl1 ​トレーナー紹介
+        #app.trainerBox.box2
+          template(v-for="(item, index) in posts")
+            .col(v-if="item.acf.store.includes('中井駅前店')")
+              .ph
+                img(v-bind:src="item.acf.photo1", loading="lazy")
+                img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+              h3.taC
+                span {{item.title.rendered}}
+                div(v-html="item.content.rendered")
+        
+        //.trainerBox.box2
           .col 
             .ph
               +img("trainer/nakai-ph1.png?20210622")
@@ -132,9 +131,8 @@
               +img("trainer/ph_shoma-1.jpg?20210622")
               +img("trainer/ph_shoma-1.jpg?2021062","","cov")
             h3.taC <span>ショウマ</span><br>トレーナー
-          
-          -->
-        </article>
+        
+        -->
         <article class="priceZone" id="price">
           <div class="u-enTxt">PRICE</div>
           <div class="u-inner">
