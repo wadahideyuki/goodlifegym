@@ -74,19 +74,13 @@ html(lang="ja")
             a(href="#contact").u-btn1  お問い合わせはこちら
             .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
       main.l-cont
-        //article.photoZone 
+        article.photoZone 
           ul 
-            li: img(src="./img/ph01.jpg?2022")
-            li: img(src="./img/ph02.jpg?2022")
-            li: img(src="./img/ph03.jpg?2022")
-            li: img(src="./img/ph04.jpg?2022")
-            li: img(src="./img/ph05.jpg?2022")
-            li: img(src="./img/ph06.jpg?2022")
-            li: img(src="./img/ph07.jpg?2022")
-            li: img(src="./img/ph08.jpg?2022")
-            li: img(src="./img/ph09.jpg?2022")
-            li: img(src="./img/ph10.jpg?2022")
-            li: img(src="./img/ph12.jpg?2022")
+            li: img(src="./img/p1.jpg?2022")
+            li: img(src="./img/p2.jpg?2022")
+            li: img(src="./img/p3.jpg?2022")
+            li: img(src="./img/p4.jpg?2022")
+            li: img(src="./img/p5.jpg?2022")
 
 
 
@@ -147,13 +141,13 @@ html(lang="ja")
 
 
 
-        //article.trainerZone
+        article.trainerZone
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('小田原店')")
+              .col(v-if="item.acf.store.includes('春日後楽園店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")

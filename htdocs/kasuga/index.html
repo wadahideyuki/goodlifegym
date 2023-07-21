@@ -73,25 +73,15 @@
         </dl>
       </div>
       <main class="l-cont">
-        <!--article.photoZone 
-        ul 
-          li: img(src="./img/ph01.jpg?2022")
-          li: img(src="./img/ph02.jpg?2022")
-          li: img(src="./img/ph03.jpg?2022")
-          li: img(src="./img/ph04.jpg?2022")
-          li: img(src="./img/ph05.jpg?2022")
-          li: img(src="./img/ph06.jpg?2022")
-          li: img(src="./img/ph07.jpg?2022")
-          li: img(src="./img/ph08.jpg?2022")
-          li: img(src="./img/ph09.jpg?2022")
-          li: img(src="./img/ph10.jpg?2022")
-          li: img(src="./img/ph12.jpg?2022")
-        
-        
-        
-        
-        
-        -->
+        <article class="photoZone"> 
+          <ul> 
+            <li><img src="./img/p1.jpg?2022"></li>
+            <li><img src="./img/p2.jpg?2022"></li>
+            <li><img src="./img/p3.jpg?2022"></li>
+            <li><img src="./img/p4.jpg?2022"></li>
+            <li><img src="./img/p5.jpg?2022"></li>
+          </ul>
+        </article>
         <!--article.featureZone 
         h2.ttl2  紹介動画
         .shopMov 
@@ -155,21 +145,22 @@
             <!--img(src="./img/p3.jpg")-->
           </div>
         </article>
-        <!--article.trainerZone
-        .u-enTxt TRAINER
-        .u-inner
-          h2.u-ttl1 ​トレーナー紹介
-        #app.trainerBox.box2
-          template(v-for="(item, index) in posts")
-            .col(v-if="item.acf.store.includes('小田原店')")
-              .ph
-                img(v-bind:src="item.acf.photo1", loading="lazy")
-                img.cov(v-bind:src="item.acf.photo2", loading="lazy")
-              h3.taC
-                span {{item.title.rendered}}
-                div(v-html="item.content.rendered")
-        
-        -->
+        <article class="trainerZone">
+          <div class="u-enTxt">TRAINER</div>
+          <div class="u-inner">
+            <h2 class="u-ttl1">​トレーナー紹介</h2>
+          </div>
+          <div class="trainerBox box2" id="app">
+            <template v-for="(item, index) in posts">
+              <div class="col" v-if="item.acf.store.includes('春日後楽園店')">
+                <div class="ph"><img v-bind:src="item.acf.photo1" loading="lazy"><img class="cov" v-bind:src="item.acf.photo2" loading="lazy"></div>
+                <h3 class="taC"><span>{{item.title.rendered}}</span>
+                  <div v-html="item.content.rendered"></div>
+                </h3>
+              </div>
+            </template>
+          </div>
+        </article>
         <!--article.outlineZone 
         h2.ttl2  お客様の声
         ul.voice 
