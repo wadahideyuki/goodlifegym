@@ -22,7 +22,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 西新宿店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 西新宿五丁目店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -107,7 +107,7 @@ html(lang="ja")
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('西新宿店')")
+              .col(v-if="item.acf.store.includes('西新宿五丁目店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")
@@ -176,13 +176,13 @@ html(lang="ja")
         article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("西新宿店 お問い合わせ")
+            +ttl1("西新宿五丁目店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
               form.formrun(action="https://form.run/api/v1/r/6y4x4c213kfogpin4plweh9x" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "西新宿店"
+                - var shopName = "西新宿五丁目店"
                 include /_index_cont/_contact.pug
 
 
