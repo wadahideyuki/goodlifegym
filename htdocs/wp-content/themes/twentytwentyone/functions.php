@@ -654,3 +654,6 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 		return __( ', ', 'twentytwentyone' );
 	}
 endif;
+
+// 管理バーを非表示にする
+add_filter('show_admin_bar', '__return_false');

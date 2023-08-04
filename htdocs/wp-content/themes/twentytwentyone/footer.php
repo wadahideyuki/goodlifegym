@@ -16,66 +16,49 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
-	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
-
-	<footer id="colophon" class="site-footer">
-
-		<?php if ( has_nav_menu( 'footer' ) ) : ?>
-			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
-				<ul class="footer-navigation-wrapper">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'items_wrap'     => '%3$s',
-							'container'      => false,
-							'depth'          => 1,
-							'link_before'    => '<span>',
-							'link_after'     => '</span>',
-							'fallback_cb'    => false,
-						)
-					);
-					?>
-				</ul><!-- .footer-navigation-wrapper -->
-			</nav><!-- .footer-navigation -->
-		<?php endif; ?>
-		<div class="site-info">
-			<div class="site-name">
-				<?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
-				<?php else : ?>
-					<?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-						<?php if ( is_front_page() && ! is_paged() ) : ?>
-							<?php bloginfo( 'name' ); ?>
-						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						<?php endif; ?>
-					<?php endif; ?>
-				<?php endif; ?>
-			</div><!-- .site-name -->
-
-			<?php
-			if ( function_exists( 'the_privacy_policy_link' ) ) {
-				the_privacy_policy_link( '<div class="privacy-policy">', '</div>' );
-			}
-			?>
-
-			<div class="powered-by">
-				<?php
-				printf(
-					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
-					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
-				);
-				?>
-			</div><!-- .powered-by -->
-
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
-</html>
+<!--.fixBtn
+.pc 
+  +img("line_pc.png")
+.sp
+  a(href="http://nav.cx/ew6wavf") 
+    +img("line_sp.png")
+-->
+<footer>
+  <div class="l-footer"> 
+    <div class="in">
+      <div class="footLogo"><img src="/common/img/logo_blue.png" loading="lazy"/>
+      </div>
+      <dl class="company">
+        <dt>会社名　　</dt>
+        <dd> 合同会社GOODLIFE​</dd>
+        <dt>設立　　</dt>
+        <dd> 2021年1月12日</dd>
+        <dt>代表者　　</dt>
+        <dd> 鈴木　涼太​</dd>
+        <dt>所在地　　</dt>
+        <dd> 東京都渋谷区代々木３－４６－１６小野木ビル６０７</dd>
+        <dt>​資本金　　</dt>
+        <dd> 1,000,000円</dd>
+        <dt> 事業内容　　</dt>
+        <dd> フィットネスクラブ経営</dd>
+      </dl>
+    </div>
+    <p class="prv"><a href="/privacy">プライバシーポリシー </a></p>
+  </div>
+  <div class="copyright">Copyright（C）Good life gym. All Rights Reserved.</div>
+</footer>
+<!-- Meta Pixel Code-->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '424779469346305');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=424779469346305&amp;ev=PageView&amp;noscript=1"/></noscript>
+<!-- End Meta Pixel Code-->
