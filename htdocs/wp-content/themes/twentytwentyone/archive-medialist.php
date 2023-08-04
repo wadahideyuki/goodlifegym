@@ -23,17 +23,15 @@ $description = get_the_archive_description();
       <?php while ( have_posts() ) : ?>
         <?php the_post(); ?>
         <li>
-          <span class="day"><?php the_date();?></span>
+          <span class="day"><?php echo get_the_date();?></span>
           <span class="txt">
             <?php the_field('shopName'); ?> が 
-            「<a target="_blank" href="<?php the_field('mediaUrl'); ?>"><?php the_field('mediaName'); ?>」</a> の記事 
-            「<a target="_blank" href="<?php the_field('pageUrl'); ?>"><?php the_field('pageName'); ?>」</a>に掲載されました。
+            「<a target="_blank" href="<?php the_field('mediaUrl'); ?>"><?php the_field('mediaName'); ?></a>」 の記事 
+            「<a target="_blank" href="<?php the_field('pageUrl'); ?>"><?php the_field('pageName'); ?></a>」に掲載されました。
           </span>
         </li>
 
       <?php endwhile; ?>
-      <li><span class="day">2023.08.03</span><span class="txt">GOODLIFE GYM が「<a href="https://getfit.jp/" target="_blank"> Getfit</a>」の記事「<a href="https://getfit.jp/gym/a-tokyo" target="_blank">東京都内のパーソナルジム30選</a>に掲載されました。</span></li>
-      <li><span class="day">2023.08.03</span><span class="txt">GOODLIFE GYM 東日本橋店 が「<a href="https://getfit.jp/" target="_blank"> Getfit</a>」の記事「<a href="https://getfit.jp/gym/a-chuuouku" target="_blank">中央区のパーソナルジム25選</a>に掲載されました。</span></li>
       <li><span class="day">2023.08.03</span><span class="txt">GOODLIFE GYM 浅草店 が「<a href="https://getfit.jp/" target="_blank"> Getfit</a>」の記事「<a href="https://getfit.jp/gym/a-daitouku" target="_blank">台東区のパーソナルジム15選</a>に掲載されました。</span></li>
       <li><span class="day">2023.08.03</span><span class="txt">GOODLIFE GYM 中野店 が「<a href="https://getfit.jp/" target="_blank"> Getfit</a>」の記事「<a href="https://getfit.jp/gym/a-nakanoku" target="_blank">中野のパーソナルジム11選</a>に掲載されました。</span></li>
       <li><span class="day">2023.08.03</span><span class="txt">通い放題セミパーソナルGOODLIFE GYM prime南千住駅前店 が「<a href="https://getfit.jp/" target="_blank"> Getfit</a>」の記事「<a href="https://getfit.jp/gym/a-arakawaku" target="_blank">荒川区のパーソナルジム8選</a>に掲載されました。</span></li>
