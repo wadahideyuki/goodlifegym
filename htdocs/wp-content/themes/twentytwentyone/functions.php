@@ -657,3 +657,13 @@ endif;
 
 // 管理バーを非表示にする
 add_filter('show_admin_bar', '__return_false');
+
+function change_media_menu_label() {
+    global $menu;
+    global $submenu;
+
+    $menu[10][0] = '画像ファイル'; // メディアメニューの名称を変更
+    $submenu['upload.php'][5][0] = '画像ファイル'; // サブメニューも変更
+}
+
+add_action( 'admin_menu', 'change_media_menu_label' );
