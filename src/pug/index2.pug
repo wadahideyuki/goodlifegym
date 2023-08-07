@@ -1,0 +1,103 @@
+include /_include/_mixin.pug
+
+doctype html
+html(lang="ja")
+  head
+    // Global site tag (gtag.js) - Google Analytics
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-8MLD0Z0N3G")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-8MLD0Z0N3G');
+
+    include /_include/_head.pug
+
+  body.pageTop
+    .l-wrapper
+      include /_include/_header.pug
+
+
+      main.l-cont
+        article.mainZone
+          include /_index_cont/_main.pug
+
+        article.informationZone
+          include /_index_cont/_information.pug
+
+        article.aboutZone#about
+          include /_index_cont/_about.pug
+
+        //article.voiceZone
+          include /_index_cont/_voice.pug
+
+        article.trainerZone.isType2#trainer
+          .u-inner
+            h2.u-ttl1.top_trainer GOODLIFE GYMが#[br.sp]選ばれる理由
+            a(href="/trainer/").btnTrainer GOODLIFE GYMについて#[br.sp]さらに詳しく知りたい方はコチラ
+
+        article.priceZone#price
+          include /_index_cont/_price.pug
+
+        article.storesZone#access
+          include /_index_cont/_stores.pug
+
+        article.faqZone
+          include /_index_cont/_faq.pug
+
+        //article.contactZone.index
+          .u-enTxt#contact CONTACT
+          .u-inner
+            +ttl1("お問い合わせ")
+            p.u-lead1 カウンセリング、初回体験をご希望の方は、各店舗ページのフォームよりお問い合わせください。
+            include /_index_cont/_clist.pug
+            .companyBox
+              h3 運営会社
+              dl
+                dt 会社名　　
+                dd  合同会社GOODLIFE​
+                dt 代表者　　
+                dd  鈴木　涼太​
+                dt 所在地　　
+                dd  東京都渋谷区代々木３－４６－１６小野木ビル６０７
+                dt ​資本金　　
+                dd  1,000,000円
+                dt  事業内容　　
+                dd  フィットネスクラブ経営、サプリメント販売・アパレル販売
+
+
+        include /_index_cont/_recruit.pug
+        //article.noteZone#column
+          include /_index_cont/_note.pug
+        article.mediaZone#media
+          .u-enTxt MEDIA
+          .u-inner
+            h2.u-ttl1 メディア掲載情報
+            include /_index_cont/_media.pug
+            .btn 
+              a(href="./media/")  メディア掲載情報一覧へ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      include /_include/_footer.pug
+
+

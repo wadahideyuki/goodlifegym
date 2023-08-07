@@ -4,7 +4,8 @@
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P36PRNS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript)-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDQRW34D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="l-header"> 
   <div class="logo"> <a href="/"><img src="/common/img/logo_tenpo.png?v2" loading="lazy"/></a></div>
   <div class="spBtn sp"></div>
