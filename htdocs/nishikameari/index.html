@@ -14,7 +14,7 @@
     <meta http-equiv="content-script-type" content="text/javascript">
     <meta http-equiv="content-script-type" content="text/css">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover">
-    <title>西亀有店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム</title>
+    <title>綾瀬店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム</title>
     <meta name="description" content="グッドライフジム（GOODLIFEGYM）は定額通い放題・初心者も安心のパーソナルトレーニングジム（代々木・東日本橋・浅草）です。">
     <meta name="keywords" content="">
     <!-- OGs-->
@@ -41,7 +41,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript)-->
     <div class="l-wrapper"><!--#include virtual="/common/include/head.html" -->
-      <h1 class="ttl"> GOODLIFE GYM<sup>®</sup><br class="sp">西亀有</h1>
+      <h1 class="ttl"> GOODLIFE GYM<sup>®</sup><br class="sp">綾瀬</h1>
       <div class="info">
         <dl>
           <dt> キャンペーン実施中！<br><span class="di_camp">限定人数に達した時点で終了いたします。お早めにお申し込みください。</span></dt>
@@ -61,7 +61,7 @@
             <li><img src="./img/ph01.jpg?2022"></li>
             <li><img src="./img/ph02.jpg?2022"></li>
             <li><img src="./img/ph04.jpg?2022"></li>
-            <li><img src="./img/ph05.jpg?2022"></li>
+            <!--li: img(src="./img/ph05.jpg?2022")-->
             <li><img src="./img/ph06.jpg?2022"></li>
             <li><img src="./img/ph03.jpg?2022"></li>
           </ul>
@@ -112,7 +112,7 @@
             -->
             <dl>
               <dt> 住所</dt>
-              <dd> 124-0002<br>東京都葛飾区西亀有２丁目３０−１　コープ野口２</dd>
+              <dd> 124-0002<br>東京都葛飾区綾瀬２丁目３０−１　コープ野口２</dd>
             </dl>
             <!--dl
             dt  アクセス
@@ -129,22 +129,21 @@
             <!--img(src="./img/sche.png")-->
           </div>
         </article>
-        <article class="trainerZone">
-          <div class="u-enTxt">TRAINER</div>
-          <div class="u-inner">
-            <h2 class="u-ttl1">​トレーナー紹介</h2>
-          </div>
-          <div class="trainerBox box2" id="app">
-            <template v-for="(item, index) in posts">
-              <div class="col" v-if="item.acf.store.includes('西亀有店')">
-                <div class="ph"><img v-bind:src="item.acf.photo1" loading="lazy"><img class="cov" v-bind:src="item.acf.photo2" loading="lazy"></div>
-                <h3 class="taC"><span>{{item.title.rendered}}</span>
-                  <div v-html="item.content.rendered"></div>
-                </h3>
-              </div>
-            </template>
-          </div>
-        </article>
+        <!--article.trainerZone
+        .u-enTxt TRAINER
+        .u-inner
+          h2.u-ttl1 ​トレーナー紹介
+        #app.trainerBox.box2
+          template(v-for="(item, index) in posts")
+            .col(v-if="item.acf.store.includes('綾瀬店')")
+              .ph
+                img(v-bind:src="item.acf.photo1", loading="lazy")
+                img.cov(v-bind:src="item.acf.photo2", loading="lazy")
+              h3.taC
+                span {{item.title.rendered}}
+                div(v-html="item.content.rendered")
+        
+        -->
         <!--article.outlineZone 
         h2.ttl2  お客様の声
         ul.voice 
@@ -193,6 +192,11 @@
                       <h3>マンツーマン週１回</h3><span class="monthly">月額<em>24,800</em>円(税込)</span>
                       <p class="recommend">マンツーマン<br>パーソナルトレーニング<br>週１回（月４～５回分）</p>
                     </li>
+                    <li>
+                      <div class="lm_ic">人数限定</div>
+                      <h3>マンツーマン/セミパ<br>どっちも通い放題</h3><span class="monthly">月額<em>49,800</em>円(税込)</span>
+                      <p class="recommend">マンツーマンパーソナル<br>セミパーソナル<br>通い放題<br>【他店舗相互利用可能】</p>
+                    </li>
                   </ul><span class="planNote">＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます<br>＊月の途中からのプラン開始も可能です<br>(例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます</span>
                 </div>
                 <div class="tableBox">
@@ -218,7 +222,7 @@
         <article class="contactZone">
           <div class="u-enTxt" id="contact">CONTACT</div>
           <div class="u-inner">
-            <h2 class="u-ttlBox1"><small>西亀有店 お問い合わせ</small><span></span></h2>
+            <h2 class="u-ttlBox1"><small>綾瀬店 お問い合わせ</small><span></span></h2>
             <p class="u-lead1">カウンセリング、初回体験をご希望の方は、<br>以下のメールフォームよりお問合せください。</p>
             <!-- class, action, methodを変更しないでください-->
             <div class="formBox">
@@ -273,7 +277,7 @@
                     <ul class="column">
                       <li> 
                         <label> 
-                          <input name="ご希望の店舗" type="hidden" value="西亀有店">西亀有店 
+                          <input name="ご希望の店舗" type="hidden" value="綾瀬店">綾瀬店 
                         </label>
                       </li>
                     </ul>
@@ -289,6 +293,11 @@
                       <li> 
                         <label>
                           <input name="どちらにご興味がございますか" type="radio" value="セミパーソナル" required>セミパーソナル
+                        </label>
+                      </li>
+                      <li> 
+                        <label>
+                          <input name="どちらにご興味がございますか" type="radio" value="セミパーソナル" required>マンツーマン/セミパどっちも通い放題
                         </label>
                       </li>
                       <li> 

@@ -16,7 +16,7 @@ html(lang="ja")
     meta(http-equiv='content-script-type', content='text/javascript')
     meta(http-equiv='content-script-type', content='text/css')
     meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover')
-    title 西亀有店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
+    title 綾瀬店 | グッドライフジム（GOODLIFEGYM）定額通い放題のマンツーマン、セミパーソナルトレーニングジム
     meta(name='description', content=desc)
     meta(name='keywords', content='')
     // OGs
@@ -44,7 +44,7 @@ html(lang="ja")
     // End Google Tag Manager (noscript)
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]西亀有
+      h1.ttl  GOODLIFE GYM#[sup ®]#[br.sp]綾瀬
       
       .info
         dl
@@ -65,7 +65,7 @@ html(lang="ja")
             li: img(src="./img/ph01.jpg?2022")
             li: img(src="./img/ph02.jpg?2022")
             li: img(src="./img/ph04.jpg?2022")
-            li: img(src="./img/ph05.jpg?2022")
+            //li: img(src="./img/ph05.jpg?2022")
             li: img(src="./img/ph06.jpg?2022")
             li: img(src="./img/ph03.jpg?2022")
 
@@ -114,7 +114,7 @@ html(lang="ja")
               dd 火曜日（6/1~営業予定）
             dl
               dt  住所
-              dd  124-0002#[br]東京都葛飾区西亀有２丁目３０−１　コープ野口２
+              dd  124-0002#[br]東京都葛飾区綾瀬２丁目３０−１　コープ野口２
             //dl
               dt  アクセス
               dd  小伝馬町駅　徒歩2分#[br]馬喰町駅　徒歩２分#[br]馬喰横山駅　徒歩３分#[br]東日本橋駅　徒歩5分#[br]浅草橋駅　徒歩7分#[br]秋葉原駅　徒歩９分
@@ -128,13 +128,13 @@ html(lang="ja")
 
 
 
-        article.trainerZone
+        //article.trainerZone
           .u-enTxt TRAINER
           .u-inner
             h2.u-ttl1 ​トレーナー紹介
           #app.trainerBox.box2
             template(v-for="(item, index) in posts")
-              .col(v-if="item.acf.store.includes('西亀有店')")
+              .col(v-if="item.acf.store.includes('綾瀬店')")
                 .ph
                   img(v-bind:src="item.acf.photo1", loading="lazy")
                   img.cov(v-bind:src="item.acf.photo2", loading="lazy")
@@ -191,6 +191,11 @@ html(lang="ja")
                       h3 マンツーマン週１回
                       span.monthly 月額#[em 24,800]円(税込)
                       p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
+                    li
+                      .lm_ic 人数限定
+                      h3 マンツーマン/セミパ#[br]どっちも通い放題
+                      span.monthly 月額#[em 49,800]円(税込)
+                      p.recommend マンツーマンパーソナル#[br]セミパーソナル#[br]通い放題#[br]【他店舗相互利用可能】
                   span.planNote ＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます#[br]＊月の途中からのプラン開始も可能です#[br](例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます
                   
                 .tableBox
@@ -209,13 +214,13 @@ html(lang="ja")
         article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
-            +ttl1("西亀有店 お問い合わせ")
+            +ttl1("綾瀬店 お問い合わせ")
             p.u-lead1 カウンセリング、初回体験をご希望の方は、#[br]以下のメールフォームよりお問合せください。
             // class, action, methodを変更しないでください
             .formBox
               form.formrun(action="https://form.run/api/v1/r/7prvbqzv96o1k7nnudztcw7p" method="post")
                 // ↓自由に要素を追加・編集することができます
-                - var shopName = "西亀有店"
+                - var shopName = "綾瀬店"
                 include /_index_cont/_contact.pug
 
 

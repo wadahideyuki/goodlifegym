@@ -68,6 +68,14 @@ h3 お客様情報
           - else
             input(name="どちらにご興味がございますか" type="radio" value="セミパーソナル" required)
             | セミパーソナル
+      li 
+        label
+          - if (semipa1andman1 == "off")
+            input(name="どちらにご興味がございますか" type="radio" value="セミパーソナル" disabled)
+            | セミパーソナル（定員のため受付停止）
+          - else
+            input(name="どちらにご興味がございますか" type="radio" value="セミパーソナル" required)
+            | マンツーマン/セミパどっちも通い放題
       li  
         label
           input(name="どちらにご興味がございますか" type="radio" value="相談して決めたい" required)
