@@ -142,7 +142,7 @@
                       <p><b>リリースキャンペーン中のご入会で<br>セミパ通い放題prime会費</b><br><span>　24,800円→<em>19,800円</em><br></span></p>
                     </div>
                     <div class="right">
-                      <p><b>対象店舗<br><em>prime恵比寿店/prime南千住駅前店/prime梅島</em></b></p>
+                      <p><b>対象店舗<br><em>prime恵比寿広尾店/prime南千住駅前店/prime梅島</em></b></p>
                     </div>
                   </div>
                 </div>
