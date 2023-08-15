@@ -305,6 +305,12 @@ article:not(.cont1Zone) {
               text-align: center;
               color: #0099b0;
               font-weight: bold;
+              &.al_right{
+                @include mq{
+                  text-align: right;
+                  margin-right: 2vw;
+                }
+              }
             }
 
             .monthly {
