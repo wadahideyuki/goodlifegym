@@ -92,6 +92,14 @@ article:not(.informationZone){
                         font-weight: normal;
                         color: #000;
                         font-size: 1.6rem;
+                        &.d_red-t{
+                            color: red;
+                            font-size: 1.8rem;
+                            font-weight: bold;
+                            @include mq{
+                                font-size: 1.5rem;
+                            }
+                        }
                       }
                   }
                   &.notes{

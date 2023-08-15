@@ -242,7 +242,7 @@ article:not(.cont1Zone) {
           }
 
           li {
-            width: 48%;
+            width: 30%;
             box-sizing: border-box;
             border-radius: 10px;
             padding: 30px 20px;
@@ -405,7 +405,15 @@ article:not(.cont1Zone) {
           }
           &.top_li{
             li{
-              width: 25%;
+              width: 30%;
+              @include mq{
+                width: 100%;
+              }
+            }
+          }
+          &.prm_li{
+            li{
+              width: 48%;
               @include mq{
                 width: 100%;
               }

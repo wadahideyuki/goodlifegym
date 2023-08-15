@@ -130,16 +130,17 @@
             <!--img(src="./img/sche.png")-->
           </div>
         </article>
-        <article class="prm_moretxt"> 
-          <div class="u-inner">
-            <h2 class="ttl2">GOODLIFE GYM primeとは</h2>
-            <p>セミパーソナル特化型の新ブランド‼<br>GOODLIFE GYMトップトレーナー在籍‼<br>セミパーソナル向けにつくられた最高の環境で朝から夜までセミパセッションを実施‼</p><a href="/store/">※マンツーマンをご希望の方は近隣のGOODLIFE GYM店舗にお問い合わせください。 </a>
-            <div class="movieBox">
-              <div class="ttl_mv">セミパーソナルの様子はこちらの動画をご覧ください</div>
-              <iframe src="https://www.youtube.com/embed/OJHTV5iRYQo?rel=0&amp;wmode=transparent" allowfullscreen="" frameborder="0"></iframe>
-            </div>
-          </div>
-        </article>
+        <!--article.prm_moretxt 
+        .u-inner
+          h2.ttl2 GOODLIFE GYM primeとは
+          p セミパーソナル特化型の新ブランド‼<br>GOODLIFE GYMトップトレーナー在籍‼<br>セミパーソナル向けにつくられた最高の環境で朝から夜までセミパセッションを実施‼
+          a(href="/store/") ※マンツーマンをご希望の方は近隣のGOODLIFE GYM店舗にお問い合わせください。 
+          .movieBox
+            .ttl_mv セミパーソナルの様子はこちらの動画をご覧ください
+            +mov("OJHTV5iRYQo")
+        
+        
+        -->
         <!--article.trainerZone
         .u-enTxt TRAINER
         .u-inner
@@ -184,39 +185,50 @@
             <div class="planArea">
               <div class="planBox">
                 <div class="contWrap is-active">
-                  <ul class="planList">
+                  <ul class="planList prm_li">
                     <li>
                       <div class="lm_ic">人数限定</div>
                       <h3>セミパ通い放題prime</h3><span class="monthly">通常料⾦：24,800円<br class="sp">→期間限定：<em>19,800</em>円(税込)</span>
-                      <div class="note_store">GOODLIFE GYM prime恵比寿広尾店</div>
+                      <!--.note_store GOODLIFE GYM prime恵比寿広尾店-->
                       <p class="recommend">セミパーソナルトレーニング<br class="sp">通い放題<br>【他店舗相互利用可能】</p>
                     </li>
                     <li>
                       <h3>セミパ週１回</h3><span class="monthly">月額<em>14,800</em>円(税込)</span>
                       <p class="recommend">セミパーソナルトレーニング<br>週１回（月４～５回分）​​</p>
                     </li>
+                    <li>
+                      <div class="lm_ic">人数限定</div>
+                      <h3>マンツーマン<br class="sp">通い放題prime</h3><span class="monthly">通常料⾦：44,800円<br class="sp">→期間限定：<em>34,800</em>円(税込)</span>
+                      <!--.note_store GOODLIFE GYM prime恵比寿広尾店-->
+                      <p class="recommend">セミパーソナルトレーニング<br class="sp">通い放題<br>【他店舗相互利用可能】</p>
+                    </li>
+                    <li>
+                      <h3>マンツーマン週１回</h3><span class="monthly">月額<em>24,800</em>円(税込)</span>
+                      <p class="recommend">マンツーマン<br>パーソナルトレーニング<br>週１回（月４～５回分）</p>
+                    </li>
+                    <li>
+                      <div class="lm_ic">人数限定</div><h3>マンツーマン/セミパ<br class="sp">どっちも通い放題prime</h3><span class="monthly">通常料⾦：59,800円<br class="sp">→期間限定：<em>49,800</em>円(税込)</span>
+<p class="recommend">マンツーマンパーソナル<br class="sp">セミパーソナル<br class="sp">通い放題<br>【他店舗相互利用可能】
+                    </li>
                   </ul><span class="planNote">＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます<br>＊月の途中からのプラン開始も可能です<br>(例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます</span>
                 </div>
-                <div class="tableBox">
-                  <table>
-                    <tr>
-                      <th>カウンセリング＆初回体験料</th>
-                      <td>3,000円→ <em>【キャンペーン中】無料</em></td>
-                    </tr>
-                    <tr>
-                      <th>入会金・登録料</th>
-                      <td><span class="price">30,000円</span> → <em>【キャンペーン中】初回体験当日のご入会で入会金10,000円</em></td>
-                    </tr>
-                    <tr> 
-                      <th>キャンペーン中の<br>ご入会でセミパ通い放題prime会費</th>
-                      <td>24,800円→ <em>【キャンペーン中】19,800円</em></td>
-                    </tr>
-                    <tr>
-                      <th>毎月のお支払い方法</th>
-                      <td>銀行振込またはクレジットカード<small>(VISA/master/AMEX/JCB/Diners/Discover)</small></td>
-                    </tr>
-                  </table>
-                </div>
+                <!--.tableBox
+                table
+                  tr
+                    th カウンセリング＆初回体験料
+                    td 3,000円→ <em>【キャンペーン中】無料</em>
+                  tr
+                    th 入会金・登録料
+                    td <span class="price">30,000円</span> → <em>【キャンペーン中】初回体験当日のご入会で入会金10,000円</em>
+                  tr 
+                    th キャンペーン中の<br>ご入会でセミパ通い放題prime会費
+                    td 24,800円→ <em>【キャンペーン中】19,800円</em>
+                  tr
+                    th 毎月のお支払い方法
+                    td 銀行振込またはクレジットカード<small>(VISA/master/AMEX/JCB/Diners/Discover)</small>
+                
+                
+                -->
               </div>
             </div>
           </div>

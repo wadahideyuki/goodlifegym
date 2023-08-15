@@ -129,20 +129,20 @@
                       <p><strong>◉体験当日ご入会で初期費用が３万円お得に！<br></strong><b>・入会金割引<br></b><span>　入会金30,000円→<em>10,000円</em><br></span><b>・初月会費割引<br></b><span>　セミパ週１回14,800→<em>4,800円</em><br></span><span>　セミパ通い放題19,800円→<em>9,800円</em><br></span><span>　マンツーマン週１回24,800円→<em>14,800円</em><br></span><span>　マンツーマン通い放題34,800円→<em>24,800円</em><br></span></p>
                     </div>
                     <div class="right">
-                      <p><b>対象店舗<br><em>綾瀬/大田区池上/十条/春日後楽園/城南別府/福岡大橋/静岡駿河/木場</em></b></p>
+                      <p><b>対象店舗<br><em>綾瀬/大田区池上/十条/春日後楽園/城南別府/福岡大橋/静岡駿河/木場/南千住駅前/梅島</em></b></p>
                       <p class="notes">※現在、お申込を多数いただいております。今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。</p>
                     </div>
                   </div>
                 </div>
                 <div class="box top">
-                  <div class="ttl">GOODLIFE GYM prime<br>新ブランドリリース記念<br>キャンペーン</div>
+                  <div class="ttl">GOODLIFE GYM prime<br>期間限定<br>キャンペーン</div>
                   <div class="in_b">
                     <div class="left">
-                      <p><strong>セミパーソナル特化型店舗<br>リリース記念の特別価格</strong></p>
-                      <p><b>リリースキャンペーン中のご入会で<br>セミパ通い放題prime会費</b><br><span>　24,800円→<em>19,800円</em><br></span></p>
+                      <p><strong>2023年12月末までに<br class="pc">体験お申し込みの方</strong></p>
+                      <p><b>体験トレーニングが無料‼<br>入会金通常30,000円が<em class="d_red-t">10,000円</em>に‼<br>通い放題プラン会費が特別割引料金に‼</b></p>
                     </div>
                     <div class="right">
-                      <p><b>対象店舗<br><em>prime恵比寿広尾店/prime南千住駅前店/prime梅島</em></b></p>
+                      <p><b>対象店舗<br><em>prime恵比寿広尾店</em></b></p>
                     </div>
                   </div>
                 </div>
@@ -237,23 +237,13 @@
                 <div class="contWrap is-active">
                   <ul class="planList top_li">
                     <li>
-                      <h3>セミパ週１回</h3><span class="monthly">月額<em>14,800</em>円(税込)</span>
-                      <p class="recommend">セミパーソナルトレーニング<br>週１回（月４～５回分）​​</p>
-                    </li>
-                    <li>
                       <div class="lm_ic">人数限定</div>
                       <h3>セミパ通い放題</h3><span class="monthly">月額<em>19,800</em>円(税込)</span>
                       <p class="recommend">セミパーソナルトレーニング<br>通い放題<br>【他店舗相互利用可能】</p>
                     </li>
                     <li>
-                      <div class="lm_ic">人数限定</div>
-                      <h3>セミパ通い放題prime</h3><span class="monthly">月額<em>24,800</em>円(税込)</span>
-                      <div class="note_store">GOODLIFE GYM prime店舗限定プラン/恵比寿店、南千住駅前店</div>
-                      <p class="recommend">セミパーソナルトレーニング<br>通い放題<br>【他店舗相互利用可能】</p>
-                    </li>
-                    <li>
-                      <h3>マンツーマン週１回</h3><span class="monthly">月額<em>24,800</em>円(税込)</span>
-                      <p class="recommend">マンツーマン<br>パーソナルトレーニング<br>週１回（月４～５回分）</p>
+                      <h3>セミパ週１回</h3><span class="monthly">月額<em>14,800</em>円(税込)</span>
+                      <p class="recommend">セミパーソナルトレーニング<br>週１回（月４～５回分）​​</p>
                     </li>
                     <li>
                       <div class="lm_ic">人数限定</div>
@@ -261,11 +251,16 @@
                       <p class="recommend">マンツーマンパーソナル<br>トレーニング通い放題<br>【他店舗相互利用可能】</p>
                     </li>
                     <li>
+                      <h3>マンツーマン週１回</h3><span class="monthly">月額<em>24,800</em>円(税込)</span>
+                      <p class="recommend">マンツーマン<br>パーソナルトレーニング<br>週１回（月４～５回分）</p>
+                    </li>
+                    <li>
                       <div class="lm_ic">人数限定</div>
                       <h3>マンツーマン/セミパ<br>どっちも通い放題</h3><span class="monthly">月額<em>49,800</em>円(税込)</span>
-                      <p class="recommend">マンツーマンパーソナル<br>セミパーソナル<br>通い放題<br>【他店舗相互利用可能】</p>
+                      <p class="recommend">マンツーマンパーソナル<br>セミパーソナル<br class="sp">通い放題<br>【他店舗相互利用可能】</p>
                     </li>
-                  </ul><span class="planNote">＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます<br>＊月の途中からのプラン開始も可能です<br>(例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます</span>
+                  </ul>
+                  <span class="planNote">＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます<br>＊月の途中からのプラン開始も可能です<br>(例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます</span>
                 </div>
                 <div class="tableBox">
                   <table>

@@ -32,18 +32,19 @@ html(lang="ja")
   body.pageStores
     .l-wrapper
       include /_include/_header.pug
-      h1.ttl 通い放題セミパーソナルGOODLIFE GYM prime梅島#[br]11月オープン予定
+      h1.ttl  GOODLIFE GYM#[sup ®]梅島#[br]11月オープン予定
+      
       .info
         dl
-          dt  セミパーソナル特化型店舗GOODLIFE GYM primeリリースキャンペーン#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
+          dt  キャンペーン実施中！#[br]#[span.di_camp 限定人数に達した時点で終了いたします。お早めにお申し込みください。]
           dd  
             ul  
               li
-                strong 初回体験無料
-              li
                 strong 入会金30,000円→#[em 10,000円]
               li
-                strong リリースキャンペーン中のご入会でセミパ通い放題prime#[br.pc]会費24,800円→#[em 19,800円]
+                strong 初月会費→#[em 10,000円割引]
+              li
+                strong カウンセリング＆初回体験料3,000円→#[em 無料]
             a(href="#contact").u-btn1  お問い合わせはこちら
             .d_more ※現在、お申込を多数いただいております。#[br]今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。
       main.l-cont
@@ -84,14 +85,6 @@ html(lang="ja")
               dd （2台）
             //img(src="./img/p3.jpg")
 
-        article.prm_moretxt 
-          .u-inner
-            h2.ttl2 GOODLIFE GYM primeとは
-            p セミパーソナル特化型の新ブランド‼#[br]GOODLIFE GYMトップトレーナー在籍‼#[br]セミパーソナル向けにつくられた最高の環境で朝から夜までセミパセッションを実施‼
-            a(href="/store/") ※マンツーマンをご希望の方は近隣のGOODLIFE GYM店舗にお問い合わせください。 
-            .movieBox
-              .ttl_mv セミパーソナルの様子はこちらの動画をご覧ください
-              +mov("OJHTV5iRYQo")
 
 
 
@@ -125,6 +118,8 @@ html(lang="ja")
 
         .mapZone
           iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.0984154322473!2d139.7984768228629!3d35.77295877401406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601891d8adfb20ef%3A0xfc9cacc380a6739b!2z44CSMTIxLTA4MTYg5p2x5Lqs6YO96Laz56uL5Yy65qKF5bO277yR5LiB55uu77yR77yV4oiS77ySIO-8te-8s-ODk-ODqw!5e0!3m2!1sja!2sjp!4v1689126684074!5m2!1sja!2sjp")
+        
+        
         article.priceZone#price
           .u-enTxt PRICE
           .u-inner
@@ -136,23 +131,28 @@ html(lang="ja")
                   ul.planList
                     li
                       .lm_ic 人数限定
-                      h3 セミパ通い放題prime
-                      span.monthly 月額#[em 24,800]円(税込)
-                      .note_store GOODLIFE GYM prime店舗限定プラン/恵比寿店、南千住駅前店
+                      h3 セミパ通い放題
+                      span.monthly 月額#[em 19,800]円(税込)
                       p.recommend セミパーソナルトレーニング#[br]通い放題#[br]【他店舗相互利用可能】
-
+                      
                     li
                       h3 セミパ週１回
                       span.monthly 月額#[em 14,800]円(税込)
                       p.recommend セミパーソナルトレーニング#[br]週１回（月４～５回分）​​
-                    //- li
-                    //-   h3 マンツーマン通い放題
-                    //-   span.monthly 月額#[em 34,800]円(税込)
-                    //-   p.recommend マンツーマンパーソナル#[br]トレーニング通い放題#[br]【他店舗相互利用可能】
-                    //- li
-                    //-   h3 マンツーマン週１回
-                    //-   span.monthly 月額#[em 24,800]円(税込)
-                    //-   p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
+                    li
+                      .lm_ic 人数限定
+                      h3 マンツーマン通い放題
+                      span.monthly 月額#[em 34,800]円(税込)
+                      p.recommend マンツーマンパーソナル#[br]トレーニング通い放題#[br]【他店舗相互利用可能】
+                    li
+                      h3 マンツーマン週１回
+                      span.monthly 月額#[em 24,800]円(税込)
+                      p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
+                    li
+                      .lm_ic 人数限定
+                      h3 マンツーマン/セミパ#[br]どっちも通い放題
+                      span.monthly 月額#[em 49,800]円(税込)
+                      p.recommend マンツーマンパーソナル#[br]セミパーソナル#[br.sp]通い放題#[br]【他店舗相互利用可能】
                   span.planNote ＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます#[br]＊月の途中からのプラン開始も可能です#[br](例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます
                   
                 .tableBox
@@ -163,14 +163,11 @@ html(lang="ja")
                     tr
                       th 入会金・登録料
                       td #[span.price 30,000円] → #[em 【キャンペーン中】初回体験当日のご入会で入会金10,000円]
-                    tr 
-                      th リリースキャンペーン中の#[br]ご入会でセミパ通い放題prime会費
-                      td 24,800円→ #[em 【キャンペーン中】19,800円]
                     tr
                       th 毎月のお支払い方法
                       td 銀行振込またはクレジットカード#[small (VISA/master/AMEX/JCB/Diners/Discover)]
 
-       
+
         article.contactZone
           .u-enTxt#contact CONTACT
           .u-inner
@@ -181,143 +178,7 @@ html(lang="ja")
               form.formrun(action="https://form.run/api/v1/r/1mm58j6p8eequksa8p0jq89o" method="post")
                 // ↓自由に要素を追加・編集することができます
                 - var shopName = "梅島店"
-                h3 お問い合わせ種別
-
-                .row.inqType
-                  label お問い合わせ種別を選択してください #[span.must 必須]
-                  ul.column
-                    li 
-                      - if (uketsuke != "off")
-                        label
-                          input(name="お問い合わせ種別" type="radio" value="初回体験" required).showDate
-                          | 初回体験
-                      label 
-                        input(name="お問い合わせ種別" type="radio" value="サービスに関するご質問" required)
-                        | サービスに関するご質問
-
-                h3 お客様情報 
-                .row
-                  label お名前 #[span.must 必須]
-                  input(name="お名前" type="text" placeholder="山田 太郎"  required)
-                .row
-                  label メールアドレス #[span.must 必須]
-                  input(name="メールアドレス" type="text" placeholder="example@mail.com" data-formrun-type="email"  required)
-
-                .row
-                  label 電話番号 #[span.must 必須]
-                  input(name="電話番号" type="text"  required  placeholder="0123456789")
-                .row
-                  label 当ジムを知ったきっかけ
-                  select(name="当ジムを知ったきっかけ")
-                    option(value="")  選択してください
-                    option(value="インターネット検索")  インターネット検索
-                    option(value="GOOGLEマップ検索")  GOOGLEマップ検索
-                    option(value="看板")  看板
-                    option(value="チラシ")  チラシ
-                    option(value="Instagram")  Instagram
-                    option(value="Facebook")  Facebook
-                    option(value="Twitter")  Twitter
-                    option(value="TikTok")  TikTok
-                    option(value="会員様のご紹介")  会員様のご紹介
-
-
-                .dateBox
-                  h3 初回体験をご希望の方 
-                  .row
-                    label ご希望の店舗 
-                    ul.column
-                      li 
-                        label 
-                          input(name="ご希望の店舗" type="hidden" value=shopName)
-                          | #{shopName} 
-
-                  .row
-                    label どちらのプランをご希望ですか？ #[span.must 必須]
-                    ul.column
-                      li 
-                        label
-                          - if (man1 == "off")
-                            input(name="どちらにご興味がございますか" type="radio" value="通い放題" disabled)
-                            | 通い放題（定員のため受付停止）
-                          - else
-                            input(name="どちらにご興味がございますか" type="radio" value="通い放題" required)
-                            | 通い放題
-                      li 
-                        label
-                          - if (semipa1 == "off")
-                            input(name="どちらにご興味がございますか" type="radio" value="週一回" disabled)
-                            | 週一回（定員のため受付停止）
-                          - else
-                            input(name="どちらにご興味がございますか" type="radio" value="週一回" required)
-                            | 週一回
-                      li  
-                        label
-                          input(name="どちらにご興味がございますか" type="radio" value="相談して決めたい" required)
-                          | 相談して決めたい
-                  .row
-                    label ご希望の⽇時（第1希望） #[span.must 必須]
-                    .date
-                      input(name="ご希望の⽇（第1希望）" type="date"   )
-                      select(name="ご希望の時間（第1希望）" type="date"   )
-                        option(value="")  選択してください
-                        option(value="何時でもOK")  何時でもOK
-                        option(value="9～15時")  9～15時
-                        option(value="15～22時")  15～22時
-                        option(value="9～13時")  9～13時
-                        option(value="12～16時")  12～16時
-                        option(value="15～19時")  15～19時
-                        option(value="20～22時")  20～22時
-                  .row
-                    label ご希望の⽇時（第2希望） #[span.must 必須]
-                    .date
-                      input(name="ご希望の⽇（第2希望）" type="date"   )
-                      select(name="ご希望の時間（第2希望）" type="date"   )
-                        option(value="")  選択してください
-                        option(value="何時でもOK")  何時でもOK
-                        option(value="9～15時")  9～15時
-                        option(value="15～22時")  15～22時
-                        option(value="9～13時")  9～13時
-                        option(value="12～16時")  12～16時
-                        option(value="15～19時")  15～19時
-                        option(value="20～22時")  20～22時
-                  .row
-                    label ご希望の⽇時（第3希望） #[span.must 必須]
-                    .date
-                      input(name="ご希望の⽇（第3希望）" type="date"   )
-                      select(name="ご希望の時間（第3希望）" type="date"   )
-                        option(value="")  選択してください
-                        option(value="何時でもOK")  何時でもOK
-                        option(value="9～15時")  9～15時
-                        option(value="15～22時")  15～22時
-                        option(value="9～13時")  9～13時
-                        option(value="12～16時")  12～16時
-                        option(value="15～19時")  15～19時
-                        option(value="20～22時")  20～22時
-                  .row
-                    p.notes(style="color:red") ※必ず第3希望まで日時をご指定ください
-                h3 サービスに関するご質問をご希望の方
-                .row
-                  label ご質問の内容を以下にご記入ください 
-                  textarea(name="お問い合わせ内容"   placeholder="お問い合わせ内容を入力(知人からの紹介の方はこちらにご紹介者のお名前を記載ください)")
-                .last_cb 
-                  label 
-                    input(name="プライバシーポリシーに同意する" type="checkbox" value="プライバシーポリシーに同意する" required)
-                    | 
-                    a(href="/privacy/" target="_blank") プライバシーポリシーに同意する
-                // ボット投稿をブロックするためのタグ
-                ._formrun_gotcha
-                  style(media="screen").
-                    ._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}
-                  label(for="_formrun_gotcha") If you are a human, ignore this field
-                  input#_formrun_gotcha(type="text" name="_formrun_gotcha" tabindex="-1")
-
-                - if (recapcha == "off")
-                  .s
-                - else
-                  .rowRcap
-                    .g-recaptcha(data-sitekey="6LfD0JQaAAAAAKtPPhOY-IlUZHPYISkGlOX2U2bW")
-
-                button(type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." onclick="gtag('event', 'contact', {'event_category': 'contact','event_label': 'contact','value': 'contact'});" ) 送信
+                include /_index_cont/_contact.pug
 
 
         article.storesZone#access

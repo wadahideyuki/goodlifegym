@@ -127,7 +127,7 @@ html(lang="ja")
               dd （2台）
             //img(src="./img/sche.png")
 
-        article.prm_moretxt 
+        //article.prm_moretxt 
           .u-inner
             h2.ttl2 GOODLIFE GYM primeとは
             p セミパーソナル特化型の新ブランド‼#[br]GOODLIFE GYMトップトレーナー在籍‼#[br]セミパーソナル向けにつくられた最高の環境で朝から夜までセミパセッションを実施‼
@@ -135,6 +135,8 @@ html(lang="ja")
             .movieBox
               .ttl_mv セミパーソナルの様子はこちらの動画をご覧ください
               +mov("OJHTV5iRYQo")
+
+
         //article.trainerZone
           .u-enTxt TRAINER
           .u-inner
@@ -178,18 +180,33 @@ html(lang="ja")
             .planArea
               .planBox
                 .contWrap.is-active
-                  ul.planList
+                  ul.planList.prm_li
                     li
                       .lm_ic 人数限定
                       h3 セミパ通い放題prime
                       span.monthly 通常料⾦：24,800円#[br.sp]→期間限定：#[em 19,800]円(税込)
-                      .note_store GOODLIFE GYM prime恵比寿広尾店
+                      //.note_store GOODLIFE GYM prime恵比寿広尾店
                       p.recommend セミパーソナルトレーニング#[br.sp]通い放題#[br]【他店舗相互利用可能】
 
                     li
                       h3 セミパ週１回
                       span.monthly 月額#[em 14,800]円(税込)
                       p.recommend セミパーソナルトレーニング#[br]週１回（月４～５回分）​​
+                    li
+                      .lm_ic 人数限定
+                      h3 マンツーマン#[br.sp]通い放題prime
+                      span.monthly 通常料⾦：44,800円#[br.sp]→期間限定：#[em 34,800]円(税込)
+                      //.note_store GOODLIFE GYM prime恵比寿広尾店
+                      p.recommend セミパーソナルトレーニング#[br.sp]通い放題#[br]【他店舗相互利用可能】
+
+                    li
+                      h3 マンツーマン週１回
+                      span.monthly 月額#[em 24,800]円(税込)
+                      p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
+                    li
+                      .lm_ic 人数限定
+                      <h3>マンツーマン/セミパ<br class="sp">どっちも通い放題prime</h3><span class="monthly">通常料⾦：59,800円<br class="sp">→期間限定：<em>49,800</em>円(税込)</span>
+                      <p class="recommend">マンツーマンパーソナル<br class="sp">セミパーソナル<br class="sp">通い放題<br>【他店舗相互利用可能】
                     //- li
                     //-   h3 マンツーマン通い放題
                     //-   span.monthly 月額#[em 34,800]円(税込)
@@ -200,7 +217,7 @@ html(lang="ja")
                     //-   p.recommend マンツーマン#[br]パーソナルトレーニング#[br]週１回（月４～５回分）
                   span.planNote ＊ご入会日より1ヶ月以内でプラン開始日をお選びいただけます#[br]＊月の途中からのプラン開始も可能です#[br](例)4/20ご入会の場合、4/21〜5/20の期間内でプラン開始日をお選びいただけます
                   
-                .tableBox
+                //.tableBox
                   table
                     tr
                       th カウンセリング＆初回体験料
