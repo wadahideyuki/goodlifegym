@@ -128,21 +128,22 @@
             <!--img(src="./img/sche.png")-->
           </div>
         </article>
-        <!--article.trainerZone
-        .u-enTxt TRAINER
-        .u-inner
-          h2.u-ttl1 ​トレーナー紹介
-        #app.trainerBox.box2
-          template(v-for="(item, index) in posts")
-            .col(v-if="item.acf.store.includes('小田原店')")
-              .ph
-                img(v-bind:src="item.acf.photo1", loading="lazy")
-                img.cov(v-bind:src="item.acf.photo2", loading="lazy")
-              h3.taC
-                span {{item.title.rendered}}
-                div(v-html="item.content.rendered")
-        
-        -->
+        <article class="trainerZone">
+          <div class="u-enTxt">TRAINER</div>
+          <div class="u-inner">
+            <h2 class="u-ttl1">​トレーナー紹介</h2>
+          </div>
+          <div class="trainerBox box2" id="app">
+            <template v-for="(item, index) in posts">
+              <div class="col" v-if="item.acf.store.includes('大田区池上店')">
+                <div class="ph"><img v-bind:src="item.acf.photo1" loading="lazy"><img class="cov" v-bind:src="item.acf.photo2" loading="lazy"></div>
+                <h3 class="taC"><span>{{item.title.rendered}}</span>
+                  <div v-html="item.content.rendered"></div>
+                </h3>
+              </div>
+            </template>
+          </div>
+        </article>
         <!--article.outlineZone 
         h2.ttl2  お客様の声
         ul.voice 

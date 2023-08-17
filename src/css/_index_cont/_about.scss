@@ -21,6 +21,16 @@ article:not(.aboutZone) {
         height: 60vw;
       }
     }
+    .video_train{
+      width: 100%;
+      height: 565px;
+      @include mq{
+        height: 60vw;
+      }
+      video{
+        width: 100%;
+      }
+    }
   }
   h2 {
     font-size: 3.6rem;

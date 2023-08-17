@@ -150,7 +150,10 @@
             </dl>
             <div class="movieBox">
               <h2>セミパーソナルの様子はこちらの動画をご覧ください</h2>
-              <iframe src="https://www.youtube.com/embed/OJHTV5iRYQo?rel=0&amp;wmode=transparent" allowfullscreen="" frameborder="0"></iframe>
+              <!-- <iframe src="https://www.youtube.com/embed/OJHTV5iRYQo?rel=0&amp;wmode=transparent" allowfullscreen="" frameborder="0"></iframe> -->
+              <div class="video_train">
+                <video width="100%" src="/common/img/train_vid.mp4" controls autoplay loop muted type="video/mp4"></video>
+              </div>
             </div>
           </div>
         </article>
