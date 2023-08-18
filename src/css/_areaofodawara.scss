@@ -369,6 +369,13 @@
           margin-top: 3vw;
           margin-bottom: 0;
         }
+        &.vid_tit{
+          font-size: 3.4rem;
+          @include mq{
+            font-size: 3rem;
+            margin-bottom: 3vw;
+          }
+        }
       }
 
     }
