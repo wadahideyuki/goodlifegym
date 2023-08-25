@@ -273,9 +273,13 @@
       }
       .di_camp{
         font-size: 2rem;
+        display: block;
         @include mq{
           font-size: 1.6rem;
         }
+      }
+      .camp_info{
+        display: block;
       }
     }
     .col2box {
