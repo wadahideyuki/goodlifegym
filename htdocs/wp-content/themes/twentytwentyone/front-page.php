@@ -37,7 +37,12 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MDQRW34D');</script>
   <!-- End Google Tag Manager -->
-    <!-- End Google Tag Manager-->
+    
+  <!-- A8 -->
+  <script src="//statics.a8.net/a8sales/a8sales.js"></script>
+  <script src="//statics.a8.net/a8sales/a8shopForm.js"></script>
+  <script src="//statics.a8.net/a8sales/a8crossDomain.js "></script>
+  <!--// A8 -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="content-script-type" content="text/javascript">
     <meta http-equiv="content-script-type" content="text/css">
@@ -84,7 +89,11 @@
                 </picture>
               </div>
               <div class="txt"> 
-                <h2>全国<br class="sp"><span>40</span>店舗<br class="sp">展開</h2>
+                <h2>全国<br class="sp"><span><?php
+                    $pages_count = wp_count_posts('page');
+                    $published_pages = $pages_count->publish;
+                    echo $published_pages - 1;
+                    ?></span>店舗<br class="sp">展開</h2>
                 <div class="bot"> 
                   <p>定額通い放題・初心者も安心の<br>パーソナルトレーニングジム</p>
                   <div class="img pc"><img src="/common/img/main/logo.png" alt="" loading="lazy">
@@ -129,7 +138,36 @@
                       <p><strong>◉体験当日ご入会で初期費用が３万円お得に！<br></strong><b>・入会金割引<br></b><span>　入会金30,000円→<em>10,000円</em><br></span><b>・初月会費割引<br></b><span>　セミパ週１回14,800→<em>4,800円</em><br></span><span>　セミパ通い放題19,800円→<em>9,800円</em><br></span><span>　マンツーマン週１回24,800円→<em>14,800円</em><br></span><span>　マンツーマン通い放題34,800円→<em>24,800円</em><br></span></p>
                     </div>
                     <div class="right">
-                      <p><b>対象店舗<br><em>綾瀬/大田区池上/十条/春日後楽園/城南別府/福岡大橋/静岡駿河/木場/南千住駅前/梅島</em></b></p>
+                      <p><b>対象店舗<br><em><?php
+                        $args2 = array(
+                          'post_type' => 'page', // 固定ページを対象にする
+                          'meta_query' => array(
+                            'relation' => 'AND', // AND条件でクエリを設定
+                            array(
+                              'key' => 'campaign',
+                              'value' => 'C1', // チェックボックスがチェックされた場合の値
+                              'compare' => 'LIKE', // 一致するものを取得
+                            ),
+                            array(
+                              'key' => 'campaign',
+                              'value' => 'C2', // チェックボックスがチェックされた場合の値
+                              'compare' => 'LIKE', // 一致するものを取得
+                            ),
+                          ),
+                        );
+                        
+                        $query2 = new WP_Query($args2); // カスタムクエリを実行
+                        
+                        if ($query2->have_posts()) :
+                          while ($query2->have_posts()) : $query2->the_post();
+                            the_title(); // タイトルを表示
+                            echo '/';
+                          endwhile;
+                        else :
+                          echo '該当するページはありません。';
+                        endif;
+                        wp_reset_postdata(); // クエリのリセット
+                        ?></em></b></p>
                       <p class="notes">※現在、お申込を多数いただいております。今後、ご入会数に制限がかかる可能性がありますので、お早めに体験日確定をしていただくことをおすすめしております。</p>
                     </div>
                   </div>

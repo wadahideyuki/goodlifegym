@@ -62,6 +62,14 @@
     })(window, document, 'script', 'dataLayer', 'GTM-MDQRW34D');
   </script>
   <!-- End Google Tag Manager -->
+  
+  <!-- A8 -->
+  <script src="//statics.a8.net/a8sales/a8sales.js"></script>
+  <script src="//statics.a8.net/a8sales/a8shopForm.js"></script>
+  <script src="//statics.a8.net/a8sales/a8crossDomain.js "></script>
+  <!--// A8 -->
+
+  
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="content-script-type" content="text/javascript">
   <meta http-equiv="content-script-type" content="text/css">
@@ -80,11 +88,11 @@
   <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" type="text/css" media="all" />
   <script src="https://sdk.form.run/js/v2/formrun.js"></script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
-  <link href="/common/css/style.css" rel="stylesheet" type="text/css" media="all" />
-  <script src="/common/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-  <script src="/common/js/slick.min.js" type="text/javascript"></script>
-  <script src="/common/js/jquery.colorbox-min.js" type="text/javascript"></script>
-  <script src="/common/js/common.js?2022-3" type="text/javascript"></script>
+  <link href="https://goodlifegym.jp/common/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="https://goodlifegym.jp/common/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="https://goodlifegym.jp/common/js/slick.min.js" type="text/javascript"></script>
+  <script src="https://goodlifegym.jp/common/js/jquery.colorbox-min.js" type="text/javascript"></script>
+  <script src="https://goodlifegym.jp/common/js/common.js?2022-3" type="text/javascript"></script>
 </head>
 
 <body class="pageStores">
