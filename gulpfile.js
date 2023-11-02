@@ -4,10 +4,6 @@ const gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   // デスクトップ通知のプラグインの読み込み
   notify = require('gulp-notify'),
-  // Sassをコンパイルするプラグインの読み込み
-  sass = require('gulp-sass'),
-  // Sassを開発ツールで参照出来るようにするプラグインの読み込み
-  sourcemaps = require('gulp-sourcemaps'),
   // mediaqueryをまとめる
   cmq = require('gulp-combine-media-queries'),
   // パグ
@@ -27,10 +23,10 @@ const gulp = require('gulp'),
 var paths = {
     rootDir : 'htdocs',
     pugDir : 'src/pug',
-    cssDir : 'htdocs/common/css',
+    cssDir : 'htdocs/css',
     scssDir : 'src/css',
     srcImgDir : 'src/img',
-    dstImgDir : 'htdocs/common/img',
+    dstImgDir : 'htdocs/img',
     styleguideDir : 'src/styleguide'
 };
 
@@ -52,41 +48,6 @@ function fncPug(){
 	.pipe(gulp.dest(paths.rootDir));
 };
 
-// scssのコンパイル
-function fncScss(){
-  console.log("\n  sassを実行\n");
-	// .scssファイルを取得
-	gulp.src([paths.scssDir + '/**/*.scss'])
-	// エラーでも止まらないように
-	.pipe(plumber({
-		// エラーをデスクトップ通知
-		errorHandler: notify.onError({
-			message: "ふぁいる→ <%= error.message %>",
-			title: "えすしーえすえすのえらー",
-			icon: "error.png"
-		})
-	}))
-	// ソースマップを初期化
-  .pipe(sourcemaps.init())
-	// Sassのコンパイルを実行
-	.pipe(sass({outputStyle: 'expanded'})
-	// Sassのコンパイルエラーを表示
-	// (これがないと自動的に止まってしまう)
-	.on('error', sass.logError))
-	// ソースマップを保存
-	.pipe(sourcemaps.write('./srcmap/'))
-	// cssフォルダー以下に保存
-	.pipe(gulp.dest(paths.cssDir));
-};
-
-// メディアクエリをまとめる
-function fncCmq(){
-	gulp.src([paths.cssDir + '/**/*.css'])
-	.pipe(cmq({
-		log: false
-	}))
-	.pipe(gulp.dest(paths.cssDir));
-};
 
 // jpg,png,gif画像の圧縮タスク
 function fncImagemin(){
@@ -113,11 +74,7 @@ function fncSvgmin(){
   var dstGlob = paths.dstImgDir;
   return gulp.src( srcGlob )
     .pipe(changed( dstGlob ))
-    .pipe(svgmin({
-      plugins:[{
-        removeViewBox: false //ViewBox属性を削除しない
-      }]
-    }))
+    .pipe(svgmin())
     .pipe(gulp.dest( dstGlob ));
 };
 
@@ -141,8 +98,6 @@ gulp.task("watch", function(){
   }
 
   gulp.watch(paths.pugDir + '/**/*.pug').on('change', fncPug);
-  gulp.watch(paths.scssDir + '/**/*.scss').on('change', fncScss);
-//	gulp.watch(paths.cssDir + '/**/*.css').on('change', gulp.series(fncCmq, bsReload));
   gulp.watch(paths.rootDir + '/**/*.html').on('change', bsReload);
   gulp.watch(paths.cssDir + '/**/*.css').on('change', bsReload);
   gulp.watch(paths.srcImgDir + '/**/*', gulp.series(fncSvgmin, fncImagemin));
